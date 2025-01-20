@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Technical Stack Overview"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Technical Stack Overview
 
-Main entry point for CoopDIGITy systems documentation
+Overview of the technical stack
 
 ## Overview
 

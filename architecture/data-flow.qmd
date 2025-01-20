@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Data Flow"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Data Flow
 
-Main entry point for CoopDIGITy systems documentation
+Documentation of data flows through the system
 
 ## Overview
 

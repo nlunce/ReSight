@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Monitoring"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Monitoring
 
-Main entry point for CoopDIGITy systems documentation
+System monitoring setup and procedures
 
 ## Overview
 

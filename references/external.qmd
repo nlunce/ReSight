@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "External Resources"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# External Resources
 
-Main entry point for CoopDIGITy systems documentation
+Links to external resources and documentation
 
 ## Overview
 

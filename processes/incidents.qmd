@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Incident Response"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Incident Response
 
-Main entry point for CoopDIGITy systems documentation
+Incident response procedures
 
 ## Overview
 

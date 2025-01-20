@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Team Structure"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Team Structure
 
-Main entry point for CoopDIGITy systems documentation
+Organization and structure of the team
 
 ## Overview
 

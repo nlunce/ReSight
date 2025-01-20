@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Common Issues"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Common Issues
 
-Main entry point for CoopDIGITy systems documentation
+Documentation of common issues and solutions
 
 ## Overview
 

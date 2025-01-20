@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Glossary"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Glossary
 
-Main entry point for CoopDIGITy systems documentation
+Glossary of terms and abbreviations
 
 ## Overview
 

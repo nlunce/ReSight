@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Databases"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Databases
 
-Main entry point for CoopDIGITy systems documentation
+Documentation of database systems
 
 ## Overview
 
