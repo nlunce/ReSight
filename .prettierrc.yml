@@ -1,0 +1,23 @@
+# Quarto Project Prettier Configuration
+proseWrap: 'always'
+semi: false
+singleQuote: true
+tabWidth: 2
+trailingComma: 'none'
+
+overrides:
+  - files: '**/*.qmd'
+    options:
+      parser: 'markdown'
+      proseWrap: 'preserve'
+
+  - files: '*.yml'
+    options:
+      proseWrap: 'preserve'
+      tabWidth: 2
+
+  - files: '*.md'
+    options:
+      tabWidth: 2
+      trailingComma: 'none'
+      proseWrap: 'always'
