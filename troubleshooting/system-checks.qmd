@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "System Checks"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# System Checks
 
-Main entry point for CoopDIGITy systems documentation
+System health check procedures
 
 ## Overview
 

@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "System Architecture Overview"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# System Architecture Overview
 
-Main entry point for CoopDIGITy systems documentation
+High-level overview of CoopDIGITy's system architecture
 
 ## Overview
 

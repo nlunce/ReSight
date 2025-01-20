@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Batch Processing"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Batch Processing
 
-Main entry point for CoopDIGITy systems documentation
+Batch processing systems and schedules
 
 ## Overview
 

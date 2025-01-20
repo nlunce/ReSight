@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Business Context"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Business Context
 
-Main entry point for CoopDIGITy systems documentation
+Overview of CoopDIGITy's business model and operations
 
 ## Overview
 

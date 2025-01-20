@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Data Warehouse"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Data Warehouse
 
-Main entry point for CoopDIGITy systems documentation
+Data warehouse architecture and setup
 
 ## Overview
 

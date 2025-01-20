@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Team Contacts"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Team Contacts
 
-Main entry point for CoopDIGITy systems documentation
+Contact information and responsibilities
 
 ## Overview
 

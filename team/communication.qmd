@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Communication"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Communication
 
-Main entry point for CoopDIGITy systems documentation
+Communication channels and protocols
 
 ## Overview
 

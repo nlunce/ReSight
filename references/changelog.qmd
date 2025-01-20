@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Change Log"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Change Log
 
-Main entry point for CoopDIGITy systems documentation
+Documentation change log
 
 ## Overview
 

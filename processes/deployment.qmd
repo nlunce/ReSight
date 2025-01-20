@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Deployment"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Deployment
 
-Main entry point for CoopDIGITy systems documentation
+Deployment processes and procedures
 
 ## Overview
 

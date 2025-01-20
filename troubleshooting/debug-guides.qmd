@@ -1,11 +1,11 @@
 ---
-title: "Main Documentation Hub"
+title: "Debug Guides"
 date: 2025-01-20
 ---
 
-# Main Documentation Hub
+# Debug Guides
 
-Main entry point for CoopDIGITy systems documentation
+Guides for debugging various system components
 
 ## Overview
 
