@@ -165,7 +165,7 @@
     "href": "index.html",
     "title": "ReSight: Building the Future of Pet Industry Analytics",
     "section": "",
-    "text": "ReSight is positioning itself to become the authoritative source of truth and insights for the U.S. pet industry. This transformation requires a robust, scalable ETL infrastructure capable of processing comprehensive industry data at scale.\n\n\nOur current ETL infrastructure demonstrates significant daily processing capacity with notable variability in workload:\n\n\n\n\n\nMetric\nTypical Day (Median)\nPeak Day\nAverage (Mean)\n\n\n\n\nLoads Processed\n40\n303\n59.2\n\n\nRows Processed\n70,588\n824,719\n105,218\n\n\nProcessing Window\nFlexible\nFlexible\nFlexible\n\n\n\n\n\n\n\nDaily Load Range: 1-303 loads per day\nTypical Range (Q1-Q3): 24-65 loads per day\nStandard Deviation: 54.8 loads, indicating high variability\nProcessing Reliability: 361 days of consistent operation with no outages\n\n\n\n\n\nDaily Row Range: 28-824,719 rows\nTypical Range (Q1-Q3): 15,606-159,225 rows\nVolume Variability: Standard deviation of 115,282 rows\nProcessing Success Rate: 100% (no missing days)\n\n\n\n\n\n\n\n\n\n\n\n\n\nMetric\nValue\nGrowth Factor\n\n\n\n\nDaily Loads\n400+/day\n10x current median\n\n\nData Volume\n700K+ rows/day typical\n10x current median\n\n\nData Sources\n1000+ integrated sources\n10x current scale\n\n\nComplexity\nHigh (ML pipelines, real-time analytics)\nSignificant increase\n\n\nProcessing Window\nNear real-time requirements\nMinutes vs. flexible\n\n\n\n\n\n\nOur next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\nMaintain sub-minute processing latency\n\nAdvanced Processing Capabilities\n\nReal-time data transformation\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nReal-time data freshness\nIndustry-leading security controls",
+    "text": "ReSight is positioning itself to become the authoritative source of truth and insights for the U.S. pet industry. This transformation requires a robust, scalable ETL infrastructure capable of processing comprehensive industry data at scale.\n\n\nOur current ETL infrastructure demonstrates significant daily processing capacity with notable variability in workload:\n\n\n\n\n\nMetric\nTypical Day (Median)\nPeak Day\nAverage (Mean)\n\n\n\n\nLoads Processed\n40\n303\n59.2\n\n\nRows Processed\n70,588\n824,719\n105,218\n\n\nProcessing Window\nFlexible\nFlexible\nFlexible\n\n\n\n\n\n\n\nDaily Load Range: 1-303 loads per day\nTypical Range (Q1-Q3): 24-65 loads per day\nStandard Deviation: 54.8 loads, indicating high variability\nProcessing Reliability: 361 days of consistent operation with no outages\n\n\n\n\n\nDaily Row Range: 28-824,719 rows\nTypical Range (Q1-Q3): 15,606-159,225 rows\nVolume Variability: Standard deviation of 115,282 rows\nProcessing Success Rate: 100% (no missing days)\n\n\n\n\n\n\n\n\n\n\n\n\n\nMetric\nValue\nGrowth Factor\n\n\n\n\nDaily Loads\n400+/day\n10x current median\n\n\nData Volume\n700K+ rows/day typical\n10x current median\n\n\nData Sources\n1000+ integrated sources\n10x current scale\n\n\nComplexity\nHigh (ML pipelines, real-time analytics)\nSignificant increase\n\n\nProcessing Window\nNear real-time requirements\nMinutes vs. flexible\n\n\n\n\n\n\nOur next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\n\nAdvanced Processing Capabilities\n\nReal-time data transformation\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nIndustry-leading security controls",
     "crumbs": [
       "Overview"
     ]
@@ -195,7 +195,7 @@
     "href": "index.html#growth-requirements",
     "title": "ReSight: Building the Future of Pet Industry Analytics",
     "section": "",
-    "text": "Our next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\nMaintain sub-minute processing latency\n\nAdvanced Processing Capabilities\n\nReal-time data transformation\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nReal-time data freshness\nIndustry-leading security controls",
+    "text": "Our next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\n\nAdvanced Processing Capabilities\n\nReal-time data transformation\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nIndustry-leading security controls",
     "crumbs": [
       "Overview"
     ]
@@ -205,7 +205,7 @@
     "href": "index.html#core-requirements",
     "title": "ReSight: Building the Future of Pet Industry Analytics",
     "section": "2.1 Core Requirements",
-    "text": "2.1 Core Requirements\n\n2.1.1 Scalability\n\nSupport for 400+ daily loads (10x current median)\nPeak capacity of 8M+ rows per day\nElastic resource allocation\nHorizontal scaling support\n\n\n\n2.1.2 Real-time Processing\n\nSub-minute processing latency\nStreaming data ingestion\nReal-time analytics pipelines\nEvent-driven architecture\n\n\n\n2.1.3 Advanced Analytics\n\nML pipeline integration\nComplex data transformations\nData science toolkit support\nPredictive modeling capability\n\n\n\n2.1.4 Reliability\n\nZero downtime (matching current 100% reliability)\nAutomated failover\nComprehensive monitoring\nProactive scaling",
+    "text": "2.1 Core Requirements\n\n2.1.1 Scalability\n\nSupport for 400+ daily loads (10x current median)\nPeak capacity of 8M+ rows per day\nElastic resource allocation\nHorizontal scaling support\n\n\n\n2.1.2 Advanced Analytics\n\nML pipeline integration\nComplex data transformations\nData science toolkit support\nPredictive modeling capability\n\n\n\n2.1.3 Reliability\n\nZero downtime (matching current 100% reliability)\nAutomated failover\nComprehensive monitoring\nProactive scaling",
     "crumbs": [
       "Overview"
     ]
@@ -225,7 +225,7 @@
     "href": "index.html#phase-1-foundation-q1-2025",
     "title": "ReSight: Building the Future of Pet Industry Analytics",
     "section": "3.1 Phase 1: Foundation (Q1 2025)",
-    "text": "3.1 Phase 1: Foundation (Q1 2025)\n\nScale current infrastructure to handle 2x current peak load\nImplement comprehensive monitoring\nBegin real-time processing pilot",
+    "text": "3.1 Phase 1: Foundation (Q1 2025)\n\nScale current infrastructure to handle 2x current peak load\nImplement comprehensive monitoring\nDeploy new stream processing architecture",
     "crumbs": [
       "Overview"
     ]
@@ -235,7 +235,7 @@
     "href": "index.html#phase-2-scaling-q2-q3-2025",
     "title": "ReSight: Building the Future of Pet Industry Analytics",
     "section": "3.2 Phase 2: Scaling (Q2-Q3 2025)",
-    "text": "3.2 Phase 2: Scaling (Q2-Q3 2025)\n\nDeploy new stream processing architecture\nExpand data source integration capacity\nImplement ML pipeline framework",
+    "text": "3.2 Phase 2: Scaling (Q2-Q3 2025)\n\nExpand data source integration capacity\nImplement ML pipeline framework",
     "crumbs": [
       "Overview"
     ]
@@ -245,7 +245,7 @@
     "href": "index.html#phase-3-optimization-q4-2025",
     "title": "ReSight: Building the Future of Pet Industry Analytics",
     "section": "3.3 Phase 3: Optimization (Q4 2025)",
-    "text": "3.3 Phase 3: Optimization (Q4 2025)\n\nFine-tune real-time processing\nScale to 5x current capacity\nDeploy advanced analytics capabilities",
+    "text": "3.3 Phase 3: Optimization (Q4 2025)\n\nScale to 5x current capacity\nDeploy advanced analytics capabilities",
     "crumbs": [
       "Overview"
     ]
@@ -255,7 +255,7 @@
     "href": "index.html#phase-4-enterprise-scale-2026",
     "title": "ReSight: Building the Future of Pet Industry Analytics",
     "section": "3.4 Phase 4: Enterprise Scale (2026)",
-    "text": "3.4 Phase 4: Enterprise Scale (2026)\n\nAchieve full target state capabilities\nComplete migration to real-time processing\nDeploy full ML/AI integration",
+    "text": "3.4 Phase 4: Enterprise Scale (2026)\n\nAchieve full target state capabilities\nDeploy full ML/AI integration",
     "crumbs": [
       "Overview"
     ]

@@ -65,7 +65,6 @@ Our next-generation ETL pipeline must support:
    - Handle 10x increase in daily load frequency
    - Process 10x current data volumes
    - Support 10x growth in data source connections
-   - Maintain sub-minute processing latency
 
 2. **Advanced Processing Capabilities**
 
@@ -77,7 +76,6 @@ Our next-generation ETL pipeline must support:
 3. **Enterprise-Scale Operations**
    - Consistent high-volume processing
    - 24/7 operation with high availability
-   - Real-time data freshness
    - Industry-leading security controls
 
 # Infrastructure Strategy
@@ -90,13 +88,6 @@ Our next-generation ETL pipeline must support:
 - Peak capacity of 8M+ rows per day
 - Elastic resource allocation
 - Horizontal scaling support
-
-### Real-time Processing
-
-- Sub-minute processing latency
-- Streaming data ingestion
-- Real-time analytics pipelines
-- Event-driven architecture
 
 ### Advanced Analytics
 
@@ -129,24 +120,21 @@ Our next-generation ETL pipeline must support:
 
 - Scale current infrastructure to handle 2x current peak load
 - Implement comprehensive monitoring
-- Begin real-time processing pilot
+- Deploy new stream processing architecture
 
 ## Phase 2: Scaling (Q2-Q3 2025)
 
-- Deploy new stream processing architecture
 - Expand data source integration capacity
 - Implement ML pipeline framework
 
 ## Phase 3: Optimization (Q4 2025)
 
-- Fine-tune real-time processing
 - Scale to 5x current capacity
 - Deploy advanced analytics capabilities
 
 ## Phase 4: Enterprise Scale (2026)
 
 - Achieve full target state capabilities
-- Complete migration to real-time processing
 - Deploy full ML/AI integration
 
 # Conclusion
@@ -156,6 +144,5 @@ This ETL infrastructure strategy outlines our path from current state to future 
 Key success factors include:
 
 - Maintaining 100% reliability while scaling 10x in load frequency
-- Achieving sub-minute processing latency
 - Supporting 10x growth in data sources
-- Enabling real-time analytics and ML integration
+- Enabling ML integration
