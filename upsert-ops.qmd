@@ -16,9 +16,9 @@ format:
     colorlinks: true
 ---
 
-# Executive Summary
+# Summary
 
-This document compares two AWS-based Apache Spark solutions for handling UPSERT (merge) operations from S3 to multiple target databases including MSSQL, Apache Iceberg, and potentially Clickhouse:
+This document compares two AWS-based Apache Spark solutions for handling UPSERT operations from S3 to multiple target databases including MSSQL and Apache Iceberg:
 
 1. AWS Glue: A managed Apache Spark service
 2. Apache Spark on Amazon EMR: A more configurable Spark deployment
@@ -284,17 +284,6 @@ Consider migration to EMR if:
 - Requiring more performance optimization
 - Team has built Spark expertise
 - Need more control over infrastructure
-
-## Decision Matrix
-
-| Factor             | Weight | Glue Score | EMR Score |
-| ------------------ | ------ | ---------- | --------- |
-| Ease of Use        | 25%    | 9          | 6         |
-| Performance        | 20%    | 7          | 9         |
-| Cost               | 20%    | 8          | 7         |
-| Scalability        | 20%    | 7          | 9         |
-| Maintenance        | 15%    | 9          | 6         |
-| **Weighted Total** | 100%   | **8.0**    | **7.4**   |
 
 # Implementation Plan
 
