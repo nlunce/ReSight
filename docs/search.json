@@ -1,0 +1,1550 @@
+[
+  {
+    "objectID": "troubleshooting/system-checks.html",
+    "href": "troubleshooting/system-checks.html",
+    "title": "System Checks",
+    "section": "",
+    "text": "System health check procedures\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Troubleshooting",
+      "System Checks"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/system-checks.html#overview",
+    "href": "troubleshooting/system-checks.html#overview",
+    "title": "System Checks",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Troubleshooting",
+      "System Checks"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/system-checks.html#details",
+    "href": "troubleshooting/system-checks.html#details",
+    "title": "System Checks",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Troubleshooting",
+      "System Checks"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/system-checks.html#notes",
+    "href": "troubleshooting/system-checks.html#notes",
+    "title": "System Checks",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Troubleshooting",
+      "System Checks"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/common-issues.html",
+    "href": "troubleshooting/common-issues.html",
+    "title": "Common Issues",
+    "section": "",
+    "text": "Documentation of common issues and solutions\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Troubleshooting",
+      "Common Issues"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/common-issues.html#overview",
+    "href": "troubleshooting/common-issues.html#overview",
+    "title": "Common Issues",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Troubleshooting",
+      "Common Issues"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/common-issues.html#details",
+    "href": "troubleshooting/common-issues.html#details",
+    "title": "Common Issues",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Troubleshooting",
+      "Common Issues"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/common-issues.html#notes",
+    "href": "troubleshooting/common-issues.html#notes",
+    "title": "Common Issues",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Troubleshooting",
+      "Common Issues"
+    ]
+  },
+  {
+    "objectID": "tech-stack/languages.html",
+    "href": "tech-stack/languages.html",
+    "title": "Languages & Frameworks",
+    "section": "",
+    "text": "Primary relational database system\nVersion: [Document version when discovered]\nUse cases:\n\nPrimary data storage\nTransactional processing\nBusiness reporting\n\n\n\n\n\nPrimary database development environment\nFeatures used:\n\nQuery development\nDatabase administration\nPerformance monitoring\nSchema management\n\n\n\n\n\n\n-- Example connection string format\nServer=sqldev.coopdigity.internal:1433;Database=&lt;dbname&gt;;User Id=&lt;username&gt;;Password=&lt;password&gt;;",
+    "crumbs": [
+      "Technical Stack",
+      "Languages & Frameworks"
+    ]
+  },
+  {
+    "objectID": "tech-stack/languages.html#microsoft-sql-server",
+    "href": "tech-stack/languages.html#microsoft-sql-server",
+    "title": "Languages & Frameworks",
+    "section": "",
+    "text": "Primary relational database system\nVersion: [Document version when discovered]\nUse cases:\n\nPrimary data storage\nTransactional processing\nBusiness reporting\n\n\n\n\n\nPrimary database development environment\nFeatures used:\n\nQuery development\nDatabase administration\nPerformance monitoring\nSchema management",
+    "crumbs": [
+      "Technical Stack",
+      "Languages & Frameworks"
+    ]
+  },
+  {
+    "objectID": "tech-stack/languages.html#database-connectivity",
+    "href": "tech-stack/languages.html#database-connectivity",
+    "title": "Languages & Frameworks",
+    "section": "",
+    "text": "-- Example connection string format\nServer=sqldev.coopdigity.internal:1433;Database=&lt;dbname&gt;;User Id=&lt;username&gt;;Password=&lt;password&gt;;",
+    "crumbs": [
+      "Technical Stack",
+      "Languages & Frameworks"
+    ]
+  },
+  {
+    "objectID": "tech-stack/cloud.html",
+    "href": "tech-stack/cloud.html",
+    "title": "Cloud Infrastructure",
+    "section": "",
+    "text": "Serverless compute platform\nUse cases:\n\nEvent processing\nAPI backends\nData transformation\n\nDocument common functions\nNote deployment procedures\n\n\n\n\n\n\n\n\nObject storage service\nUse cases:\n\nData lake storage\nStatic asset hosting\nBackup storage\n\nDocument bucket structure\nNote access patterns\n\n\n\n\n\nNoSQL database service\nUse cases:\n\nHigh-throughput data\nServerless applications\nReal-time data access\n\nDocument table schemas\nNote access patterns\n\n\n\n\n\n\n\n\nETL service\nComponents:\n\nData catalogs\nETL jobs\nWorkflows\n\nDocument job configurations\nNote scheduling patterns\n\n\n\n\n\n\n\n\nEmail service\nUse cases:\n\nAutomated notifications\nSystem alerts\nUser communications\n\nDocument templates\nNote sending patterns",
+    "crumbs": [
+      "Technical Stack",
+      "Cloud Infrastructure"
+    ]
+  },
+  {
+    "objectID": "tech-stack/cloud.html#compute",
+    "href": "tech-stack/cloud.html#compute",
+    "title": "Cloud Infrastructure",
+    "section": "",
+    "text": "Serverless compute platform\nUse cases:\n\nEvent processing\nAPI backends\nData transformation\n\nDocument common functions\nNote deployment procedures",
+    "crumbs": [
+      "Technical Stack",
+      "Cloud Infrastructure"
+    ]
+  },
+  {
+    "objectID": "tech-stack/cloud.html#storage",
+    "href": "tech-stack/cloud.html#storage",
+    "title": "Cloud Infrastructure",
+    "section": "",
+    "text": "Object storage service\nUse cases:\n\nData lake storage\nStatic asset hosting\nBackup storage\n\nDocument bucket structure\nNote access patterns\n\n\n\n\n\nNoSQL database service\nUse cases:\n\nHigh-throughput data\nServerless applications\nReal-time data access\n\nDocument table schemas\nNote access patterns",
+    "crumbs": [
+      "Technical Stack",
+      "Cloud Infrastructure"
+    ]
+  },
+  {
+    "objectID": "tech-stack/cloud.html#data-processing",
+    "href": "tech-stack/cloud.html#data-processing",
+    "title": "Cloud Infrastructure",
+    "section": "",
+    "text": "ETL service\nComponents:\n\nData catalogs\nETL jobs\nWorkflows\n\nDocument job configurations\nNote scheduling patterns",
+    "crumbs": [
+      "Technical Stack",
+      "Cloud Infrastructure"
+    ]
+  },
+  {
+    "objectID": "tech-stack/cloud.html#communication",
+    "href": "tech-stack/cloud.html#communication",
+    "title": "Cloud Infrastructure",
+    "section": "",
+    "text": "Email service\nUse cases:\n\nAutomated notifications\nSystem alerts\nUser communications\n\nDocument templates\nNote sending patterns",
+    "crumbs": [
+      "Technical Stack",
+      "Cloud Infrastructure"
+    ]
+  },
+  {
+    "objectID": "team/contacts.html",
+    "href": "team/contacts.html",
+    "title": "Team Contacts",
+    "section": "",
+    "text": "Contact information and responsibilities\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Team",
+      "Contacts"
+    ]
+  },
+  {
+    "objectID": "team/contacts.html#overview",
+    "href": "team/contacts.html#overview",
+    "title": "Team Contacts",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Team",
+      "Contacts"
+    ]
+  },
+  {
+    "objectID": "team/contacts.html#details",
+    "href": "team/contacts.html#details",
+    "title": "Team Contacts",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Team",
+      "Contacts"
+    ]
+  },
+  {
+    "objectID": "team/contacts.html#notes",
+    "href": "team/contacts.html#notes",
+    "title": "Team Contacts",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Team",
+      "Contacts"
+    ]
+  },
+  {
+    "objectID": "references/glossary.html",
+    "href": "references/glossary.html",
+    "title": "Glossary",
+    "section": "",
+    "text": "Glossary of terms and abbreviations\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "References",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "references/glossary.html#overview",
+    "href": "references/glossary.html#overview",
+    "title": "Glossary",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "References",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "references/glossary.html#details",
+    "href": "references/glossary.html#details",
+    "title": "Glossary",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "References",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "references/glossary.html#notes",
+    "href": "references/glossary.html#notes",
+    "title": "Glossary",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "References",
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "references/changelog.html",
+    "href": "references/changelog.html",
+    "title": "Change Log",
+    "section": "",
+    "text": "Documentation change log\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "References",
+      "Change Log"
+    ]
+  },
+  {
+    "objectID": "references/changelog.html#overview",
+    "href": "references/changelog.html#overview",
+    "title": "Change Log",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "References",
+      "Change Log"
+    ]
+  },
+  {
+    "objectID": "references/changelog.html#details",
+    "href": "references/changelog.html#details",
+    "title": "Change Log",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "References",
+      "Change Log"
+    ]
+  },
+  {
+    "objectID": "references/changelog.html#notes",
+    "href": "references/changelog.html#notes",
+    "title": "Change Log",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "References",
+      "Change Log"
+    ]
+  },
+  {
+    "objectID": "processes/incidents.html",
+    "href": "processes/incidents.html",
+    "title": "Incident Response",
+    "section": "",
+    "text": "Incident response procedures\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Processes",
+      "Incident Response"
+    ]
+  },
+  {
+    "objectID": "processes/incidents.html#overview",
+    "href": "processes/incidents.html#overview",
+    "title": "Incident Response",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Processes",
+      "Incident Response"
+    ]
+  },
+  {
+    "objectID": "processes/incidents.html#details",
+    "href": "processes/incidents.html#details",
+    "title": "Incident Response",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Processes",
+      "Incident Response"
+    ]
+  },
+  {
+    "objectID": "processes/incidents.html#notes",
+    "href": "processes/incidents.html#notes",
+    "title": "Incident Response",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Processes",
+      "Incident Response"
+    ]
+  },
+  {
+    "objectID": "processes/deployment.html",
+    "href": "processes/deployment.html",
+    "title": "Deployment",
+    "section": "",
+    "text": "Deployment processes and procedures\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Processes",
+      "Deployment"
+    ]
+  },
+  {
+    "objectID": "processes/deployment.html#overview",
+    "href": "processes/deployment.html#overview",
+    "title": "Deployment",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Processes",
+      "Deployment"
+    ]
+  },
+  {
+    "objectID": "processes/deployment.html#details",
+    "href": "processes/deployment.html#details",
+    "title": "Deployment",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Processes",
+      "Deployment"
+    ]
+  },
+  {
+    "objectID": "processes/deployment.html#notes",
+    "href": "processes/deployment.html#notes",
+    "title": "Deployment",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Processes",
+      "Deployment"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Main Documentation Hub",
+    "section": "",
+    "text": "Main entry point for CoopDIGITy systems documentation\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Main Documentation Hub",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#details",
+    "href": "index.html#details",
+    "title": "Main Documentation Hub",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#notes",
+    "href": "index.html#notes",
+    "title": "Main Documentation Hub",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "data/storage/lake.html",
+    "href": "data/storage/lake.html",
+    "title": "Data Lake",
+    "section": "",
+    "text": "Data lake architecture and implementation\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Data Lake"
+    ]
+  },
+  {
+    "objectID": "data/storage/lake.html#overview",
+    "href": "data/storage/lake.html#overview",
+    "title": "Data Lake",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Data Lake"
+    ]
+  },
+  {
+    "objectID": "data/storage/lake.html#details",
+    "href": "data/storage/lake.html#details",
+    "title": "Data Lake",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Data Lake"
+    ]
+  },
+  {
+    "objectID": "data/storage/lake.html#notes",
+    "href": "data/storage/lake.html#notes",
+    "title": "Data Lake",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Data Lake"
+    ]
+  },
+  {
+    "objectID": "data/processing/realtime.html",
+    "href": "data/processing/realtime.html",
+    "title": "Real-time Processing",
+    "section": "",
+    "text": "Real-time data processing systems\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "Real-time Processing"
+    ]
+  },
+  {
+    "objectID": "data/processing/realtime.html#overview",
+    "href": "data/processing/realtime.html#overview",
+    "title": "Real-time Processing",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "Real-time Processing"
+    ]
+  },
+  {
+    "objectID": "data/processing/realtime.html#details",
+    "href": "data/processing/realtime.html#details",
+    "title": "Real-time Processing",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "Real-time Processing"
+    ]
+  },
+  {
+    "objectID": "data/processing/realtime.html#notes",
+    "href": "data/processing/realtime.html#notes",
+    "title": "Real-time Processing",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "Real-time Processing"
+    ]
+  },
+  {
+    "objectID": "data/processing/batch.html",
+    "href": "data/processing/batch.html",
+    "title": "Batch Processing",
+    "section": "",
+    "text": "Batch processing systems and schedules\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "Batch Processing"
+    ]
+  },
+  {
+    "objectID": "data/processing/batch.html#overview",
+    "href": "data/processing/batch.html#overview",
+    "title": "Batch Processing",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "Batch Processing"
+    ]
+  },
+  {
+    "objectID": "data/processing/batch.html#details",
+    "href": "data/processing/batch.html#details",
+    "title": "Batch Processing",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "Batch Processing"
+    ]
+  },
+  {
+    "objectID": "data/processing/batch.html#notes",
+    "href": "data/processing/batch.html#notes",
+    "title": "Batch Processing",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "Batch Processing"
+    ]
+  },
+  {
+    "objectID": "business-context.html",
+    "href": "business-context.html",
+    "title": "Business Context",
+    "section": "",
+    "text": "Overview of CoopDIGITy’s business model and operations\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Business Context"
+    ]
+  },
+  {
+    "objectID": "business-context.html#overview",
+    "href": "business-context.html#overview",
+    "title": "Business Context",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Business Context"
+    ]
+  },
+  {
+    "objectID": "business-context.html#details",
+    "href": "business-context.html#details",
+    "title": "Business Context",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Business Context"
+    ]
+  },
+  {
+    "objectID": "business-context.html#notes",
+    "href": "business-context.html#notes",
+    "title": "Business Context",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Business Context"
+    ]
+  },
+  {
+    "objectID": "architecture/infrastructure.html",
+    "href": "architecture/infrastructure.html",
+    "title": "Infrastructure Architecture",
+    "section": "",
+    "text": "Service registry\nHealth monitoring\nKey-value store\nConfiguration management\n\n\n\n\n\nWorkload scheduler\nApplication deployment\nResource management\nJob specifications\n\n\n\n\n\nEdge router\nSSL termination\nService routing\nLoad distribution",
+    "crumbs": [
+      "System Architecture",
+      "Infrastructure"
+    ]
+  },
+  {
+    "objectID": "architecture/infrastructure.html#service-discovery---consul",
+    "href": "architecture/infrastructure.html#service-discovery---consul",
+    "title": "Infrastructure Architecture",
+    "section": "",
+    "text": "Service registry\nHealth monitoring\nKey-value store\nConfiguration management",
+    "crumbs": [
+      "System Architecture",
+      "Infrastructure"
+    ]
+  },
+  {
+    "objectID": "architecture/infrastructure.html#container-orchestration---nomad",
+    "href": "architecture/infrastructure.html#container-orchestration---nomad",
+    "title": "Infrastructure Architecture",
+    "section": "",
+    "text": "Workload scheduler\nApplication deployment\nResource management\nJob specifications",
+    "crumbs": [
+      "System Architecture",
+      "Infrastructure"
+    ]
+  },
+  {
+    "objectID": "architecture/infrastructure.html#load-balancing---traefik",
+    "href": "architecture/infrastructure.html#load-balancing---traefik",
+    "title": "Infrastructure Architecture",
+    "section": "",
+    "text": "Edge router\nSSL termination\nService routing\nLoad distribution",
+    "crumbs": [
+      "System Architecture",
+      "Infrastructure"
+    ]
+  },
+  {
+    "objectID": "architecture/data-flow.html",
+    "href": "architecture/data-flow.html",
+    "title": "Data Flow",
+    "section": "",
+    "text": "Documentation of data flows through the system\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "System Architecture",
+      "Data Flow"
+    ]
+  },
+  {
+    "objectID": "architecture/data-flow.html#overview",
+    "href": "architecture/data-flow.html#overview",
+    "title": "Data Flow",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "System Architecture",
+      "Data Flow"
+    ]
+  },
+  {
+    "objectID": "architecture/data-flow.html#details",
+    "href": "architecture/data-flow.html#details",
+    "title": "Data Flow",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "System Architecture",
+      "Data Flow"
+    ]
+  },
+  {
+    "objectID": "architecture/data-flow.html#notes",
+    "href": "architecture/data-flow.html#notes",
+    "title": "Data Flow",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "System Architecture",
+      "Data Flow"
+    ]
+  },
+  {
+    "objectID": "architecture/index.html",
+    "href": "architecture/index.html",
+    "title": "System Architecture Overview",
+    "section": "",
+    "text": "High-level overview of CoopDIGITy’s system architecture\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "System Architecture",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "architecture/index.html#overview",
+    "href": "architecture/index.html#overview",
+    "title": "System Architecture Overview",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "System Architecture",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "architecture/index.html#details",
+    "href": "architecture/index.html#details",
+    "title": "System Architecture Overview",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "System Architecture",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "architecture/index.html#notes",
+    "href": "architecture/index.html#notes",
+    "title": "System Architecture Overview",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "System Architecture",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "architecture/security.html",
+    "href": "architecture/security.html",
+    "title": "Security Architecture",
+    "section": "",
+    "text": "Security implementation and considerations\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "System Architecture",
+      "Security"
+    ]
+  },
+  {
+    "objectID": "architecture/security.html#overview",
+    "href": "architecture/security.html#overview",
+    "title": "Security Architecture",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "System Architecture",
+      "Security"
+    ]
+  },
+  {
+    "objectID": "architecture/security.html#details",
+    "href": "architecture/security.html#details",
+    "title": "Security Architecture",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "System Architecture",
+      "Security"
+    ]
+  },
+  {
+    "objectID": "architecture/security.html#notes",
+    "href": "architecture/security.html#notes",
+    "title": "Security Architecture",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "System Architecture",
+      "Security"
+    ]
+  },
+  {
+    "objectID": "data/index.html",
+    "href": "data/index.html",
+    "title": "Data Systems Overview",
+    "section": "",
+    "text": "Overview of all data systems\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "data/index.html#overview",
+    "href": "data/index.html#overview",
+    "title": "Data Systems Overview",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Data Systems",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "data/index.html#details",
+    "href": "data/index.html#details",
+    "title": "Data Systems Overview",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Data Systems",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "data/index.html#notes",
+    "href": "data/index.html#notes",
+    "title": "Data Systems Overview",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "data/processing/etl.html",
+    "href": "data/processing/etl.html",
+    "title": "ETL Processes",
+    "section": "",
+    "text": "Documentation of ETL/ELT processes\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "ETL Processes"
+    ]
+  },
+  {
+    "objectID": "data/processing/etl.html#overview",
+    "href": "data/processing/etl.html#overview",
+    "title": "ETL Processes",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "ETL Processes"
+    ]
+  },
+  {
+    "objectID": "data/processing/etl.html#details",
+    "href": "data/processing/etl.html#details",
+    "title": "ETL Processes",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "ETL Processes"
+    ]
+  },
+  {
+    "objectID": "data/processing/etl.html#notes",
+    "href": "data/processing/etl.html#notes",
+    "title": "ETL Processes",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Processing",
+      "ETL Processes"
+    ]
+  },
+  {
+    "objectID": "data/storage/databases.html",
+    "href": "data/storage/databases.html",
+    "title": "Databases",
+    "section": "",
+    "text": "Documentation of database systems\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Databases"
+    ]
+  },
+  {
+    "objectID": "data/storage/databases.html#overview",
+    "href": "data/storage/databases.html#overview",
+    "title": "Databases",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Databases"
+    ]
+  },
+  {
+    "objectID": "data/storage/databases.html#details",
+    "href": "data/storage/databases.html#details",
+    "title": "Databases",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Databases"
+    ]
+  },
+  {
+    "objectID": "data/storage/databases.html#notes",
+    "href": "data/storage/databases.html#notes",
+    "title": "Databases",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Databases"
+    ]
+  },
+  {
+    "objectID": "data/storage/warehouse.html",
+    "href": "data/storage/warehouse.html",
+    "title": "Data Warehouse",
+    "section": "",
+    "text": "Data warehouse architecture and setup\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Data Warehouse"
+    ]
+  },
+  {
+    "objectID": "data/storage/warehouse.html#overview",
+    "href": "data/storage/warehouse.html#overview",
+    "title": "Data Warehouse",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Data Warehouse"
+    ]
+  },
+  {
+    "objectID": "data/storage/warehouse.html#details",
+    "href": "data/storage/warehouse.html#details",
+    "title": "Data Warehouse",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Data Warehouse"
+    ]
+  },
+  {
+    "objectID": "data/storage/warehouse.html#notes",
+    "href": "data/storage/warehouse.html#notes",
+    "title": "Data Warehouse",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Data Systems",
+      "Data Storage",
+      "Data Warehouse"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html",
+    "href": "onboarding-planning.html",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "",
+    "text": "This document outlines the phased approach for onboarding as a Data Engineer at CoopDIGITy, with a focus on system discovery and documentation in an environment with limited existing documentation.",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#initial-information-gathering",
+    "href": "onboarding-planning.html#initial-information-gathering",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Initial Information Gathering",
+    "text": "Initial Information Gathering\n\nSchedule 1:1s with team members to understand their roles and responsibilities\nCreate a shared document to collect tribal knowledge\nSet up a personal wiki/notebook for documenting discoveries\nRequest access to all relevant systems (even ones you’re unsure about)",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#system-archaeology",
+    "href": "onboarding-planning.html#system-archaeology",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "System Archaeology",
+    "text": "System Archaeology\n\nList all discoverable databases and data stores\nDocument all found API endpoints and services\nMap out existing data pipelines (even if incomplete)\nCreate initial system topology diagram\nDocument all environment variables and config files found",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#code-repository-mapping",
+    "href": "onboarding-planning.html#code-repository-mapping",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Code Repository Mapping",
+    "text": "Code Repository Mapping\n\nList all repositories you can find\nFor each repository:\n\nDocument its apparent purpose\nNote active contributors\nDocument build process if found\nNote dependencies and connection points\nDocument deployment process (if discoverable)",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#database-exploration",
+    "href": "onboarding-planning.html#database-exploration",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Database Exploration",
+    "text": "Database Exploration\n\nFor each database:\n\nDocument schema\nNote data volumes\nIdentify critical tables\nDocument relationships\nNote update frequencies\nIdentify owners/stakeholders",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#pipeline-discovery",
+    "href": "onboarding-planning.html#pipeline-discovery",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Pipeline Discovery",
+    "text": "Pipeline Discovery\n\nTrace data flows:\n\nSource systems\nTransformation points\nDestination systems\n\nDocument job schedules\nNote failure points and current monitoring\nMap dependencies between jobs",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#infrastructure-mapping",
+    "href": "onboarding-planning.html#infrastructure-mapping",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Infrastructure Mapping",
+    "text": "Infrastructure Mapping\n\nDocument all production servers/instances\nMap network connectivity\nDocument security groups and access patterns\nNote backup systems (if they exist)\nDocument monitoring solutions in place",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#basic-documentation",
+    "href": "onboarding-planning.html#basic-documentation",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Basic Documentation",
+    "text": "Basic Documentation\n\nCreate README files for main repositories\nDocument setup procedures as you discover them\nCreate basic architecture diagrams\nDocument known failure scenarios",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#process-documentation",
+    "href": "onboarding-planning.html#process-documentation",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Process Documentation",
+    "text": "Process Documentation\n\nDocument deployment process\nCreate troubleshooting guides\nDocument backup/restore procedures (if they exist)\nCreate incident response templates",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#historical-context",
+    "href": "onboarding-planning.html#historical-context",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Historical Context",
+    "text": "Historical Context\n\nWhat are the most problematic areas of the system?\nWhich parts of the system are most critical?\nWhat breaks most often?\nWhat tribal knowledge hasn’t been documented?",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#technical-questions",
+    "href": "onboarding-planning.html#technical-questions",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Technical Questions",
+    "text": "Technical Questions\n\nWhere are logs stored?\nHow are secrets managed?\nWhat’s the release process?\nHow is testing done?",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#system-component-template",
+    "href": "onboarding-planning.html#system-component-template",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "System Component Template",
+    "text": "System Component Template\n# Component Name\n\n## Purpose\n[What does this component do?]\n\n## Location\n- Repository: \n- Production Location:\n- Config Files:\n\n## Dependencies\n- Input Dependencies:\n- Output Dependencies:\n- Service Dependencies:\n\n## Operation\n- How to Start:\n- How to Stop:\n- How to Monitor:\n- Common Issues:\n\n## Notes\n[Any additional information]",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#process-documentation-template",
+    "href": "onboarding-planning.html#process-documentation-template",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Process Documentation Template",
+    "text": "Process Documentation Template\n# Process Name\n\n## Overview\n[Brief description]\n\n## Steps\n1. \n2. \n3. \n\n## Required Access\n- System 1\n- System 2\n\n## Common Issues\n- Issue 1: Solution 1\n- Issue 2: Solution 2\n\n## Notes\n[Additional context]",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#investigation-log-template",
+    "href": "onboarding-planning.html#investigation-log-template",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Investigation Log Template",
+    "text": "Investigation Log Template\nDate:\nSystem Investigated:\nFindings:\nQuestions:\nFollow-up Items:",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#meeting-notes-template",
+    "href": "onboarding-planning.html#meeting-notes-template",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Meeting Notes Template",
+    "text": "Meeting Notes Template\nDate:\nAttendees:\nKey Insights:\nNew Systems Discovered:\nAction Items:",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#critical-systems",
+    "href": "onboarding-planning.html#critical-systems",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Critical Systems",
+    "text": "Critical Systems\n\nProduction databases\nETL processes\nData pipelines\nBackup systems\nMonitoring systems",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#business-processes",
+    "href": "onboarding-planning.html#business-processes",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Business Processes",
+    "text": "Business Processes\n\nData flow for critical business operations\nReporting processes\nData quality checks\nBusiness rules and transformations",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#recommended-tools",
+    "href": "onboarding-planning.html#recommended-tools",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Recommended Tools",
+    "text": "Recommended Tools\n\nDraw.io for architecture diagrams\nMarkdown for process documentation\nGit for version control of documentation\nTeam wiki (if available)\nShared team documentation space",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html#documentation-organization",
+    "href": "onboarding-planning.html#documentation-organization",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Documentation Organization",
+    "text": "Documentation Organization\n\nSystem Architecture\nData Flows\nProcess Documents\nTroubleshooting Guides\nSetup Procedures\nContact Information",
+    "crumbs": [
+      "Plan"
+    ]
+  },
+  {
+    "objectID": "processes/development.html",
+    "href": "processes/development.html",
+    "title": "Development Workflow",
+    "section": "",
+    "text": "Development processes and procedures\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Processes",
+      "Development Workflow"
+    ]
+  },
+  {
+    "objectID": "processes/development.html#overview",
+    "href": "processes/development.html#overview",
+    "title": "Development Workflow",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Processes",
+      "Development Workflow"
+    ]
+  },
+  {
+    "objectID": "processes/development.html#details",
+    "href": "processes/development.html#details",
+    "title": "Development Workflow",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Processes",
+      "Development Workflow"
+    ]
+  },
+  {
+    "objectID": "processes/development.html#notes",
+    "href": "processes/development.html#notes",
+    "title": "Development Workflow",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Processes",
+      "Development Workflow"
+    ]
+  },
+  {
+    "objectID": "processes/monitoring.html",
+    "href": "processes/monitoring.html",
+    "title": "Monitoring",
+    "section": "",
+    "text": "System monitoring setup and procedures\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Processes",
+      "Monitoring"
+    ]
+  },
+  {
+    "objectID": "processes/monitoring.html#overview",
+    "href": "processes/monitoring.html#overview",
+    "title": "Monitoring",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Processes",
+      "Monitoring"
+    ]
+  },
+  {
+    "objectID": "processes/monitoring.html#details",
+    "href": "processes/monitoring.html#details",
+    "title": "Monitoring",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Processes",
+      "Monitoring"
+    ]
+  },
+  {
+    "objectID": "processes/monitoring.html#notes",
+    "href": "processes/monitoring.html#notes",
+    "title": "Monitoring",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Processes",
+      "Monitoring"
+    ]
+  },
+  {
+    "objectID": "references/external.html",
+    "href": "references/external.html",
+    "title": "External Resources",
+    "section": "",
+    "text": "Links to external resources and documentation\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "References",
+      "External Resources"
+    ]
+  },
+  {
+    "objectID": "references/external.html#overview",
+    "href": "references/external.html#overview",
+    "title": "External Resources",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "References",
+      "External Resources"
+    ]
+  },
+  {
+    "objectID": "references/external.html#details",
+    "href": "references/external.html#details",
+    "title": "External Resources",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "References",
+      "External Resources"
+    ]
+  },
+  {
+    "objectID": "references/external.html#notes",
+    "href": "references/external.html#notes",
+    "title": "External Resources",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "References",
+      "External Resources"
+    ]
+  },
+  {
+    "objectID": "team/communication.html",
+    "href": "team/communication.html",
+    "title": "Communication",
+    "section": "",
+    "text": "Communication channels and protocols\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Team",
+      "Communication"
+    ]
+  },
+  {
+    "objectID": "team/communication.html#overview",
+    "href": "team/communication.html#overview",
+    "title": "Communication",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Team",
+      "Communication"
+    ]
+  },
+  {
+    "objectID": "team/communication.html#details",
+    "href": "team/communication.html#details",
+    "title": "Communication",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Team",
+      "Communication"
+    ]
+  },
+  {
+    "objectID": "team/communication.html#notes",
+    "href": "team/communication.html#notes",
+    "title": "Communication",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Team",
+      "Communication"
+    ]
+  },
+  {
+    "objectID": "team/structure.html",
+    "href": "team/structure.html",
+    "title": "Team Structure",
+    "section": "",
+    "text": "Organization and structure of the team\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Team",
+      "Structure"
+    ]
+  },
+  {
+    "objectID": "team/structure.html#overview",
+    "href": "team/structure.html#overview",
+    "title": "Team Structure",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Team",
+      "Structure"
+    ]
+  },
+  {
+    "objectID": "team/structure.html#details",
+    "href": "team/structure.html#details",
+    "title": "Team Structure",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Team",
+      "Structure"
+    ]
+  },
+  {
+    "objectID": "team/structure.html#notes",
+    "href": "team/structure.html#notes",
+    "title": "Team Structure",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Team",
+      "Structure"
+    ]
+  },
+  {
+    "objectID": "tech-stack/index.html",
+    "href": "tech-stack/index.html",
+    "title": "Technical Stack Overview",
+    "section": "",
+    "text": "Overview of the technical stack\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Technical Stack",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "tech-stack/index.html#overview",
+    "href": "tech-stack/index.html#overview",
+    "title": "Technical Stack Overview",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Technical Stack",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "tech-stack/index.html#details",
+    "href": "tech-stack/index.html#details",
+    "title": "Technical Stack Overview",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Technical Stack",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "tech-stack/index.html#notes",
+    "href": "tech-stack/index.html#notes",
+    "title": "Technical Stack Overview",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Technical Stack",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "tech-stack/tools.html",
+    "href": "tech-stack/tools.html",
+    "title": "Tools & Services",
+    "section": "",
+    "text": "Source code management\nRepository structure\nBranch strategy\nCode review process\n\n\n\n\n\nBuild automation\nDeployment pipelines\nTest automation\nRelease management\n\n\n\n\n\n\n\nInstallation guide\nConfiguration settings\nConnection profiles\nBest practices\n\nUse local installation when possible\nAvoid using SSMS on RDP due to resource constraints\n\n\n\n\n\n\n\n\n\nRequired for internal service access\nSetup procedure:\n\nInstall OpenVPN client\nConfigure VPN profiles\nTest connectivity\nVerify internal service access\n\n\n\n\n\n\n\nLocal setup requirements\nRDP access when needed\nTool versions and compatibility",
+    "crumbs": [
+      "Technical Stack",
+      "Tools & Services"
+    ]
+  },
+  {
+    "objectID": "tech-stack/tools.html#version-control---bitbucket",
+    "href": "tech-stack/tools.html#version-control---bitbucket",
+    "title": "Tools & Services",
+    "section": "",
+    "text": "Source code management\nRepository structure\nBranch strategy\nCode review process",
+    "crumbs": [
+      "Technical Stack",
+      "Tools & Services"
+    ]
+  },
+  {
+    "objectID": "tech-stack/tools.html#cicd---jenkins",
+    "href": "tech-stack/tools.html#cicd---jenkins",
+    "title": "Tools & Services",
+    "section": "",
+    "text": "Build automation\nDeployment pipelines\nTest automation\nRelease management",
+    "crumbs": [
+      "Technical Stack",
+      "Tools & Services"
+    ]
+  },
+  {
+    "objectID": "tech-stack/tools.html#database-tools",
+    "href": "tech-stack/tools.html#database-tools",
+    "title": "Tools & Services",
+    "section": "",
+    "text": "Installation guide\nConfiguration settings\nConnection profiles\nBest practices\n\nUse local installation when possible\nAvoid using SSMS on RDP due to resource constraints",
+    "crumbs": [
+      "Technical Stack",
+      "Tools & Services"
+    ]
+  },
+  {
+    "objectID": "tech-stack/tools.html#network-access",
+    "href": "tech-stack/tools.html#network-access",
+    "title": "Tools & Services",
+    "section": "",
+    "text": "Required for internal service access\nSetup procedure:\n\nInstall OpenVPN client\nConfigure VPN profiles\nTest connectivity\nVerify internal service access",
+    "crumbs": [
+      "Technical Stack",
+      "Tools & Services"
+    ]
+  },
+  {
+    "objectID": "tech-stack/tools.html#development-environment",
+    "href": "tech-stack/tools.html#development-environment",
+    "title": "Tools & Services",
+    "section": "",
+    "text": "Local setup requirements\nRDP access when needed\nTool versions and compatibility",
+    "crumbs": [
+      "Technical Stack",
+      "Tools & Services"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/debug-guides.html",
+    "href": "troubleshooting/debug-guides.html",
+    "title": "Debug Guides",
+    "section": "",
+    "text": "Guides for debugging various system components\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "crumbs": [
+      "Troubleshooting",
+      "Debug Guides"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/debug-guides.html#overview",
+    "href": "troubleshooting/debug-guides.html#overview",
+    "title": "Debug Guides",
+    "section": "",
+    "text": "[Add overview here]",
+    "crumbs": [
+      "Troubleshooting",
+      "Debug Guides"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/debug-guides.html#details",
+    "href": "troubleshooting/debug-guides.html#details",
+    "title": "Debug Guides",
+    "section": "",
+    "text": "[Add detailed content here]",
+    "crumbs": [
+      "Troubleshooting",
+      "Debug Guides"
+    ]
+  },
+  {
+    "objectID": "troubleshooting/debug-guides.html#notes",
+    "href": "troubleshooting/debug-guides.html#notes",
+    "title": "Debug Guides",
+    "section": "",
+    "text": "[Add any additional notes here]",
+    "crumbs": [
+      "Troubleshooting",
+      "Debug Guides"
+    ]
+  }
+]
