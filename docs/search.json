@@ -398,9 +398,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Main Documentation Hub",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
     "section": "",
-    "text": "Main entry point for CoopDIGITy systems documentation\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]",
+    "text": "ReSight is positioning itself to become the authoritative source of truth and insights for the U.S. pet industry. This transformation requires a robust, scalable ETL infrastructure capable of processing comprehensive industry data at scale.\n\n\nOur current ETL infrastructure demonstrates significant daily processing capacity with notable variability in workload:\n\n\n\n\n\nMetric\nTypical Day (Median)\nPeak Day\nAverage (Mean)\n\n\n\n\nLoads Processed\n40\n303\n59.2\n\n\nRows Processed\n70,588\n824,719\n105,218\n\n\nProcessing Window\nFlexible\nFlexible\nFlexible\n\n\n\n\n\n\n\nDaily Load Range: 1-303 loads per day\nTypical Range (Q1-Q3): 24-65 loads per day\nStandard Deviation: 54.8 loads, indicating high variability\nProcessing Reliability: 361 days of consistent operation with no outages\n\n\n\n\n\nDaily Row Range: 28-824,719 rows\nTypical Range (Q1-Q3): 15,606-159,225 rows\nVolume Variability: Standard deviation of 115,282 rows\nProcessing Success Rate: 100% (no missing days)\n\n\n\n\n\n\n\n\n\n\n\n\n\nMetric\nValue\nGrowth Factor\n\n\n\n\nDaily Loads\n400+/day\n10x current median\n\n\nData Volume\n700K+ rows/day typical\n10x current median\n\n\nData Sources\n1000+ integrated sources\n10x current scale\n\n\nComplexity\nHigh (ML pipelines, real-time analytics)\nSignificant increase\n\n\nProcessing Window\nNear real-time requirements\nMinutes vs. flexible\n\n\n\n\n\n\nOur next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\nMaintain sub-minute processing latency\n\nAdvanced Processing Capabilities\n\nReal-time data transformation\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nReal-time data freshness\nIndustry-leading security controls",
     "crumbs": [
       "Overview"
     ]
@@ -988,190 +988,133 @@
     "href": "onboarding-planning.html",
     "title": "Data Engineer Onboarding Plan",
     "section": "",
-    "text": "This document outlines the phased approach for onboarding as a Data Engineer at CoopDIGITy, with a focus on system discovery and documentation in an environment with limited existing documentation.",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "This document outlines the phased approach for onboarding as a Data Engineer at CoopDIGITy, with a focus on system discovery and documentation in an environment with limited existing documentation."
   },
   {
     "objectID": "onboarding-planning.html#initial-information-gathering",
     "href": "onboarding-planning.html#initial-information-gathering",
     "title": "Data Engineer Onboarding Plan",
     "section": "Initial Information Gathering",
-    "text": "Initial Information Gathering\n\nSchedule 1:1s with team members to understand their roles and responsibilities\nCreate a shared document to collect tribal knowledge\nSet up a personal wiki/notebook for documenting discoveries\nRequest access to all relevant systems (even ones you’re unsure about)",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Initial Information Gathering\n\nSchedule 1:1s with team members to understand their roles and responsibilities\nCreate a shared document to collect tribal knowledge\nSet up a personal wiki/notebook for documenting discoveries\nRequest access to all relevant systems (even ones you’re unsure about)"
   },
   {
     "objectID": "onboarding-planning.html#system-archaeology",
     "href": "onboarding-planning.html#system-archaeology",
     "title": "Data Engineer Onboarding Plan",
     "section": "System Archaeology",
-    "text": "System Archaeology\n\nList all discoverable databases and data stores\nDocument all found API endpoints and services\nMap out existing data pipelines (even if incomplete)\nCreate initial system topology diagram\nDocument all environment variables and config files found",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "System Archaeology\n\nList all discoverable databases and data stores\nDocument all found API endpoints and services\nMap out existing data pipelines (even if incomplete)\nCreate initial system topology diagram\nDocument all environment variables and config files found"
   },
   {
     "objectID": "onboarding-planning.html#code-repository-mapping",
     "href": "onboarding-planning.html#code-repository-mapping",
     "title": "Data Engineer Onboarding Plan",
     "section": "Code Repository Mapping",
-    "text": "Code Repository Mapping\n\nList all repositories you can find\nFor each repository:\n\nDocument its apparent purpose\nNote active contributors\nDocument build process if found\nNote dependencies and connection points\nDocument deployment process (if discoverable)",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Code Repository Mapping\n\nList all repositories you can find\nFor each repository:\n\nDocument its apparent purpose\nNote active contributors\nDocument build process if found\nNote dependencies and connection points\nDocument deployment process (if discoverable)"
   },
   {
     "objectID": "onboarding-planning.html#database-exploration",
     "href": "onboarding-planning.html#database-exploration",
     "title": "Data Engineer Onboarding Plan",
     "section": "Database Exploration",
-    "text": "Database Exploration\n\nFor each database:\n\nDocument schema\nNote data volumes\nIdentify critical tables\nDocument relationships\nNote update frequencies\nIdentify owners/stakeholders",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Database Exploration\n\nFor each database:\n\nDocument schema\nNote data volumes\nIdentify critical tables\nDocument relationships\nNote update frequencies\nIdentify owners/stakeholders"
   },
   {
     "objectID": "onboarding-planning.html#pipeline-discovery",
     "href": "onboarding-planning.html#pipeline-discovery",
     "title": "Data Engineer Onboarding Plan",
     "section": "Pipeline Discovery",
-    "text": "Pipeline Discovery\n\nTrace data flows:\n\nSource systems\nTransformation points\nDestination systems\n\nDocument job schedules\nNote failure points and current monitoring\nMap dependencies between jobs",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Pipeline Discovery\n\nTrace data flows:\n\nSource systems\nTransformation points\nDestination systems\n\nDocument job schedules\nNote failure points and current monitoring\nMap dependencies between jobs"
   },
   {
     "objectID": "onboarding-planning.html#infrastructure-mapping",
     "href": "onboarding-planning.html#infrastructure-mapping",
     "title": "Data Engineer Onboarding Plan",
     "section": "Infrastructure Mapping",
-    "text": "Infrastructure Mapping\n\nDocument all production servers/instances\nMap network connectivity\nDocument security groups and access patterns\nNote backup systems (if they exist)\nDocument monitoring solutions in place",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Infrastructure Mapping\n\nDocument all production servers/instances\nMap network connectivity\nDocument security groups and access patterns\nNote backup systems (if they exist)\nDocument monitoring solutions in place"
   },
   {
     "objectID": "onboarding-planning.html#basic-documentation",
     "href": "onboarding-planning.html#basic-documentation",
     "title": "Data Engineer Onboarding Plan",
     "section": "Basic Documentation",
-    "text": "Basic Documentation\n\nCreate README files for main repositories\nDocument setup procedures as you discover them\nCreate basic architecture diagrams\nDocument known failure scenarios",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Basic Documentation\n\nCreate README files for main repositories\nDocument setup procedures as you discover them\nCreate basic architecture diagrams\nDocument known failure scenarios"
   },
   {
     "objectID": "onboarding-planning.html#process-documentation",
     "href": "onboarding-planning.html#process-documentation",
     "title": "Data Engineer Onboarding Plan",
     "section": "Process Documentation",
-    "text": "Process Documentation\n\nDocument deployment process\nCreate troubleshooting guides\nDocument backup/restore procedures (if they exist)\nCreate incident response templates",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Process Documentation\n\nDocument deployment process\nCreate troubleshooting guides\nDocument backup/restore procedures (if they exist)\nCreate incident response templates"
   },
   {
     "objectID": "onboarding-planning.html#historical-context",
     "href": "onboarding-planning.html#historical-context",
     "title": "Data Engineer Onboarding Plan",
     "section": "Historical Context",
-    "text": "Historical Context\n\nWhat are the most problematic areas of the system?\nWhich parts of the system are most critical?\nWhat breaks most often?\nWhat tribal knowledge hasn’t been documented?",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Historical Context\n\nWhat are the most problematic areas of the system?\nWhich parts of the system are most critical?\nWhat breaks most often?\nWhat tribal knowledge hasn’t been documented?"
   },
   {
     "objectID": "onboarding-planning.html#technical-questions",
     "href": "onboarding-planning.html#technical-questions",
     "title": "Data Engineer Onboarding Plan",
     "section": "Technical Questions",
-    "text": "Technical Questions\n\nWhere are logs stored?\nHow are secrets managed?\nWhat’s the release process?\nHow is testing done?",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Technical Questions\n\nWhere are logs stored?\nHow are secrets managed?\nWhat’s the release process?\nHow is testing done?"
   },
   {
     "objectID": "onboarding-planning.html#system-component-template",
     "href": "onboarding-planning.html#system-component-template",
     "title": "Data Engineer Onboarding Plan",
     "section": "System Component Template",
-    "text": "System Component Template\n# Component Name\n\n## Purpose\n[What does this component do?]\n\n## Location\n- Repository: \n- Production Location:\n- Config Files:\n\n## Dependencies\n- Input Dependencies:\n- Output Dependencies:\n- Service Dependencies:\n\n## Operation\n- How to Start:\n- How to Stop:\n- How to Monitor:\n- Common Issues:\n\n## Notes\n[Any additional information]",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "System Component Template\n# Component Name\n\n## Purpose\n[What does this component do?]\n\n## Location\n- Repository: \n- Production Location:\n- Config Files:\n\n## Dependencies\n- Input Dependencies:\n- Output Dependencies:\n- Service Dependencies:\n\n## Operation\n- How to Start:\n- How to Stop:\n- How to Monitor:\n- Common Issues:\n\n## Notes\n[Any additional information]"
   },
   {
     "objectID": "onboarding-planning.html#process-documentation-template",
     "href": "onboarding-planning.html#process-documentation-template",
     "title": "Data Engineer Onboarding Plan",
     "section": "Process Documentation Template",
-    "text": "Process Documentation Template\n# Process Name\n\n## Overview\n[Brief description]\n\n## Steps\n1. \n2. \n3. \n\n## Required Access\n- System 1\n- System 2\n\n## Common Issues\n- Issue 1: Solution 1\n- Issue 2: Solution 2\n\n## Notes\n[Additional context]",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Process Documentation Template\n# Process Name\n\n## Overview\n[Brief description]\n\n## Steps\n1. \n2. \n3. \n\n## Required Access\n- System 1\n- System 2\n\n## Common Issues\n- Issue 1: Solution 1\n- Issue 2: Solution 2\n\n## Notes\n[Additional context]"
   },
   {
     "objectID": "onboarding-planning.html#investigation-log-template",
     "href": "onboarding-planning.html#investigation-log-template",
     "title": "Data Engineer Onboarding Plan",
     "section": "Investigation Log Template",
-    "text": "Investigation Log Template\nDate:\nSystem Investigated:\nFindings:\nQuestions:\nFollow-up Items:",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Investigation Log Template\nDate:\nSystem Investigated:\nFindings:\nQuestions:\nFollow-up Items:"
   },
   {
     "objectID": "onboarding-planning.html#meeting-notes-template",
     "href": "onboarding-planning.html#meeting-notes-template",
     "title": "Data Engineer Onboarding Plan",
     "section": "Meeting Notes Template",
-    "text": "Meeting Notes Template\nDate:\nAttendees:\nKey Insights:\nNew Systems Discovered:\nAction Items:",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Meeting Notes Template\nDate:\nAttendees:\nKey Insights:\nNew Systems Discovered:\nAction Items:"
   },
   {
     "objectID": "onboarding-planning.html#critical-systems",
     "href": "onboarding-planning.html#critical-systems",
     "title": "Data Engineer Onboarding Plan",
     "section": "Critical Systems",
-    "text": "Critical Systems\n\nProduction databases\nETL processes\nData pipelines\nBackup systems\nMonitoring systems",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Critical Systems\n\nProduction databases\nETL processes\nData pipelines\nBackup systems\nMonitoring systems"
   },
   {
     "objectID": "onboarding-planning.html#business-processes",
     "href": "onboarding-planning.html#business-processes",
     "title": "Data Engineer Onboarding Plan",
     "section": "Business Processes",
-    "text": "Business Processes\n\nData flow for critical business operations\nReporting processes\nData quality checks\nBusiness rules and transformations",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Business Processes\n\nData flow for critical business operations\nReporting processes\nData quality checks\nBusiness rules and transformations"
   },
   {
     "objectID": "onboarding-planning.html#recommended-tools",
     "href": "onboarding-planning.html#recommended-tools",
     "title": "Data Engineer Onboarding Plan",
     "section": "Recommended Tools",
-    "text": "Recommended Tools\n\nDraw.io for architecture diagrams\nMarkdown for process documentation\nGit for version control of documentation\nTeam wiki (if available)\nShared team documentation space",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Recommended Tools\n\nDraw.io for architecture diagrams\nMarkdown for process documentation\nGit for version control of documentation\nTeam wiki (if available)\nShared team documentation space"
   },
   {
     "objectID": "onboarding-planning.html#documentation-organization",
     "href": "onboarding-planning.html#documentation-organization",
     "title": "Data Engineer Onboarding Plan",
     "section": "Documentation Organization",
-    "text": "Documentation Organization\n\nSystem Architecture\nData Flows\nProcess Documents\nTroubleshooting Guides\nSetup Procedures\nContact Information",
-    "crumbs": [
-      "Plan"
-    ]
+    "text": "Documentation Organization\n\nSystem Architecture\nData Flows\nProcess Documents\nTroubleshooting Guides\nSetup Procedures\nContact Information"
   },
   {
     "objectID": "processes/development.html",
@@ -1545,6 +1488,266 @@
     "crumbs": [
       "Troubleshooting",
       "Debug Guides"
+    ]
+  },
+  {
+    "objectID": "index.html#current-state-analysis-2024",
+    "href": "index.html#current-state-analysis-2024",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "",
+    "text": "Our current ETL infrastructure demonstrates significant daily processing capacity with notable variability in workload:\n\n\n\n\n\nMetric\nTypical Day (Median)\nPeak Day\nAverage (Mean)\n\n\n\n\nLoads Processed\n40\n303\n59.2\n\n\nRows Processed\n70,588\n824,719\n105,218\n\n\nProcessing Window\nFlexible\nFlexible\nFlexible\n\n\n\n\n\n\n\nDaily Load Range: 1-303 loads per day\nTypical Range (Q1-Q3): 24-65 loads per day\nStandard Deviation: 54.8 loads, indicating high variability\nProcessing Reliability: 361 days of consistent operation with no outages\n\n\n\n\n\nDaily Row Range: 28-824,719 rows\nTypical Range (Q1-Q3): 15,606-159,225 rows\nVolume Variability: Standard deviation of 115,282 rows\nProcessing Success Rate: 100% (no missing days)",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#target-state-2026",
+    "href": "index.html#target-state-2026",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "",
+    "text": "Metric\nValue\nGrowth Factor\n\n\n\n\nDaily Loads\n400+/day\n10x current median\n\n\nData Volume\n700K+ rows/day typical\n10x current median\n\n\nData Sources\n1000+ integrated sources\n10x current scale\n\n\nComplexity\nHigh (ML pipelines, real-time analytics)\nSignificant increase\n\n\nProcessing Window\nNear real-time requirements\nMinutes vs. flexible",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#growth-requirements",
+    "href": "index.html#growth-requirements",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "",
+    "text": "Our next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\nMaintain sub-minute processing latency\n\nAdvanced Processing Capabilities\n\nReal-time data transformation\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nReal-time data freshness\nIndustry-leading security controls",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#core-requirements",
+    "href": "index.html#core-requirements",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "2.1 Core Requirements",
+    "text": "2.1 Core Requirements\n\n2.1.1 Scalability\n\nSupport for 400+ daily loads (10x current median)\nPeak capacity of 8M+ rows per day\nElastic resource allocation\nHorizontal scaling support\n\n\n\n2.1.2 Real-time Processing\n\nSub-minute processing latency\nStreaming data ingestion\nReal-time analytics pipelines\nEvent-driven architecture\n\n\n\n2.1.3 Advanced Analytics\n\nML pipeline integration\nComplex data transformations\nData science toolkit support\nPredictive modeling capability\n\n\n\n2.1.4 Reliability\n\nZero downtime (matching current 100% reliability)\nAutomated failover\nComprehensive monitoring\nProactive scaling",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#key-performance-indicators",
+    "href": "index.html#key-performance-indicators",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "2.2 Key Performance Indicators",
+    "text": "2.2 Key Performance Indicators\n\n\n\nMetric\nCurrent (2024)\nTarget (2026)\n\n\n\n\nDaily Loads (Median)\n40\n400+\n\n\nPeak Daily Loads\n303\n3000+\n\n\nDaily Rows (Median)\n70,588\n700K+\n\n\nPeak Daily Rows\n824,719\n8M+\n\n\nProcessing Latency\nHours\nMinutes\n\n\nData Sources\n~100\n1000+",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#phase-1-foundation-q1-2025",
+    "href": "index.html#phase-1-foundation-q1-2025",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "3.1 Phase 1: Foundation (Q1 2025)",
+    "text": "3.1 Phase 1: Foundation (Q1 2025)\n\nScale current infrastructure to handle 2x current peak load\nImplement comprehensive monitoring\nBegin real-time processing pilot",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#phase-2-scaling-q2-q3-2025",
+    "href": "index.html#phase-2-scaling-q2-q3-2025",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "3.2 Phase 2: Scaling (Q2-Q3 2025)",
+    "text": "3.2 Phase 2: Scaling (Q2-Q3 2025)\n\nDeploy new stream processing architecture\nExpand data source integration capacity\nImplement ML pipeline framework",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#phase-3-optimization-q4-2025",
+    "href": "index.html#phase-3-optimization-q4-2025",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "3.3 Phase 3: Optimization (Q4 2025)",
+    "text": "3.3 Phase 3: Optimization (Q4 2025)\n\nFine-tune real-time processing\nScale to 5x current capacity\nDeploy advanced analytics capabilities",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#phase-4-enterprise-scale-2026",
+    "href": "index.html#phase-4-enterprise-scale-2026",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "3.4 Phase 4: Enterprise Scale (2026)",
+    "text": "3.4 Phase 4: Enterprise Scale (2026)\n\nAchieve full target state capabilities\nComplete migration to real-time processing\nDeploy full ML/AI integration",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html",
+    "href": "upsert-ops.html",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "",
+    "text": "This document compares two AWS-based Apache Spark solutions for handling UPSERT (merge) operations from S3 to multiple target databases including MSSQL, Apache Iceberg, and potentially Clickhouse:\n\nAWS Glue: A managed Apache Spark service\nApache Spark on Amazon EMR: A more configurable Spark deployment\n\n\n\n\n\n\n\nNote\n\n\n\nBoth solutions use Apache Spark as their processing engine. The key differences lie in management, configuration, and operational aspects rather than core processing capabilities.",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#aws-glue",
+    "href": "upsert-ops.html#aws-glue",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "AWS Glue",
+    "text": "AWS Glue\nAWS Glue provides a managed Apache Spark environment with:\n\nBuilt-in Apache Spark engine (same as EMR)\nAWS-specific optimizations and tooling\nBoth Spark SQL and PySpark interfaces\nAdditional features like DynamicFrames\nManaged infrastructure and scaling",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#spark-on-emr",
+    "href": "upsert-ops.html#spark-on-emr",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "Spark on EMR",
+    "text": "Spark on EMR\nAmazon EMR provides a more traditional Spark deployment with:\n\nFull Apache Spark ecosystem\nComplete configuration control\nCustom cluster management\nDirect access to Spark internals\nInfrastructure flexibility",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#aws-glue-costs",
+    "href": "upsert-ops.html#aws-glue-costs",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "3.1 AWS Glue Costs",
+    "text": "3.1 AWS Glue Costs\n\nPricing StructureHidden SavingsConsiderations\n\n\n\n$0.44 per DPU-Hour (1 DPU = 4 vCPU, 16GB memory)\nMinimum 10-minute billing\nDevelopment endpoints additional cost\n\n\n\n\nNo cluster management costs\nIncludes Spark optimization\nLess operational overhead\n\n\n\n\nMore expensive per compute hour\nLess granular scaling\nSimplified cost model",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#emr-costs",
+    "href": "upsert-ops.html#emr-costs",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "3.2 EMR Costs",
+    "text": "3.2 EMR Costs\n\nDirect CostsOptimization OptionsHidden Costs\n\n\n\nEC2 instance costs\nEMR service charges\nStorage and data transfer\n\n\n\n\nSpot instance usage\nMore granular scaling\nResource optimization\n\n\n\n\nOperational overhead\nManagement complexity\nRequired expertise",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#aws-glue-performance",
+    "href": "upsert-ops.html#aws-glue-performance",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "4.1 AWS Glue Performance",
+    "text": "4.1 AWS Glue Performance\n# Example Glue Spark UPSERT implementation\nfrom awsglue.context import GlueContext\nfrom pyspark.context import SparkContext\n\n# Initialize Glue Spark context\nglueContext = GlueContext(SparkContext.getOrCreate())\nspark = glueContext.spark_session\n\n# Read from S3 (using standard Spark)\nsource_df = spark.read.parquet(\"s3://bucket/path\")\n\n# MSSQL UPSERT\ndef perform_mssql_upsert(df):\n    # Write to staging table using Spark JDBC\n    df.write \\\n        .format(\"jdbc\") \\\n        .option(\"url\", jdbc_url) \\\n        .option(\"dbtable\", \"staging_table\") \\\n        .mode(\"overwrite\") \\\n        .save()\n\n    # Execute MERGE using Spark SQL\n    spark.sql(\"\"\"\n    MERGE INTO target_table t\n    USING staging_table s\n    ON t.key = s.key\n    WHEN MATCHED THEN UPDATE...\n    WHEN NOT MATCHED THEN INSERT...\n    \"\"\")\n\n\n\n\n\n\nGlue Performance Strengths\n\n\n\n\nPre-configured Spark optimizations\nAWS service-specific tuning\nAuto-scaling built in\nWarm pools reduce startup time\n\n\n\n\n\n\n\n\n\nGlue Performance Limitations\n\n\n\n\nLess Spark configuration flexibility\nFixed worker configurations\nLimited Spark version control",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#emr-performance",
+    "href": "upsert-ops.html#emr-performance",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "4.2 EMR Performance",
+    "text": "4.2 EMR Performance\n# Example EMR Spark UPSERT implementation\nfrom pyspark.sql import SparkSession\n\n# Initialize Spark session\nspark = SparkSession.builder \\\n    .appName(\"EMR UPSERT\") \\\n    .getOrCreate()\n\n# Read from S3 (identical to Glue)\nsource_df = spark.read.parquet(\"s3://bucket/path\")\n\n# MSSQL UPSERT (identical to Glue)\ndef perform_mssql_upsert(df):\n    df.write \\\n        .format(\"jdbc\") \\\n        .option(\"url\", jdbc_url) \\\n        .option(\"dbtable\", \"staging_table\") \\\n        .mode(\"overwrite\") \\\n        .save()\n\n\n\n\n\n\nEMR Performance Strengths\n\n\n\n\nFull Spark configuration control\nCustom Spark properties\nBetter performance for large jobs\nFine-grained optimization\n\n\n\n\n\n\n\n\n\nEMR Performance Limitations\n\n\n\n\nRequires Spark expertise\nInfrastructure management overhead\nCluster startup time",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#key-differences",
+    "href": "upsert-ops.html#key-differences",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "5.1 Key Differences",
+    "text": "5.1 Key Differences\n\n\n\nAspect\nAWS Glue\nSpark on EMR\n\n\n\n\nSetup Complexity\nLow\nHigh\n\n\nConfiguration Options\nLimited\nExtensive\n\n\nDevelopment Tools\nAWS Console + IDE\nAny IDE\n\n\nLocal Testing\nLimited\nFull Support\n\n\nDebugging\nBasic\nAdvanced",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#integration-capabilities",
+    "href": "upsert-ops.html#integration-capabilities",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "5.2 Integration Capabilities",
+    "text": "5.2 Integration Capabilities\n\nAWS GlueSpark on EMR\n\n\n\nNative AWS integration\nPre-configured connectors\nStandard Spark JDBC\nBasic Iceberg support\n\n\n\n\nFull connector ecosystem\nCustom connectors\nAll Spark data sources\nComplete Iceberg support",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#monitoring-options",
+    "href": "upsert-ops.html#monitoring-options",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "6.1 Monitoring Options",
+    "text": "6.1 Monitoring Options\n\nAWS GlueSpark on EMR\n\n\n\nCloudWatch integration\nBuilt-in dashboards\nAuto-retry capability\nAWS-native alerting\n\n\n\n\nFull Spark metrics\nCustom monitoring\nDetailed job tracking\nThird-party tools",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#operational-requirements",
+    "href": "upsert-ops.html#operational-requirements",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "6.2 Operational Requirements",
+    "text": "6.2 Operational Requirements\n\n\n\nRequirement\nAWS Glue\nSpark on EMR\n\n\n\n\nSpark Expertise\nBasic\nAdvanced\n\n\nDevOps Support\nMinimal\nSubstantial\n\n\nMaintenance\nAWS Managed\nSelf Managed\n\n\nScaling\nAutomatic\nManual/Custom",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#short-term",
+    "href": "upsert-ops.html#short-term",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "7.1 Short Term",
+    "text": "7.1 Short Term\nRecommend starting with AWS Glue due to:\n\nFaster implementation\nManaged environment\nSufficient for current scale\nLower operational overhead",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#long-term",
+    "href": "upsert-ops.html#long-term",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "7.2 Long Term",
+    "text": "7.2 Long Term\nConsider migration to EMR if:\n\nApproaching cost crossover point\nRequiring more performance optimization\nTeam has built Spark expertise\nNeed more control over infrastructure",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#decision-matrix",
+    "href": "upsert-ops.html#decision-matrix",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "7.3 Decision Matrix",
+    "text": "7.3 Decision Matrix\n\n\n\nFactor\nWeight\nGlue Score\nEMR Score\n\n\n\n\nEase of Use\n25%\n9\n6\n\n\nPerformance\n20%\n7\n9\n\n\nCost\n20%\n8\n7\n\n\nScalability\n20%\n7\n9\n\n\nMaintenance\n15%\n9\n6\n\n\nWeighted Total\n100%\n8.0\n7.4",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#phase-1-initial-setup",
+    "href": "upsert-ops.html#phase-1-initial-setup",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "8.1 Phase 1: Initial Setup",
+    "text": "8.1 Phase 1: Initial Setup\n\nSet up development environment\nCreate test jobs\nEstablish monitoring\nDocument procedures",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#phase-2-production-migration",
+    "href": "upsert-ops.html#phase-2-production-migration",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "8.2 Phase 2: Production Migration",
+    "text": "8.2 Phase 2: Production Migration\n\nMigrate simple jobs\nAdd error handling\nImplement monitoring\nDocument operations",
+    "crumbs": [
+      "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "upsert-ops.html#phase-3-optimization",
+    "href": "upsert-ops.html#phase-3-optimization",
+    "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
+    "section": "8.3 Phase 3: Optimization",
+    "text": "8.3 Phase 3: Optimization\n\nPerformance tuning\nCost optimization\nProcess refinement\nTeam training\n\n\n\n\n\n\n\nNext Steps\n\n\n\n\nPrototype both solutions\nTest with production data volumes\nCalculate actual costs",
+    "crumbs": [
+      "UPSERT Operations"
     ]
   }
 ]
