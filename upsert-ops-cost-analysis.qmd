@@ -128,15 +128,24 @@ daily_stats = daily_stats.with_columns([
     (pl.col("data_size_gb") * EMR_FACTOR).round(2).alias("emr_daily_cost")
 ])
 
-print("ETL Load Statistics Summary")
-print("-" * 50)
-print(f"| Metric                          | Value              |")
-print(f"|-------------------------------- |-------------------|")
-print(f"| Date Range                      | {daily_stats['date'].min()} to {daily_stats['date'].max()} |")
-print(f"| Average Daily Rows Processed    | {daily_stats['total_rows'].mean():,.0f} rows/day |")
-print(f"| Average Daily Load Operations   | {daily_stats['number_of_loads'].mean():.1f} loads/day |")
-print(f"| Average Data Size              | {daily_stats['data_size_gb'].mean():.2f} GB/day |")
+# print("ETL Load Statistics Summary")
+# print("-" * 50)
+# print(f"| Metric                          | Value              |")
+# print(f"|-------------------------------- |-------------------|")
+# print(f"| Date Range                      | {daily_stats['date'].min()} to {daily_stats['date'].max()} |")
+# print(f"| Average Daily Rows Processed    | {daily_stats['total_rows'].mean():,.0f} rows/day |")
+# print(f"| Average Daily Load Operations   | {daily_stats['number_of_loads'].mean():.1f} loads/day |")
+# print(f"| Average Data Size              | {daily_stats['data_size_gb'].mean():.2f} GB/day |")
 ```
+
+---
+
+| Metric                        | Value                    |
+| ----------------------------- | ------------------------ |
+| Date Range                    | 2024-01-01 to 2024-12-30 |
+| Average Daily Rows Processed  | 105,218 rows/day         |
+| Average Daily Load Operations | 59.2 loads/day           |
+| Average Data Size             | 0.10 GB/day              |
 
 ## Cost Comparison
 
@@ -182,7 +191,7 @@ fig = px.line(
     cost_comparison.to_pandas(),
     x='date',
     y=['AWS Glue', 'EMR'],
-    title='Daily Cost Comparison: AWS Glue vs EMR (2025 Projection)',
+    title='Daily Cost Comparison: AWS Glue vs EMR',
     labels={'value': 'Cost ($)', 'variable': 'Service'}
 )
 

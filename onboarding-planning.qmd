@@ -1,210 +1,101 @@
 ---
-title: "Data Engineer Onboarding Plan"
-subtitle: "System Discovery and Documentation Strategy"
-date: 2024-01-20
+title: 'AWS Glue vs Spark on EMR for 2024'
+author: 'Your Name'
+date: 'January 22, 2025'
+format:
+  html:
+    toc: true
+    code-fold: true
+    number-sections: true
+    theme: cosmo
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+execute:
+  echo: true
+  warning: false
+  message: false
 ---
 
-# Overview
+```{python}
+import pandas as pd
+import plotly.express as px
 
-This document outlines the phased approach for onboarding as a Data Engineer at CoopDIGITy, with a focus on system discovery and documentation in an environment with limited existing documentation.
+# 1) Load ETL notifications from Parquet
+df = pd.read_parquet("scripts/etl_history_2024.parquet")
 
-# Phase 1: System Discovery & Documentation
-## Initial Information Gathering
+# 2) Convert timestamp (milliseconds) to datetime
+df["datetime"] = pd.to_datetime(df["timestamp"], unit="ms")
+df["date"] = df["datetime"].dt.date
 
-- [ ] Schedule 1:1s with team members to understand their roles and responsibilities
-- [ ] Create a shared document to collect tribal knowledge
-- [ ] Set up a personal wiki/notebook for documenting discoveries
-- [ ] Request access to all relevant systems (even ones you're unsure about)
+# 3) Hypothetical cost model
+#    No runtime data here, so we'll assume cost is per-row:
+#      cost_glue = rows * $0.00002
+#      cost_emr  = rows * $0.000015
+#    Adjust these multipliers as needed.
+df["cost_glue"] = df["rows"] * 0.00002
+df["cost_emr"]  = df["rows"] * 0.000015
 
-## System Archaeology
+# 4) Aggregate by date
+daily_costs = (
+    df.groupby("date", as_index=False)
+      .agg({
+          "cost_glue": "sum",
+          "cost_emr": "sum",
+          "rows": "sum"
+      })
+)
 
-- [ ] List all discoverable databases and data stores
-- [ ] Document all found API endpoints and services
-- [ ] Map out existing data pipelines (even if incomplete)
-- [ ] Create initial system topology diagram
-- [ ] Document all environment variables and config files found
+# 5) Compare daily costs (Glue vs EMR) in a line chart
+fig_costs = px.line(
+    daily_costs,
+    x="date",
+    y=["cost_glue", "cost_emr"],
+    labels={"value": "Daily Cost (USD)", "date": "Date"},
+    title="Daily Hypothetical Costs: AWS Glue vs EMR (2024)"
+)
+fig_costs.update_layout(hovermode="x unified")
 
-## Code Repository Mapping
-
-- [ ] List all repositories you can find
-- [ ] For each repository:
-    - [ ] Document its apparent purpose
-    - [ ] Note active contributors
-    - [ ] Document build process if found
-    - [ ] Note dependencies and connection points
-    - [ ] Document deployment process (if discoverable)
-
-# Phase 2: Active Investigation
-
-## Database Exploration
-
-- [ ] For each database:
-    - [ ] Document schema
-    - [ ] Note data volumes
-    - [ ] Identify critical tables
-    - [ ] Document relationships
-    - [ ] Note update frequencies
-    - [ ] Identify owners/stakeholders
-
-## Pipeline Discovery
-
-- [ ] Trace data flows:
-    - [ ] Source systems
-    - [ ] Transformation points
-    - [ ] Destination systems
-- [ ] Document job schedules
-- [ ] Note failure points and current monitoring
-- [ ] Map dependencies between jobs
-
-## Infrastructure Mapping
-
-- [ ] Document all production servers/instances
-- [ ] Map network connectivity
-- [ ] Document security groups and access patterns
-- [ ] Note backup systems (if they exist)
-- [ ] Document monitoring solutions in place
-
-# Phase 3: Documentation Creation
-
-## Basic Documentation
-
-- [ ] Create README files for main repositories
-- [ ] Document setup procedures as you discover them
-- [ ] Create basic architecture diagrams
-- [ ] Document known failure scenarios
-
-## Process Documentation
-
-- [ ] Document deployment process
-- [ ] Create troubleshooting guides
-- [ ] Document backup/restore procedures (if they exist)
-- [ ] Create incident response templates
-
-# Key Questions for Team Members
-
-## Historical Context
-
-1. What are the most problematic areas of the system?
-2. Which parts of the system are most critical?
-3. What breaks most often?
-4. What tribal knowledge hasn't been documented?
-
-## Technical Questions
-
-1. Where are logs stored?
-2. How are secrets managed?
-3. What's the release process?
-4. How is testing done?
-
-# Documentation Templates
-
-## System Component Template
-
-```markdown
-# Component Name
-
-## Purpose
-[What does this component do?]
-
-## Location
-- Repository: 
-- Production Location:
-- Config Files:
-
-## Dependencies
-- Input Dependencies:
-- Output Dependencies:
-- Service Dependencies:
-
-## Operation
-- How to Start:
-- How to Stop:
-- How to Monitor:
-- Common Issues:
-
-## Notes
-[Any additional information]
+# Display the Plotly figure
+fig_costs.show()
 ```
 
-## Process Documentation Template
-
-```markdown
-# Process Name
-
-## Overview
-[Brief description]
-
-## Steps
-1. 
-2. 
-3. 
-
-## Required Access
-- System 1
-- System 2
-
-## Common Issues
-- Issue 1: Solution 1
-- Issue 2: Solution 2
-
-## Notes
-[Additional context]
+```{python}
+# 6) Visualize daily rows processed in a bar chart
+fig_rows = px.bar(
+    daily_costs,
+    x="date",
+    y="rows",
+    labels={"rows": "Rows Processed", "date": "Date"},
+    title="Total Rows Processed per Day"
+)
+fig_rows.show()
 ```
 
-# Progress Tracking
+---
 
-## Investigation Log Template
+### Customizing the Document
 
-```markdown
-Date:
-System Investigated:
-Findings:
-Questions:
-Follow-up Items:
-```
+1. **Cost Model**
 
-## Meeting Notes Template
+   - Adjust your cost multipliers based on real usage (e.g., DPUs for Glue, instance-hour costs for EMR, cluster overhead, etc.).
+   - If you have actual **runtimes** or **DPUs** used, incorporate those into your calculation instead of a simple “per-row” approach.
 
-```markdown
-Date:
-Attendees:
-Key Insights:
-New Systems Discovered:
-Action Items:
-```
+2. **Chart Types**
 
-# Priority Documentation Areas
+   - Plotly supports many chart types (scatter, area, box, etc.). Choose what best displays your data.
+   - You can also add interactive tooltips, facet the data by `destination` or `table`, etc.
 
-## Critical Systems
+3. **Grouping & Granularity**
 
-- [ ] Production databases
-- [ ] ETL processes
-- [ ] Data pipelines
-- [ ] Backup systems
-- [ ] Monitoring systems
+   - If you have thousands of daily data points, consider grouping by **week** or **month** to simplify the charts:
+     ```python
+     df["year_week"] = df["datetime"].dt.strftime('%Y-%U')
+     ```
+   - Then group by `year_week` instead of `date`.
 
-## Business Processes
+4. **Styling and Themes**
+   - Quarto + Plotly uses the default Plotly theme by default. You can customize layout, colors, etc. using Plotly’s theming options.
 
-- [ ] Data flow for critical business operations
-- [ ] Reporting processes
-- [ ] Data quality checks
-- [ ] Business rules and transformations
-
-# Documentation Tools and Organization
-
-## Recommended Tools
-
-- Draw.io for architecture diagrams
-- Markdown for process documentation
-- Git for version control of documentation
-- Team wiki (if available)
-- Shared team documentation space
-
-## Documentation Organization
-
-- System Architecture
-- Data Flows
-- Process Documents
-- Troubleshooting Guides
-- Setup Procedures
-- Contact Information
+With this Quarto document, you’ll have an end-to-end workflow showing how much you _would_ have spent each day on AWS Glue vs. EMR, plus a breakdown of how many rows were processed overall. Adjust the details to match your actual cost structures and data fields.

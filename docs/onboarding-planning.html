@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-01-20">
+<meta name="author" content="Your Name">
+<meta name="dcterms.date" content="2025-01-22">
 
-<title>Data Engineer Onboarding Plan – ReSight - Next Gen ETL</title>
+<title>AWS Glue vs Spark on EMR for 2024 – ReSight - Next Gen ETL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,7 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -103,6 +104,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script type="text/javascript">
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+if (typeof require !== 'undefined') {
+require.undef("plotly");
+requirejs.config({
+    paths: {
+        'plotly': ['https://cdn.plot.ly/plotly-2.35.2.min']
+    }
+});
+require(['plotly'], function(Plotly) {
+    window._Plotly = Plotly;
+});
+}
+</script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -169,70 +189,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#phase-1-system-discovery-documentation" id="toc-phase-1-system-discovery-documentation" class="nav-link" data-scroll-target="#phase-1-system-discovery-documentation">Phase 1: System Discovery &amp; Documentation</a>
-  <ul class="collapse">
-  <li><a href="#initial-information-gathering" id="toc-initial-information-gathering" class="nav-link" data-scroll-target="#initial-information-gathering">Initial Information Gathering</a></li>
-  <li><a href="#system-archaeology" id="toc-system-archaeology" class="nav-link" data-scroll-target="#system-archaeology">System Archaeology</a></li>
-  <li><a href="#code-repository-mapping" id="toc-code-repository-mapping" class="nav-link" data-scroll-target="#code-repository-mapping">Code Repository Mapping</a></li>
-  </ul></li>
-  <li><a href="#phase-2-active-investigation" id="toc-phase-2-active-investigation" class="nav-link" data-scroll-target="#phase-2-active-investigation">Phase 2: Active Investigation</a>
-  <ul class="collapse">
-  <li><a href="#database-exploration" id="toc-database-exploration" class="nav-link" data-scroll-target="#database-exploration">Database Exploration</a></li>
-  <li><a href="#pipeline-discovery" id="toc-pipeline-discovery" class="nav-link" data-scroll-target="#pipeline-discovery">Pipeline Discovery</a></li>
-  <li><a href="#infrastructure-mapping" id="toc-infrastructure-mapping" class="nav-link" data-scroll-target="#infrastructure-mapping">Infrastructure Mapping</a></li>
-  </ul></li>
-  <li><a href="#phase-3-documentation-creation" id="toc-phase-3-documentation-creation" class="nav-link" data-scroll-target="#phase-3-documentation-creation">Phase 3: Documentation Creation</a>
-  <ul class="collapse">
-  <li><a href="#basic-documentation" id="toc-basic-documentation" class="nav-link" data-scroll-target="#basic-documentation">Basic Documentation</a></li>
-  <li><a href="#process-documentation" id="toc-process-documentation" class="nav-link" data-scroll-target="#process-documentation">Process Documentation</a></li>
-  </ul></li>
-  <li><a href="#key-questions-for-team-members" id="toc-key-questions-for-team-members" class="nav-link" data-scroll-target="#key-questions-for-team-members">Key Questions for Team Members</a>
-  <ul class="collapse">
-  <li><a href="#historical-context" id="toc-historical-context" class="nav-link" data-scroll-target="#historical-context">Historical Context</a></li>
-  <li><a href="#technical-questions" id="toc-technical-questions" class="nav-link" data-scroll-target="#technical-questions">Technical Questions</a></li>
-  </ul></li>
-  <li><a href="#documentation-templates" id="toc-documentation-templates" class="nav-link" data-scroll-target="#documentation-templates">Documentation Templates</a>
-  <ul class="collapse">
-  <li><a href="#system-component-template" id="toc-system-component-template" class="nav-link" data-scroll-target="#system-component-template">System Component Template</a></li>
-  <li><a href="#process-documentation-template" id="toc-process-documentation-template" class="nav-link" data-scroll-target="#process-documentation-template">Process Documentation Template</a></li>
-  </ul></li>
-  <li><a href="#progress-tracking" id="toc-progress-tracking" class="nav-link" data-scroll-target="#progress-tracking">Progress Tracking</a>
-  <ul class="collapse">
-  <li><a href="#investigation-log-template" id="toc-investigation-log-template" class="nav-link" data-scroll-target="#investigation-log-template">Investigation Log Template</a></li>
-  <li><a href="#meeting-notes-template" id="toc-meeting-notes-template" class="nav-link" data-scroll-target="#meeting-notes-template">Meeting Notes Template</a></li>
-  </ul></li>
-  <li><a href="#priority-documentation-areas" id="toc-priority-documentation-areas" class="nav-link" data-scroll-target="#priority-documentation-areas">Priority Documentation Areas</a>
-  <ul class="collapse">
-  <li><a href="#critical-systems" id="toc-critical-systems" class="nav-link" data-scroll-target="#critical-systems">Critical Systems</a></li>
-  <li><a href="#business-processes" id="toc-business-processes" class="nav-link" data-scroll-target="#business-processes">Business Processes</a></li>
-  </ul></li>
-  <li><a href="#documentation-tools-and-organization" id="toc-documentation-tools-and-organization" class="nav-link" data-scroll-target="#documentation-tools-and-organization">Documentation Tools and Organization</a>
-  <ul class="collapse">
-  <li><a href="#recommended-tools" id="toc-recommended-tools" class="nav-link" data-scroll-target="#recommended-tools">Recommended Tools</a></li>
-  <li><a href="#documentation-organization" id="toc-documentation-organization" class="nav-link" data-scroll-target="#documentation-organization">Documentation Organization</a></li>
-  </ul></li>
+  <li><a href="#customizing-the-document" id="toc-customizing-the-document" class="nav-link active" data-scroll-target="#customizing-the-document"><span class="header-section-number">0.1</span> Customizing the Document</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="onboarding-planning.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Data Engineer Onboarding Plan</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">System Discovery and Documentation Strategy</p>
+<div class="quarto-title-block"><div><h1 class="title">AWS Glue vs Spark on EMR for 2024</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 20, 2024</p>
+      <p class="date">January 22, 2025</p>
     </div>
   </div>
   
@@ -244,249 +227,149 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="overview" class="level1">
-<h1>Overview</h1>
-<p>This document outlines the phased approach for onboarding as a Data Engineer at CoopDIGITy, with a focus on system discovery and documentation in an environment with limited existing documentation.</p>
-</section>
-<section id="phase-1-system-discovery-documentation" class="level1">
-<h1>Phase 1: System Discovery &amp; Documentation</h1>
-<section id="initial-information-gathering" class="level2">
-<h2 class="anchored" data-anchor-id="initial-information-gathering">Initial Information Gathering</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Schedule 1:1s with team members to understand their roles and responsibilities</label></li>
-<li><label><input type="checkbox">Create a shared document to collect tribal knowledge</label></li>
-<li><label><input type="checkbox">Set up a personal wiki/notebook for documenting discoveries</label></li>
-<li><label><input type="checkbox">Request access to all relevant systems (even ones you’re unsure about)</label></li>
-</ul>
-</section>
-<section id="system-archaeology" class="level2">
-<h2 class="anchored" data-anchor-id="system-archaeology">System Archaeology</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">List all discoverable databases and data stores</label></li>
-<li><label><input type="checkbox">Document all found API endpoints and services</label></li>
-<li><label><input type="checkbox">Map out existing data pipelines (even if incomplete)</label></li>
-<li><label><input type="checkbox">Create initial system topology diagram</label></li>
-<li><label><input type="checkbox">Document all environment variables and config files found</label></li>
-</ul>
-</section>
-<section id="code-repository-mapping" class="level2">
-<h2 class="anchored" data-anchor-id="code-repository-mapping">Code Repository Mapping</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">List all repositories you can find</label></li>
-<li><label><input type="checkbox">For each repository:</label>
-<ul class="task-list">
-<li><label><input type="checkbox">Document its apparent purpose</label></li>
-<li><label><input type="checkbox">Note active contributors</label></li>
-<li><label><input type="checkbox">Document build process if found</label></li>
-<li><label><input type="checkbox">Note dependencies and connection points</label></li>
-<li><label><input type="checkbox">Document deployment process (if discoverable)</label></li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="phase-2-active-investigation" class="level1">
-<h1>Phase 2: Active Investigation</h1>
-<section id="database-exploration" class="level2">
-<h2 class="anchored" data-anchor-id="database-exploration">Database Exploration</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">For each database:</label>
-<ul class="task-list">
-<li><label><input type="checkbox">Document schema</label></li>
-<li><label><input type="checkbox">Note data volumes</label></li>
-<li><label><input type="checkbox">Identify critical tables</label></li>
-<li><label><input type="checkbox">Document relationships</label></li>
-<li><label><input type="checkbox">Note update frequencies</label></li>
-<li><label><input type="checkbox">Identify owners/stakeholders</label></li>
-</ul></li>
-</ul>
-</section>
-<section id="pipeline-discovery" class="level2">
-<h2 class="anchored" data-anchor-id="pipeline-discovery">Pipeline Discovery</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Trace data flows:</label>
-<ul class="task-list">
-<li><label><input type="checkbox">Source systems</label></li>
-<li><label><input type="checkbox">Transformation points</label></li>
-<li><label><input type="checkbox">Destination systems</label></li>
-</ul></li>
-<li><label><input type="checkbox">Document job schedules</label></li>
-<li><label><input type="checkbox">Note failure points and current monitoring</label></li>
-<li><label><input type="checkbox">Map dependencies between jobs</label></li>
-</ul>
-</section>
-<section id="infrastructure-mapping" class="level2">
-<h2 class="anchored" data-anchor-id="infrastructure-mapping">Infrastructure Mapping</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Document all production servers/instances</label></li>
-<li><label><input type="checkbox">Map network connectivity</label></li>
-<li><label><input type="checkbox">Document security groups and access patterns</label></li>
-<li><label><input type="checkbox">Note backup systems (if they exist)</label></li>
-<li><label><input type="checkbox">Document monitoring solutions in place</label></li>
-</ul>
-</section>
-</section>
-<section id="phase-3-documentation-creation" class="level1">
-<h1>Phase 3: Documentation Creation</h1>
-<section id="basic-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="basic-documentation">Basic Documentation</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Create README files for main repositories</label></li>
-<li><label><input type="checkbox">Document setup procedures as you discover them</label></li>
-<li><label><input type="checkbox">Create basic architecture diagrams</label></li>
-<li><label><input type="checkbox">Document known failure scenarios</label></li>
-</ul>
-</section>
-<section id="process-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="process-documentation">Process Documentation</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Document deployment process</label></li>
-<li><label><input type="checkbox">Create troubleshooting guides</label></li>
-<li><label><input type="checkbox">Document backup/restore procedures (if they exist)</label></li>
-<li><label><input type="checkbox">Create incident response templates</label></li>
-</ul>
-</section>
-</section>
-<section id="key-questions-for-team-members" class="level1">
-<h1>Key Questions for Team Members</h1>
-<section id="historical-context" class="level2">
-<h2 class="anchored" data-anchor-id="historical-context">Historical Context</h2>
-<ol type="1">
-<li>What are the most problematic areas of the system?</li>
-<li>Which parts of the system are most critical?</li>
-<li>What breaks most often?</li>
-<li>What tribal knowledge hasn’t been documented?</li>
-</ol>
-</section>
-<section id="technical-questions" class="level2">
-<h2 class="anchored" data-anchor-id="technical-questions">Technical Questions</h2>
-<ol type="1">
-<li>Where are logs stored?</li>
-<li>How are secrets managed?</li>
-<li>What’s the release process?</li>
-<li>How is testing done?</li>
-</ol>
-</section>
-</section>
-<section id="documentation-templates" class="level1">
-<h1>Documentation Templates</h1>
-<section id="system-component-template" class="level2">
-<h2 class="anchored" data-anchor-id="system-component-template">System Component Template</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu"># Component Name</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">## Purpose</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">[</span><span class="ot">What does this component do?</span><span class="co">]</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">## Location</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="ss">- </span>Repository: </span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="ss">- </span>Production Location:</span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="ss">- </span>Config Files:</span>
+<div id="3bbda765" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># 1) Load ETL notifications from Parquet</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>df <span class="op">=</span> pd.read_parquet(<span class="st">"scripts/etl_history_2024.parquet"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># 2) Convert timestamp (milliseconds) to datetime</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>df[<span class="st">"datetime"</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">"timestamp"</span>], unit<span class="op">=</span><span class="st">"ms"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9"></a>df[<span class="st">"date"</span>] <span class="op">=</span> df[<span class="st">"datetime"</span>].dt.date</span>
 <span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">## Dependencies</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="ss">- </span>Input Dependencies:</span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">- </span>Output Dependencies:</span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="ss">- </span>Service Dependencies:</span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="fu">## Operation</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="ss">- </span>How to Start:</span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="ss">- </span>How to Stop:</span>
-<span id="cb1-19"><a href="#cb1-19"></a><span class="ss">- </span>How to Monitor:</span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="ss">- </span>Common Issues:</span>
-<span id="cb1-21"><a href="#cb1-21"></a></span>
-<span id="cb1-22"><a href="#cb1-22"></a><span class="fu">## Notes</span></span>
-<span id="cb1-23"><a href="#cb1-23"></a><span class="co">[</span><span class="ot">Any additional information</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="process-documentation-template" class="level2">
-<h2 class="anchored" data-anchor-id="process-documentation-template">Process Documentation Template</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu"># Process Name</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">## Overview</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co">[</span><span class="ot">Brief description</span><span class="co">]</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="fu">## Steps</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="ss">1. </span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="ss">2. </span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="ss">3. </span></span>
-<span id="cb2-10"><a href="#cb2-10"></a></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="fu">## Required Access</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="ss">- </span>System 1</span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="ss">- </span>System 2</span>
-<span id="cb2-14"><a href="#cb2-14"></a></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="fu">## Common Issues</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="ss">- </span>Issue 1: Solution 1</span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="ss">- </span>Issue 2: Solution 2</span>
-<span id="cb2-18"><a href="#cb2-18"></a></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="fu">## Notes</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="co">[</span><span class="ot">Additional context</span><span class="co">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="progress-tracking" class="level1">
-<h1>Progress Tracking</h1>
-<section id="investigation-log-template" class="level2">
-<h2 class="anchored" data-anchor-id="investigation-log-template">Investigation Log Template</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="an">Date:</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="an">System Investigated:</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="an">Findings:</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="an">Questions:</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="an">Follow-up Items:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="meeting-notes-template" class="level2">
-<h2 class="anchored" data-anchor-id="meeting-notes-template">Meeting Notes Template</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="an">Date:</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="an">Attendees:</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="an">Key Insights:</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="an">New Systems Discovered:</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="an">Action Items:</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-</section>
-<section id="priority-documentation-areas" class="level1">
-<h1>Priority Documentation Areas</h1>
-<section id="critical-systems" class="level2">
-<h2 class="anchored" data-anchor-id="critical-systems">Critical Systems</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Production databases</label></li>
-<li><label><input type="checkbox">ETL processes</label></li>
-<li><label><input type="checkbox">Data pipelines</label></li>
-<li><label><input type="checkbox">Backup systems</label></li>
-<li><label><input type="checkbox">Monitoring systems</label></li>
-</ul>
-</section>
-<section id="business-processes" class="level2">
-<h2 class="anchored" data-anchor-id="business-processes">Business Processes</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Data flow for critical business operations</label></li>
-<li><label><input type="checkbox">Reporting processes</label></li>
-<li><label><input type="checkbox">Data quality checks</label></li>
-<li><label><input type="checkbox">Business rules and transformations</label></li>
-</ul>
-</section>
-</section>
-<section id="documentation-tools-and-organization" class="level1">
-<h1>Documentation Tools and Organization</h1>
-<section id="recommended-tools" class="level2">
-<h2 class="anchored" data-anchor-id="recommended-tools">Recommended Tools</h2>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># 3) Hypothetical cost model</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co">#    No runtime data here, so we'll assume cost is per-row:</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#      cost_glue = rows * $0.00002</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co">#      cost_emr  = rows * $0.000015</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co">#    Adjust these multipliers as needed.</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>df[<span class="st">"cost_glue"</span>] <span class="op">=</span> df[<span class="st">"rows"</span>] <span class="op">*</span> <span class="fl">0.00002</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>df[<span class="st">"cost_emr"</span>]  <span class="op">=</span> df[<span class="st">"rows"</span>] <span class="op">*</span> <span class="fl">0.000015</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="co"># 4) Aggregate by date</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>daily_costs <span class="op">=</span> (</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    df.groupby(<span class="st">"date"</span>, as_index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-22"><a href="#cb1-22"></a>      .agg({</span>
+<span id="cb1-23"><a href="#cb1-23"></a>          <span class="st">"cost_glue"</span>: <span class="st">"sum"</span>,</span>
+<span id="cb1-24"><a href="#cb1-24"></a>          <span class="st">"cost_emr"</span>: <span class="st">"sum"</span>,</span>
+<span id="cb1-25"><a href="#cb1-25"></a>          <span class="st">"rows"</span>: <span class="st">"sum"</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a>      })</span>
+<span id="cb1-27"><a href="#cb1-27"></a>)</span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="co"># 5) Compare daily costs (Glue vs EMR) in a line chart</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a>fig_costs <span class="op">=</span> px.line(</span>
+<span id="cb1-31"><a href="#cb1-31"></a>    daily_costs,</span>
+<span id="cb1-32"><a href="#cb1-32"></a>    x<span class="op">=</span><span class="st">"date"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33"></a>    y<span class="op">=</span>[<span class="st">"cost_glue"</span>, <span class="st">"cost_emr"</span>],</span>
+<span id="cb1-34"><a href="#cb1-34"></a>    labels<span class="op">=</span>{<span class="st">"value"</span>: <span class="st">"Daily Cost (USD)"</span>, <span class="st">"date"</span>: <span class="st">"Date"</span>},</span>
+<span id="cb1-35"><a href="#cb1-35"></a>    title<span class="op">=</span><span class="st">"Daily Hypothetical Costs: AWS Glue vs EMR (2024)"</span></span>
+<span id="cb1-36"><a href="#cb1-36"></a>)</span>
+<span id="cb1-37"><a href="#cb1-37"></a>fig_costs.update_layout(hovermode<span class="op">=</span><span class="st">"x unified"</span>)</span>
+<span id="cb1-38"><a href="#cb1-38"></a></span>
+<span id="cb1-39"><a href="#cb1-39"></a><span class="co"># Display the Plotly figure</span></span>
+<span id="cb1-40"><a href="#cb1-40"></a>fig_costs.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>                            <div id="6b21dc0a-bb8c-4909-a027-d601b733bd26" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("6b21dc0a-bb8c-4909-a027-d601b733bd26")) {                    Plotly.newPlot(                        "6b21dc0a-bb8c-4909-a027-d601b733bd26",                        [{"hovertemplate":"variable=cost_glue\u003cbr\u003eDate=%{x}\u003cbr\u003eDaily Cost (USD)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"cost_glue","line":{"color":"#636efa","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"cost_glue","orientation":"v","showlegend":true,"x":["2024-01-01","2024-01-02","2024-01-03","2024-01-04","2024-01-05","2024-01-06","2024-01-07","2024-01-08","2024-01-09","2024-01-10","2024-01-11","2024-01-12","2024-01-13","2024-01-14","2024-01-15","2024-01-16","2024-01-17","2024-01-18","2024-01-19","2024-01-20","2024-01-21","2024-01-22","2024-01-23","2024-01-24","2024-01-25","2024-01-26","2024-01-27","2024-01-28","2024-01-29","2024-01-30","2024-01-31","2024-02-01","2024-02-02","2024-02-03","2024-02-04","2024-02-05","2024-02-06","2024-02-07","2024-02-08","2024-02-09","2024-02-10","2024-02-11","2024-02-12","2024-02-13","2024-02-14","2024-02-15","2024-02-16","2024-02-17","2024-02-18","2024-02-19","2024-02-20","2024-02-21","2024-02-22","2024-02-23","2024-02-24","2024-02-25","2024-02-26","2024-02-27","2024-02-28","2024-02-29","2024-03-01","2024-03-02","2024-03-03","2024-03-04","2024-03-05","2024-03-06","2024-03-07","2024-03-08","2024-03-09","2024-03-10","2024-03-11","2024-03-12","2024-03-13","2024-03-14","2024-03-15","2024-03-16","2024-03-17","2024-03-18","2024-03-19","2024-03-20","2024-03-21","2024-03-22","2024-03-23","2024-03-24","2024-03-25","2024-03-26","2024-03-27","2024-03-28","2024-03-29","2024-03-30","2024-03-31","2024-04-01","2024-04-02","2024-04-03","2024-04-04","2024-04-05","2024-04-06","2024-04-07","2024-04-08","2024-04-09","2024-04-10","2024-04-11","2024-04-12","2024-04-13","2024-04-14","2024-04-15","2024-04-16","2024-04-17","2024-04-18","2024-04-19","2024-04-20","2024-04-21","2024-04-22","2024-04-23","2024-04-24","2024-04-25","2024-04-26","2024-04-27","2024-04-28","2024-04-29","2024-04-30","2024-05-01","2024-05-02","2024-05-03","2024-05-04","2024-05-05","2024-05-06","2024-05-07","2024-05-08","2024-05-09","2024-05-10","2024-05-11","2024-05-12","2024-05-13","2024-05-14","2024-05-15","2024-05-16","2024-05-17","2024-05-18","2024-05-19","2024-05-20","2024-05-21","2024-05-22","2024-05-23","2024-05-24","2024-05-25","2024-05-26","2024-05-27","2024-05-28","2024-05-29","2024-05-30","2024-05-31","2024-06-01","2024-06-02","2024-06-03","2024-06-04","2024-06-05","2024-06-06","2024-06-07","2024-06-08","2024-06-09","2024-06-10","2024-06-11","2024-06-12","2024-06-13","2024-06-14","2024-06-15","2024-06-16","2024-06-17","2024-06-18","2024-06-19","2024-06-20","2024-06-21","2024-06-22","2024-06-23","2024-06-24","2024-06-25","2024-06-26","2024-06-27","2024-06-28","2024-06-29","2024-06-30","2024-07-01","2024-07-02","2024-07-03","2024-07-04","2024-07-05","2024-07-06","2024-07-07","2024-07-08","2024-07-09","2024-07-10","2024-07-11","2024-07-12","2024-07-13","2024-07-14","2024-07-15","2024-07-16","2024-07-17","2024-07-18","2024-07-19","2024-07-20","2024-07-21","2024-07-22","2024-07-23","2024-07-24","2024-07-25","2024-07-26","2024-07-27","2024-07-28","2024-07-29","2024-07-30","2024-07-31","2024-08-01","2024-08-02","2024-08-03","2024-08-04","2024-08-05","2024-08-06","2024-08-07","2024-08-08","2024-08-09","2024-08-10","2024-08-11","2024-08-12","2024-08-13","2024-08-14","2024-08-15","2024-08-16","2024-08-17","2024-08-18","2024-08-19","2024-08-20","2024-08-21","2024-08-22","2024-08-23","2024-08-24","2024-08-25","2024-08-26","2024-08-27","2024-08-28","2024-08-29","2024-08-30","2024-08-31","2024-09-01","2024-09-02","2024-09-03","2024-09-04","2024-09-05","2024-09-06","2024-09-07","2024-09-08","2024-09-09","2024-09-10","2024-09-11","2024-09-12","2024-09-13","2024-09-14","2024-09-15","2024-09-16","2024-09-17","2024-09-18","2024-09-19","2024-09-20","2024-09-21","2024-09-22","2024-09-23","2024-09-24","2024-09-25","2024-09-26","2024-09-27","2024-09-28","2024-09-29","2024-09-30","2024-10-01","2024-10-02","2024-10-03","2024-10-04","2024-10-05","2024-10-06","2024-10-07","2024-10-08","2024-10-09","2024-10-10","2024-10-11","2024-10-12","2024-10-13","2024-10-14","2024-10-15","2024-10-16","2024-10-17","2024-10-18","2024-10-19","2024-10-20","2024-10-21","2024-10-22","2024-10-23","2024-10-24","2024-10-25","2024-10-26","2024-10-27","2024-10-28","2024-10-29","2024-10-30","2024-10-31","2024-11-01","2024-11-02","2024-11-03","2024-11-04","2024-11-05","2024-11-06","2024-11-07","2024-11-08","2024-11-09","2024-11-10","2024-11-11","2024-11-12","2024-11-13","2024-11-14","2024-11-15","2024-11-16","2024-11-17","2024-11-18","2024-11-19","2024-11-20","2024-11-21","2024-11-22","2024-11-23","2024-11-24","2024-11-25","2024-11-26","2024-11-27","2024-11-29","2024-11-30","2024-12-01","2024-12-02","2024-12-03","2024-12-04","2024-12-05","2024-12-06","2024-12-07","2024-12-08","2024-12-09","2024-12-10","2024-12-11","2024-12-12","2024-12-13","2024-12-16","2024-12-17","2024-12-18","2024-12-19","2024-12-20","2024-12-21","2024-12-22","2024-12-23","2024-12-24","2024-12-26","2024-12-27","2024-12-28","2024-12-29","2024-12-30"],"xaxis":"x","y":[2.12306,6.487800000000001,3.7222200000000005,2.6124,1.5780000000000003,0.8073400000000001,0.09584000000000001,5.349080000000001,3.8047800000000005,3.2751200000000003,0.5543,0.19862000000000002,0.8459800000000001,0.15984,4.82964,1.6211600000000002,6.191300000000001,4.50652,4.9298,0.9046000000000001,0.11734000000000001,4.0857600000000005,1.2573,2.12544,0.10452,6.98526,1.03662,0.11950000000000001,4.204400000000001,1.3439400000000001,6.85174,2.9976800000000003,3.61288,0.9322400000000001,0.116,9.07868,6.258400000000001,0.7140200000000001,1.5086600000000001,0.6535000000000001,0.9396,0.12310000000000001,4.7001,2.73476,1.7135600000000002,0.18210000000000004,0.6077400000000001,0.77346,0.12814,4.08256,6.012720000000001,1.97286,0.17620000000000002,0.08184000000000001,0.7618,0.12784,4.1627,1.91628,2.1923200000000005,0.32684,2.19828,1.4370600000000002,0.13138,4.51072,9.940460000000002,3.1427000000000005,1.9628600000000003,1.2864600000000002,0.75438,0.13956000000000002,3.27586,2.1618000000000004,2.91252,0.9417800000000001,0.04462,0.9206600000000001,0.14416,4.57036,1.6816200000000001,1.9982400000000002,0.34938,1.60134,0.8170400000000001,0.12082000000000001,3.9400000000000004,1.6515600000000001,1.6217800000000002,0.00456,0.32070000000000004,0.535,0.19210000000000002,5.916440000000001,3.9889200000000002,3.6247400000000005,0.7108800000000001,5.484640000000001,0.85982,0.13392,5.401660000000001,1.00224,4.26776,0.93232,0.09196,0.8914600000000001,0.13794,5.09196,4.23568,4.49528,0.12978,0.12006000000000001,0.8490600000000001,0.134,4.93158,1.70236,1.72286,0.2841,0.026840000000000003,0.88736,0.12678,3.5430200000000003,1.7833800000000002,5.2259,3.28194,3.5931800000000003,0.8404200000000001,0.7033200000000001,6.11718,2.8439,4.1978800000000005,0.32864000000000004,0.3788,0.5525000000000001,0.13008,7.766220000000001,1.6048200000000001,2.4732600000000002,0.27326,9.774180000000001,0.8597000000000001,0.12324000000000002,2.5761000000000003,2.04712,2.25096,1.3947800000000001,0.09340000000000001,0.8302200000000001,0.13402000000000003,2.3522800000000004,2.1538000000000004,7.015960000000001,0.1363,0.3689200000000001,1.2891400000000002,0.10318000000000001,3.96708,4.214300000000001,5.05464,1.8599,2.09344,0.7932800000000001,0.12894000000000003,7.40148,3.6134800000000005,2.7797600000000005,2.25476,0.021140000000000003,0.51648,0.11986000000000001,4.9962800000000005,6.714600000000001,3.1845000000000003,4.4976400000000005,1.6648600000000002,0.9012200000000001,0.14232,3.9076000000000004,1.3643800000000001,1.5328400000000002,0.05768,1.1657000000000002,0.86506,0.28926,7.1080000000000005,3.6084600000000004,2.2785200000000003,0.20192000000000002,1.6415800000000003,0.78274,0.11146,7.936460000000001,1.8937000000000002,1.8972200000000004,0.5951200000000001,13.8976,0.9739600000000002,0.15048000000000003,16.49438,5.439380000000001,2.5828,0.23964000000000002,0.38312,0.9411200000000001,0.1207,3.6126400000000003,6.514220000000001,1.5584,0.20356000000000002,0.004320000000000001,0.9073200000000001,0.13708,4.440460000000001,1.8241600000000002,2.0956,2.68424,0.5636800000000001,1.3030400000000002,0.15500000000000003,9.465480000000001,3.6834400000000005,3.8834800000000005,1.8697000000000001,1.4117600000000001,0.9188000000000001,0.12952000000000002,5.4911,1.7981200000000002,2.8071,0.31806,0.70618,0.8562200000000001,0.13224,3.0841600000000002,2.4569,1.8369600000000001,0.15030000000000002,0.039020000000000006,0.8668,0.12562,2.9614200000000004,1.4406800000000002,3.2997400000000003,0.15056,0.5607,1.0707000000000002,0.31212,2.7223400000000004,3.9355,6.249040000000001,4.086860000000001,4.1958400000000005,0.9318400000000001,0.10596000000000001,3.6849000000000003,1.2362000000000002,2.56802,0.24842000000000003,4.78396,0.8746800000000001,0.14150000000000001,3.3208,2.7666000000000004,1.8141600000000002,1.5921200000000002,0.7467800000000001,0.88324,0.13602,3.69668,2.95432,1.9234200000000001,0.73864,0.09768,0.88812,0.12802,2.8405400000000003,5.377820000000001,1.92856,3.81734,0.6706000000000001,0.41338,0.01668,3.1068800000000003,1.7277200000000001,0.61824,2.2644800000000003,0.024380000000000002,0.06362000000000001,0.00674,1.48144,1.4741000000000002,2.3932200000000003,0.4821000000000001,0.08924,1.09948,0.02738,2.00794,2.20484,1.40486,0.1551,0.08044000000000001,0.9108400000000001,0.03978,2.3765600000000004,1.2957800000000002,1.7098600000000002,0.11380000000000001,0.47040000000000004,0.9461600000000001,0.03028,4.702380000000001,5.6122000000000005,0.80334,0.50416,0.19208,0.8508800000000001,0.025580000000000002,3.3363400000000003,2.7909,1.9604800000000002,0.0005600000000000001,0.17806,0.9009400000000001,0.02626,3.2053400000000005,10.990120000000001,2.55044,2.3971400000000003,2.6729000000000003,0.9657000000000001,0.03982,5.2995600000000005,1.3308600000000002,2.0622000000000003,0.17196,0.8074800000000001,0.1554,6.37448,2.5543400000000003,5.11266,3.0769400000000005,1.8761600000000003,0.9534400000000001,0.14052,5.06066,1.56004,7.6371400000000005,0.15382,0.08532000000000001,0.36818,3.5829000000000004,4.30728,0.00928,0.09738000000000002,1.0408600000000001,0.15178,3.6967600000000003,1.60538,2.5069800000000004,0.002,0.5624600000000001,0.12474,3.11478],"yaxis":"y","type":"scatter"},{"hovertemplate":"variable=cost_emr\u003cbr\u003eDate=%{x}\u003cbr\u003eDaily Cost (USD)=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"cost_emr","line":{"color":"#EF553B","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"cost_emr","orientation":"v","showlegend":true,"x":["2024-01-01","2024-01-02","2024-01-03","2024-01-04","2024-01-05","2024-01-06","2024-01-07","2024-01-08","2024-01-09","2024-01-10","2024-01-11","2024-01-12","2024-01-13","2024-01-14","2024-01-15","2024-01-16","2024-01-17","2024-01-18","2024-01-19","2024-01-20","2024-01-21","2024-01-22","2024-01-23","2024-01-24","2024-01-25","2024-01-26","2024-01-27","2024-01-28","2024-01-29","2024-01-30","2024-01-31","2024-02-01","2024-02-02","2024-02-03","2024-02-04","2024-02-05","2024-02-06","2024-02-07","2024-02-08","2024-02-09","2024-02-10","2024-02-11","2024-02-12","2024-02-13","2024-02-14","2024-02-15","2024-02-16","2024-02-17","2024-02-18","2024-02-19","2024-02-20","2024-02-21","2024-02-22","2024-02-23","2024-02-24","2024-02-25","2024-02-26","2024-02-27","2024-02-28","2024-02-29","2024-03-01","2024-03-02","2024-03-03","2024-03-04","2024-03-05","2024-03-06","2024-03-07","2024-03-08","2024-03-09","2024-03-10","2024-03-11","2024-03-12","2024-03-13","2024-03-14","2024-03-15","2024-03-16","2024-03-17","2024-03-18","2024-03-19","2024-03-20","2024-03-21","2024-03-22","2024-03-23","2024-03-24","2024-03-25","2024-03-26","2024-03-27","2024-03-28","2024-03-29","2024-03-30","2024-03-31","2024-04-01","2024-04-02","2024-04-03","2024-04-04","2024-04-05","2024-04-06","2024-04-07","2024-04-08","2024-04-09","2024-04-10","2024-04-11","2024-04-12","2024-04-13","2024-04-14","2024-04-15","2024-04-16","2024-04-17","2024-04-18","2024-04-19","2024-04-20","2024-04-21","2024-04-22","2024-04-23","2024-04-24","2024-04-25","2024-04-26","2024-04-27","2024-04-28","2024-04-29","2024-04-30","2024-05-01","2024-05-02","2024-05-03","2024-05-04","2024-05-05","2024-05-06","2024-05-07","2024-05-08","2024-05-09","2024-05-10","2024-05-11","2024-05-12","2024-05-13","2024-05-14","2024-05-15","2024-05-16","2024-05-17","2024-05-18","2024-05-19","2024-05-20","2024-05-21","2024-05-22","2024-05-23","2024-05-24","2024-05-25","2024-05-26","2024-05-27","2024-05-28","2024-05-29","2024-05-30","2024-05-31","2024-06-01","2024-06-02","2024-06-03","2024-06-04","2024-06-05","2024-06-06","2024-06-07","2024-06-08","2024-06-09","2024-06-10","2024-06-11","2024-06-12","2024-06-13","2024-06-14","2024-06-15","2024-06-16","2024-06-17","2024-06-18","2024-06-19","2024-06-20","2024-06-21","2024-06-22","2024-06-23","2024-06-24","2024-06-25","2024-06-26","2024-06-27","2024-06-28","2024-06-29","2024-06-30","2024-07-01","2024-07-02","2024-07-03","2024-07-04","2024-07-05","2024-07-06","2024-07-07","2024-07-08","2024-07-09","2024-07-10","2024-07-11","2024-07-12","2024-07-13","2024-07-14","2024-07-15","2024-07-16","2024-07-17","2024-07-18","2024-07-19","2024-07-20","2024-07-21","2024-07-22","2024-07-23","2024-07-24","2024-07-25","2024-07-26","2024-07-27","2024-07-28","2024-07-29","2024-07-30","2024-07-31","2024-08-01","2024-08-02","2024-08-03","2024-08-04","2024-08-05","2024-08-06","2024-08-07","2024-08-08","2024-08-09","2024-08-10","2024-08-11","2024-08-12","2024-08-13","2024-08-14","2024-08-15","2024-08-16","2024-08-17","2024-08-18","2024-08-19","2024-08-20","2024-08-21","2024-08-22","2024-08-23","2024-08-24","2024-08-25","2024-08-26","2024-08-27","2024-08-28","2024-08-29","2024-08-30","2024-08-31","2024-09-01","2024-09-02","2024-09-03","2024-09-04","2024-09-05","2024-09-06","2024-09-07","2024-09-08","2024-09-09","2024-09-10","2024-09-11","2024-09-12","2024-09-13","2024-09-14","2024-09-15","2024-09-16","2024-09-17","2024-09-18","2024-09-19","2024-09-20","2024-09-21","2024-09-22","2024-09-23","2024-09-24","2024-09-25","2024-09-26","2024-09-27","2024-09-28","2024-09-29","2024-09-30","2024-10-01","2024-10-02","2024-10-03","2024-10-04","2024-10-05","2024-10-06","2024-10-07","2024-10-08","2024-10-09","2024-10-10","2024-10-11","2024-10-12","2024-10-13","2024-10-14","2024-10-15","2024-10-16","2024-10-17","2024-10-18","2024-10-19","2024-10-20","2024-10-21","2024-10-22","2024-10-23","2024-10-24","2024-10-25","2024-10-26","2024-10-27","2024-10-28","2024-10-29","2024-10-30","2024-10-31","2024-11-01","2024-11-02","2024-11-03","2024-11-04","2024-11-05","2024-11-06","2024-11-07","2024-11-08","2024-11-09","2024-11-10","2024-11-11","2024-11-12","2024-11-13","2024-11-14","2024-11-15","2024-11-16","2024-11-17","2024-11-18","2024-11-19","2024-11-20","2024-11-21","2024-11-22","2024-11-23","2024-11-24","2024-11-25","2024-11-26","2024-11-27","2024-11-29","2024-11-30","2024-12-01","2024-12-02","2024-12-03","2024-12-04","2024-12-05","2024-12-06","2024-12-07","2024-12-08","2024-12-09","2024-12-10","2024-12-11","2024-12-12","2024-12-13","2024-12-16","2024-12-17","2024-12-18","2024-12-19","2024-12-20","2024-12-21","2024-12-22","2024-12-23","2024-12-24","2024-12-26","2024-12-27","2024-12-28","2024-12-29","2024-12-30"],"xaxis":"x","y":[1.592295,4.86585,2.791665,1.9593,1.1835,0.605505,0.07188,4.01181,2.8535850000000003,2.45634,0.415725,0.14896500000000001,0.634485,0.11988000000000001,3.62223,1.21587,4.6434750000000005,3.37989,3.69735,0.67845,0.088005,3.06432,0.9429750000000001,1.59408,0.07839,5.238945,0.7774650000000001,0.089625,3.1533,1.007955,5.1388050000000005,2.24826,2.70966,0.69918,0.087,6.80901,4.6937999999999995,0.535515,1.1314950000000001,0.49012500000000003,0.7047000000000001,0.092325,3.525075,2.05107,1.28517,0.136575,0.455805,0.580095,0.09610500000000001,3.06192,4.50954,1.479645,0.13215,0.061380000000000004,0.57135,0.09588,3.122025,1.43721,1.6442400000000001,0.24513000000000001,1.64871,1.077795,0.098535,3.3830400000000003,7.455345,2.357025,1.472145,0.964845,0.565785,0.10467,2.456895,1.62135,2.18439,0.706335,0.033465,0.690495,0.10812000000000001,3.42777,1.261215,1.49868,0.262035,1.201005,0.61278,0.090615,2.955,1.23867,1.216335,0.0034200000000000003,0.24052500000000002,0.40125,0.144075,4.43733,2.99169,2.7185550000000003,0.5331600000000001,4.11348,0.644865,0.10044,4.051245,0.7516800000000001,3.20082,0.6992400000000001,0.06897,0.668595,0.103455,3.81897,3.17676,3.37146,0.097335,0.090045,0.636795,0.1005,3.6986850000000002,1.27677,1.292145,0.21307500000000001,0.020130000000000002,0.66552,0.095085,2.657265,1.337535,3.919425,2.461455,2.694885,0.630315,0.52749,4.587885,2.132925,3.14841,0.24648,0.2841,0.414375,0.09756000000000001,5.824665,1.203615,1.854945,0.204945,7.330635,0.644775,0.09243,1.932075,1.5353400000000001,1.68822,1.0460850000000002,0.07005,0.622665,0.10051500000000001,1.76421,1.61535,5.26197,0.102225,0.27669,0.966855,0.077385,2.97531,3.1607250000000002,3.7909800000000002,1.394925,1.57008,0.59496,0.096705,5.55111,2.7101100000000002,2.08482,1.6910700000000003,0.015855,0.38736,0.089895,3.74721,5.03595,2.388375,3.37323,1.248645,0.675915,0.10674,2.9307,1.023285,1.14963,0.04326,0.874275,0.648795,0.216945,5.331,2.7063450000000002,1.70889,0.15144,1.231185,0.587055,0.083595,5.952345,1.4202750000000002,1.422915,0.44634,10.423200000000001,0.7304700000000001,0.11286,12.370785,4.079535,1.9371,0.17973,0.28734,0.70584,0.09052500000000001,2.70948,4.885665,1.1688,0.15267,0.00324,0.68049,0.10281,3.330345,1.36812,1.5717,2.01318,0.42276,0.97728,0.11625,7.0991100000000005,2.7625800000000003,2.91261,1.402275,1.05882,0.6891,0.09714,4.1183250000000005,1.34859,2.105325,0.238545,0.529635,0.642165,0.09918,2.31312,1.842675,1.37772,0.112725,0.029265,0.6501,0.09421500000000001,2.221065,1.08051,2.474805,0.11292,0.420525,0.803025,0.23409,2.041755,2.951625,4.686780000000001,3.0651450000000002,3.14688,0.69888,0.07947,2.763675,0.92715,1.926015,0.186315,3.5879700000000003,0.65601,0.10612500000000001,2.4906,2.07495,1.36062,1.19409,0.560085,0.6624300000000001,0.10201500000000001,2.77251,2.21574,1.442565,0.55398,0.07326,0.6660900000000001,0.096015,2.130405,4.033365,1.44642,2.8630050000000002,0.50295,0.310035,0.01251,2.3301600000000002,1.29579,0.46368,1.69836,0.018285000000000003,0.047715,0.0050550000000000005,1.11108,1.105575,1.794915,0.36157500000000004,0.06693,0.8246100000000001,0.020535,1.505955,1.6536300000000002,1.053645,0.116325,0.06033,0.68313,0.029835,1.7824200000000001,0.971835,1.282395,0.08535000000000001,0.3528,0.70962,0.02271,3.526785,4.20915,0.6025050000000001,0.37812,0.14406000000000002,0.6381600000000001,0.019185,2.502255,2.093175,1.4703600000000001,0.00042,0.133545,0.675705,0.019695000000000004,2.404005,8.24259,1.91283,1.797855,2.004675,0.724275,0.029865000000000003,3.97467,0.9981450000000001,1.54665,0.12897,0.60561,0.11655,4.7808600000000006,1.915755,3.834495,2.307705,1.40712,0.7150799999999999,0.10539,3.795495,1.17003,5.727855,0.115365,0.06399,0.27613499999999996,2.687175,3.23046,0.00696,0.073035,0.780645,0.113835,2.77257,1.204035,1.880235,0.0015,0.421845,0.093555,2.336085],"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Date"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Daily Cost (USD)"}},"legend":{"title":{"text":"variable"},"tracegroupgap":0},"title":{"text":"Daily Hypothetical Costs: AWS Glue vs EMR (2024)"},"hovermode":"x unified"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('6b21dc0a-bb8c-4909-a027-d601b733bd26');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+<div id="96f44ace" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># 6) Visualize daily rows processed in a bar chart</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>fig_rows <span class="op">=</span> px.bar(</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    daily_costs,</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    x<span class="op">=</span><span class="st">"date"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5"></a>    y<span class="op">=</span><span class="st">"rows"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    labels<span class="op">=</span>{<span class="st">"rows"</span>: <span class="st">"Rows Processed"</span>, <span class="st">"date"</span>: <span class="st">"Date"</span>},</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    title<span class="op">=</span><span class="st">"Total Rows Processed per Day"</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>)</span>
+<span id="cb2-9"><a href="#cb2-9"></a>fig_rows.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>                            <div id="dd7ab733-970d-4fee-b570-559e6080ed1e" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("dd7ab733-970d-4fee-b570-559e6080ed1e")) {                    Plotly.newPlot(                        "dd7ab733-970d-4fee-b570-559e6080ed1e",                        [{"alignmentgroup":"True","hovertemplate":"Date=%{x}\u003cbr\u003eRows Processed=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":["2024-01-01","2024-01-02","2024-01-03","2024-01-04","2024-01-05","2024-01-06","2024-01-07","2024-01-08","2024-01-09","2024-01-10","2024-01-11","2024-01-12","2024-01-13","2024-01-14","2024-01-15","2024-01-16","2024-01-17","2024-01-18","2024-01-19","2024-01-20","2024-01-21","2024-01-22","2024-01-23","2024-01-24","2024-01-25","2024-01-26","2024-01-27","2024-01-28","2024-01-29","2024-01-30","2024-01-31","2024-02-01","2024-02-02","2024-02-03","2024-02-04","2024-02-05","2024-02-06","2024-02-07","2024-02-08","2024-02-09","2024-02-10","2024-02-11","2024-02-12","2024-02-13","2024-02-14","2024-02-15","2024-02-16","2024-02-17","2024-02-18","2024-02-19","2024-02-20","2024-02-21","2024-02-22","2024-02-23","2024-02-24","2024-02-25","2024-02-26","2024-02-27","2024-02-28","2024-02-29","2024-03-01","2024-03-02","2024-03-03","2024-03-04","2024-03-05","2024-03-06","2024-03-07","2024-03-08","2024-03-09","2024-03-10","2024-03-11","2024-03-12","2024-03-13","2024-03-14","2024-03-15","2024-03-16","2024-03-17","2024-03-18","2024-03-19","2024-03-20","2024-03-21","2024-03-22","2024-03-23","2024-03-24","2024-03-25","2024-03-26","2024-03-27","2024-03-28","2024-03-29","2024-03-30","2024-03-31","2024-04-01","2024-04-02","2024-04-03","2024-04-04","2024-04-05","2024-04-06","2024-04-07","2024-04-08","2024-04-09","2024-04-10","2024-04-11","2024-04-12","2024-04-13","2024-04-14","2024-04-15","2024-04-16","2024-04-17","2024-04-18","2024-04-19","2024-04-20","2024-04-21","2024-04-22","2024-04-23","2024-04-24","2024-04-25","2024-04-26","2024-04-27","2024-04-28","2024-04-29","2024-04-30","2024-05-01","2024-05-02","2024-05-03","2024-05-04","2024-05-05","2024-05-06","2024-05-07","2024-05-08","2024-05-09","2024-05-10","2024-05-11","2024-05-12","2024-05-13","2024-05-14","2024-05-15","2024-05-16","2024-05-17","2024-05-18","2024-05-19","2024-05-20","2024-05-21","2024-05-22","2024-05-23","2024-05-24","2024-05-25","2024-05-26","2024-05-27","2024-05-28","2024-05-29","2024-05-30","2024-05-31","2024-06-01","2024-06-02","2024-06-03","2024-06-04","2024-06-05","2024-06-06","2024-06-07","2024-06-08","2024-06-09","2024-06-10","2024-06-11","2024-06-12","2024-06-13","2024-06-14","2024-06-15","2024-06-16","2024-06-17","2024-06-18","2024-06-19","2024-06-20","2024-06-21","2024-06-22","2024-06-23","2024-06-24","2024-06-25","2024-06-26","2024-06-27","2024-06-28","2024-06-29","2024-06-30","2024-07-01","2024-07-02","2024-07-03","2024-07-04","2024-07-05","2024-07-06","2024-07-07","2024-07-08","2024-07-09","2024-07-10","2024-07-11","2024-07-12","2024-07-13","2024-07-14","2024-07-15","2024-07-16","2024-07-17","2024-07-18","2024-07-19","2024-07-20","2024-07-21","2024-07-22","2024-07-23","2024-07-24","2024-07-25","2024-07-26","2024-07-27","2024-07-28","2024-07-29","2024-07-30","2024-07-31","2024-08-01","2024-08-02","2024-08-03","2024-08-04","2024-08-05","2024-08-06","2024-08-07","2024-08-08","2024-08-09","2024-08-10","2024-08-11","2024-08-12","2024-08-13","2024-08-14","2024-08-15","2024-08-16","2024-08-17","2024-08-18","2024-08-19","2024-08-20","2024-08-21","2024-08-22","2024-08-23","2024-08-24","2024-08-25","2024-08-26","2024-08-27","2024-08-28","2024-08-29","2024-08-30","2024-08-31","2024-09-01","2024-09-02","2024-09-03","2024-09-04","2024-09-05","2024-09-06","2024-09-07","2024-09-08","2024-09-09","2024-09-10","2024-09-11","2024-09-12","2024-09-13","2024-09-14","2024-09-15","2024-09-16","2024-09-17","2024-09-18","2024-09-19","2024-09-20","2024-09-21","2024-09-22","2024-09-23","2024-09-24","2024-09-25","2024-09-26","2024-09-27","2024-09-28","2024-09-29","2024-09-30","2024-10-01","2024-10-02","2024-10-03","2024-10-04","2024-10-05","2024-10-06","2024-10-07","2024-10-08","2024-10-09","2024-10-10","2024-10-11","2024-10-12","2024-10-13","2024-10-14","2024-10-15","2024-10-16","2024-10-17","2024-10-18","2024-10-19","2024-10-20","2024-10-21","2024-10-22","2024-10-23","2024-10-24","2024-10-25","2024-10-26","2024-10-27","2024-10-28","2024-10-29","2024-10-30","2024-10-31","2024-11-01","2024-11-02","2024-11-03","2024-11-04","2024-11-05","2024-11-06","2024-11-07","2024-11-08","2024-11-09","2024-11-10","2024-11-11","2024-11-12","2024-11-13","2024-11-14","2024-11-15","2024-11-16","2024-11-17","2024-11-18","2024-11-19","2024-11-20","2024-11-21","2024-11-22","2024-11-23","2024-11-24","2024-11-25","2024-11-26","2024-11-27","2024-11-29","2024-11-30","2024-12-01","2024-12-02","2024-12-03","2024-12-04","2024-12-05","2024-12-06","2024-12-07","2024-12-08","2024-12-09","2024-12-10","2024-12-11","2024-12-12","2024-12-13","2024-12-16","2024-12-17","2024-12-18","2024-12-19","2024-12-20","2024-12-21","2024-12-22","2024-12-23","2024-12-24","2024-12-26","2024-12-27","2024-12-28","2024-12-29","2024-12-30"],"xaxis":"x","y":[106153,324390,186111,130620,78900,40367,4792,267454,190239,163756,27715,9931,42299,7992,241482,81058,309565,225326,246490,45230,5867,204288,62865,106272,5226,349263,51831,5975,210220,67197,342587,149884,180644,46612,5800,453934,312920,35701,75433,32675,46980,6155,235005,136738,85678,9105,30387,38673,6407,204128,300636,98643,8810,4092,38090,6392,208135,95814,109616,16342,109914,71853,6569,225536,497023,157135,98143,64323,37719,6978,163793,108090,145626,47089,2231,46033,7208,228518,84081,99912,17469,80067,40852,6041,197000,82578,81089,228,16035,26750,9605,295822,199446,181237,35544,274232,42991,6696,270083,50112,213388,46616,4598,44573,6897,254598,211784,224764,6489,6003,42453,6700,246579,85118,86143,14205,1342,44368,6339,177151,89169,261295,164097,179659,42021,35166,305859,142195,209894,16432,18940,27625,6504,388311,80241,123663,13663,488709,42985,6162,128805,102356,112548,69739,4670,41511,6701,117614,107690,350798,6815,18446,64457,5159,198354,210715,252732,92995,104672,39664,6447,370074,180674,138988,112738,1057,25824,5993,249814,335730,159225,224882,83243,45061,7116,195380,68219,76642,2884,58285,43253,14463,355400,180423,113926,10096,82079,39137,5573,396823,94685,94861,29756,694880,48698,7524,824719,271969,129140,11982,19156,47056,6035,180632,325711,77920,10178,216,45366,6854,222023,91208,104780,134212,28184,65152,7750,473274,184172,194174,93485,70588,45940,6476,274555,89906,140355,15903,35309,42811,6612,154208,122845,91848,7515,1951,43340,6281,148071,72034,164987,7528,28035,53535,15606,136117,196775,312452,204343,209792,46592,5298,184245,61810,128401,12421,239198,43734,7075,166040,138330,90708,79606,37339,44162,6801,184834,147716,96171,36932,4884,44406,6401,142027,268891,96428,190867,33530,20669,834,155344,86386,30912,113224,1219,3181,337,74072,73705,119661,24105,4462,54974,1369,100397,110242,70243,7755,4022,45542,1989,118828,64789,85493,5690,23520,47308,1514,235119,280610,40167,25208,9604,42544,1279,166817,139545,98024,28,8903,45047,1313,160267,549506,127522,119857,133645,48285,1991,264978,66543,103110,8598,40374,7770,318724,127717,255633,153847,93808,47672,7026,253033,78002,381857,7691,4266,18409,179145,215364,464,4869,52043,7589,184838,80269,125349,100,28123,6237,155739],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Date"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Rows Processed"}},"legend":{"tracegroupgap":0},"title":{"text":"Total Rows Processed per Day"},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('dd7ab733-970d-4fee-b570-559e6080ed1e');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+<hr>
+<section id="customizing-the-document" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="customizing-the-document"><span class="header-section-number">0.1</span> Customizing the Document</h3>
+<ol type="1">
+<li><p><strong>Cost Model</strong></p>
 <ul>
-<li>Draw.io for architecture diagrams</li>
-<li>Markdown for process documentation</li>
-<li>Git for version control of documentation</li>
-<li>Team wiki (if available)</li>
-<li>Shared team documentation space</li>
-</ul>
-</section>
-<section id="documentation-organization" class="level2">
-<h2 class="anchored" data-anchor-id="documentation-organization">Documentation Organization</h2>
+<li>Adjust your cost multipliers based on real usage (e.g., DPUs for Glue, instance-hour costs for EMR, cluster overhead, etc.).</li>
+<li>If you have actual <strong>runtimes</strong> or <strong>DPUs</strong> used, incorporate those into your calculation instead of a simple “per-row” approach.</li>
+</ul></li>
+<li><p><strong>Chart Types</strong></p>
 <ul>
-<li>System Architecture</li>
-<li>Data Flows</li>
-<li>Process Documents</li>
-<li>Troubleshooting Guides</li>
-<li>Setup Procedures</li>
-<li>Contact Information</li>
-</ul>
+<li>Plotly supports many chart types (scatter, area, box, etc.). Choose what best displays your data.</li>
+<li>You can also add interactive tooltips, facet the data by <code>destination</code> or <code>table</code>, etc.</li>
+</ul></li>
+<li><p><strong>Grouping &amp; Granularity</strong></p>
+<ul>
+<li><p>If you have thousands of daily data points, consider grouping by <strong>week</strong> or <strong>month</strong> to simplify the charts:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>df[<span class="st">"year_week"</span>] <span class="op">=</span> df[<span class="st">"datetime"</span>].dt.strftime(<span class="st">'%Y-%U'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Then group by <code>year_week</code> instead of <code>date</code>.</p></li>
+</ul></li>
+<li><p><strong>Styling and Themes</strong></p>
+<ul>
+<li>Quarto + Plotly uses the default Plotly theme by default. You can customize layout, colors, etc. using Plotly’s theming options.</li>
+</ul></li>
+</ol>
+<p>With this Quarto document, you’ll have an end-to-end workflow showing how much you <em>would</em> have spent each day on AWS Glue vs.&nbsp;EMR, plus a breakdown of how many rows were processed overall. Adjust the details to match your actual cost structures and data fields.</p>
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1105,216 +988,108 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">---</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="an">title:</span><span class="co"> "Data Engineer Onboarding Plan"</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="an">subtitle:</span><span class="co"> "System Discovery and Documentation Strategy"</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="an">date:</span><span class="co"> 2024-01-20</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="co">---</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="fu"># Overview</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a></span>
-<span id="cb5-9"><a href="#cb5-9"></a>This document outlines the phased approach for onboarding as a Data Engineer at CoopDIGITy, with a focus on system discovery and documentation in an environment with limited existing documentation.</span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="fu"># Phase 1: System Discovery &amp; Documentation</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="fu">## Initial Information Gathering</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a></span>
-<span id="cb5-14"><a href="#cb5-14"></a><span class="ss">- </span><span class="va">[ ]</span> Schedule 1:1s with team members to understand their roles and responsibilities</span>
-<span id="cb5-15"><a href="#cb5-15"></a><span class="ss">- </span><span class="va">[ ]</span> Create a shared document to collect tribal knowledge</span>
-<span id="cb5-16"><a href="#cb5-16"></a><span class="ss">- </span><span class="va">[ ]</span> Set up a personal wiki/notebook for documenting discoveries</span>
-<span id="cb5-17"><a href="#cb5-17"></a><span class="ss">- </span><span class="va">[ ]</span> Request access to all relevant systems (even ones you're unsure about)</span>
-<span id="cb5-18"><a href="#cb5-18"></a></span>
-<span id="cb5-19"><a href="#cb5-19"></a><span class="fu">## System Archaeology</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a></span>
-<span id="cb5-21"><a href="#cb5-21"></a><span class="ss">- </span><span class="va">[ ]</span> List all discoverable databases and data stores</span>
-<span id="cb5-22"><a href="#cb5-22"></a><span class="ss">- </span><span class="va">[ ]</span> Document all found API endpoints and services</span>
-<span id="cb5-23"><a href="#cb5-23"></a><span class="ss">- </span><span class="va">[ ]</span> Map out existing data pipelines (even if incomplete)</span>
-<span id="cb5-24"><a href="#cb5-24"></a><span class="ss">- </span><span class="va">[ ]</span> Create initial system topology diagram</span>
-<span id="cb5-25"><a href="#cb5-25"></a><span class="ss">- </span><span class="va">[ ]</span> Document all environment variables and config files found</span>
-<span id="cb5-26"><a href="#cb5-26"></a></span>
-<span id="cb5-27"><a href="#cb5-27"></a><span class="fu">## Code Repository Mapping</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a></span>
-<span id="cb5-29"><a href="#cb5-29"></a><span class="ss">- </span><span class="va">[ ]</span> List all repositories you can find</span>
-<span id="cb5-30"><a href="#cb5-30"></a><span class="ss">- </span><span class="va">[ ]</span> For each repository:</span>
-<span id="cb5-31"><a href="#cb5-31"></a><span class="ss">    - </span><span class="va">[ ]</span> Document its apparent purpose</span>
-<span id="cb5-32"><a href="#cb5-32"></a><span class="ss">    - </span><span class="va">[ ]</span> Note active contributors</span>
-<span id="cb5-33"><a href="#cb5-33"></a><span class="ss">    - </span><span class="va">[ ]</span> Document build process if found</span>
-<span id="cb5-34"><a href="#cb5-34"></a><span class="ss">    - </span><span class="va">[ ]</span> Note dependencies and connection points</span>
-<span id="cb5-35"><a href="#cb5-35"></a><span class="ss">    - </span><span class="va">[ ]</span> Document deployment process (if discoverable)</span>
-<span id="cb5-36"><a href="#cb5-36"></a></span>
-<span id="cb5-37"><a href="#cb5-37"></a><span class="fu"># Phase 2: Active Investigation</span></span>
-<span id="cb5-38"><a href="#cb5-38"></a></span>
-<span id="cb5-39"><a href="#cb5-39"></a><span class="fu">## Database Exploration</span></span>
-<span id="cb5-40"><a href="#cb5-40"></a></span>
-<span id="cb5-41"><a href="#cb5-41"></a><span class="ss">- </span><span class="va">[ ]</span> For each database:</span>
-<span id="cb5-42"><a href="#cb5-42"></a><span class="ss">    - </span><span class="va">[ ]</span> Document schema</span>
-<span id="cb5-43"><a href="#cb5-43"></a><span class="ss">    - </span><span class="va">[ ]</span> Note data volumes</span>
-<span id="cb5-44"><a href="#cb5-44"></a><span class="ss">    - </span><span class="va">[ ]</span> Identify critical tables</span>
-<span id="cb5-45"><a href="#cb5-45"></a><span class="ss">    - </span><span class="va">[ ]</span> Document relationships</span>
-<span id="cb5-46"><a href="#cb5-46"></a><span class="ss">    - </span><span class="va">[ ]</span> Note update frequencies</span>
-<span id="cb5-47"><a href="#cb5-47"></a><span class="ss">    - </span><span class="va">[ ]</span> Identify owners/stakeholders</span>
-<span id="cb5-48"><a href="#cb5-48"></a></span>
-<span id="cb5-49"><a href="#cb5-49"></a><span class="fu">## Pipeline Discovery</span></span>
-<span id="cb5-50"><a href="#cb5-50"></a></span>
-<span id="cb5-51"><a href="#cb5-51"></a><span class="ss">- </span><span class="va">[ ]</span> Trace data flows:</span>
-<span id="cb5-52"><a href="#cb5-52"></a><span class="ss">    - </span><span class="va">[ ]</span> Source systems</span>
-<span id="cb5-53"><a href="#cb5-53"></a><span class="ss">    - </span><span class="va">[ ]</span> Transformation points</span>
-<span id="cb5-54"><a href="#cb5-54"></a><span class="ss">    - </span><span class="va">[ ]</span> Destination systems</span>
-<span id="cb5-55"><a href="#cb5-55"></a><span class="ss">- </span><span class="va">[ ]</span> Document job schedules</span>
-<span id="cb5-56"><a href="#cb5-56"></a><span class="ss">- </span><span class="va">[ ]</span> Note failure points and current monitoring</span>
-<span id="cb5-57"><a href="#cb5-57"></a><span class="ss">- </span><span class="va">[ ]</span> Map dependencies between jobs</span>
-<span id="cb5-58"><a href="#cb5-58"></a></span>
-<span id="cb5-59"><a href="#cb5-59"></a><span class="fu">## Infrastructure Mapping</span></span>
-<span id="cb5-60"><a href="#cb5-60"></a></span>
-<span id="cb5-61"><a href="#cb5-61"></a><span class="ss">- </span><span class="va">[ ]</span> Document all production servers/instances</span>
-<span id="cb5-62"><a href="#cb5-62"></a><span class="ss">- </span><span class="va">[ ]</span> Map network connectivity</span>
-<span id="cb5-63"><a href="#cb5-63"></a><span class="ss">- </span><span class="va">[ ]</span> Document security groups and access patterns</span>
-<span id="cb5-64"><a href="#cb5-64"></a><span class="ss">- </span><span class="va">[ ]</span> Note backup systems (if they exist)</span>
-<span id="cb5-65"><a href="#cb5-65"></a><span class="ss">- </span><span class="va">[ ]</span> Document monitoring solutions in place</span>
-<span id="cb5-66"><a href="#cb5-66"></a></span>
-<span id="cb5-67"><a href="#cb5-67"></a><span class="fu"># Phase 3: Documentation Creation</span></span>
-<span id="cb5-68"><a href="#cb5-68"></a></span>
-<span id="cb5-69"><a href="#cb5-69"></a><span class="fu">## Basic Documentation</span></span>
-<span id="cb5-70"><a href="#cb5-70"></a></span>
-<span id="cb5-71"><a href="#cb5-71"></a><span class="ss">- </span><span class="va">[ ]</span> Create README files for main repositories</span>
-<span id="cb5-72"><a href="#cb5-72"></a><span class="ss">- </span><span class="va">[ ]</span> Document setup procedures as you discover them</span>
-<span id="cb5-73"><a href="#cb5-73"></a><span class="ss">- </span><span class="va">[ ]</span> Create basic architecture diagrams</span>
-<span id="cb5-74"><a href="#cb5-74"></a><span class="ss">- </span><span class="va">[ ]</span> Document known failure scenarios</span>
-<span id="cb5-75"><a href="#cb5-75"></a></span>
-<span id="cb5-76"><a href="#cb5-76"></a><span class="fu">## Process Documentation</span></span>
-<span id="cb5-77"><a href="#cb5-77"></a></span>
-<span id="cb5-78"><a href="#cb5-78"></a><span class="ss">- </span><span class="va">[ ]</span> Document deployment process</span>
-<span id="cb5-79"><a href="#cb5-79"></a><span class="ss">- </span><span class="va">[ ]</span> Create troubleshooting guides</span>
-<span id="cb5-80"><a href="#cb5-80"></a><span class="ss">- </span><span class="va">[ ]</span> Document backup/restore procedures (if they exist)</span>
-<span id="cb5-81"><a href="#cb5-81"></a><span class="ss">- </span><span class="va">[ ]</span> Create incident response templates</span>
-<span id="cb5-82"><a href="#cb5-82"></a></span>
-<span id="cb5-83"><a href="#cb5-83"></a><span class="fu"># Key Questions for Team Members</span></span>
-<span id="cb5-84"><a href="#cb5-84"></a></span>
-<span id="cb5-85"><a href="#cb5-85"></a><span class="fu">## Historical Context</span></span>
-<span id="cb5-86"><a href="#cb5-86"></a></span>
-<span id="cb5-87"><a href="#cb5-87"></a><span class="ss">1. </span>What are the most problematic areas of the system?</span>
-<span id="cb5-88"><a href="#cb5-88"></a><span class="ss">2. </span>Which parts of the system are most critical?</span>
-<span id="cb5-89"><a href="#cb5-89"></a><span class="ss">3. </span>What breaks most often?</span>
-<span id="cb5-90"><a href="#cb5-90"></a><span class="ss">4. </span>What tribal knowledge hasn't been documented?</span>
-<span id="cb5-91"><a href="#cb5-91"></a></span>
-<span id="cb5-92"><a href="#cb5-92"></a><span class="fu">## Technical Questions</span></span>
-<span id="cb5-93"><a href="#cb5-93"></a></span>
-<span id="cb5-94"><a href="#cb5-94"></a><span class="ss">1. </span>Where are logs stored?</span>
-<span id="cb5-95"><a href="#cb5-95"></a><span class="ss">2. </span>How are secrets managed?</span>
-<span id="cb5-96"><a href="#cb5-96"></a><span class="ss">3. </span>What's the release process?</span>
-<span id="cb5-97"><a href="#cb5-97"></a><span class="ss">4. </span>How is testing done?</span>
-<span id="cb5-98"><a href="#cb5-98"></a></span>
-<span id="cb5-99"><a href="#cb5-99"></a><span class="fu"># Documentation Templates</span></span>
-<span id="cb5-100"><a href="#cb5-100"></a></span>
-<span id="cb5-101"><a href="#cb5-101"></a><span class="fu">## System Component Template</span></span>
-<span id="cb5-102"><a href="#cb5-102"></a></span>
-<span id="cb5-103"><a href="#cb5-103"></a><span class="in">```markdown</span></span>
-<span id="cb5-104"><a href="#cb5-104"></a><span class="fu"># Component Name</span></span>
-<span id="cb5-105"><a href="#cb5-105"></a></span>
-<span id="cb5-106"><a href="#cb5-106"></a><span class="fu">## Purpose</span></span>
-<span id="cb5-107"><a href="#cb5-107"></a><span class="co">[</span><span class="ot">What does this component do?</span><span class="co">]</span></span>
-<span id="cb5-108"><a href="#cb5-108"></a></span>
-<span id="cb5-109"><a href="#cb5-109"></a><span class="fu">## Location</span></span>
-<span id="cb5-110"><a href="#cb5-110"></a><span class="ss">- </span>Repository: </span>
-<span id="cb5-111"><a href="#cb5-111"></a><span class="ss">- </span>Production Location:</span>
-<span id="cb5-112"><a href="#cb5-112"></a><span class="ss">- </span>Config Files:</span>
-<span id="cb5-113"><a href="#cb5-113"></a></span>
-<span id="cb5-114"><a href="#cb5-114"></a><span class="fu">## Dependencies</span></span>
-<span id="cb5-115"><a href="#cb5-115"></a><span class="ss">- </span>Input Dependencies:</span>
-<span id="cb5-116"><a href="#cb5-116"></a><span class="ss">- </span>Output Dependencies:</span>
-<span id="cb5-117"><a href="#cb5-117"></a><span class="ss">- </span>Service Dependencies:</span>
-<span id="cb5-118"><a href="#cb5-118"></a></span>
-<span id="cb5-119"><a href="#cb5-119"></a><span class="fu">## Operation</span></span>
-<span id="cb5-120"><a href="#cb5-120"></a><span class="ss">- </span>How to Start:</span>
-<span id="cb5-121"><a href="#cb5-121"></a><span class="ss">- </span>How to Stop:</span>
-<span id="cb5-122"><a href="#cb5-122"></a><span class="ss">- </span>How to Monitor:</span>
-<span id="cb5-123"><a href="#cb5-123"></a><span class="ss">- </span>Common Issues:</span>
-<span id="cb5-124"><a href="#cb5-124"></a></span>
-<span id="cb5-125"><a href="#cb5-125"></a><span class="fu">## Notes</span></span>
-<span id="cb5-126"><a href="#cb5-126"></a><span class="co">[</span><span class="ot">Any additional information</span><span class="co">]</span></span>
-<span id="cb5-127"><a href="#cb5-127"></a><span class="in">```</span></span>
-<span id="cb5-128"><a href="#cb5-128"></a></span>
-<span id="cb5-129"><a href="#cb5-129"></a><span class="fu">## Process Documentation Template</span></span>
-<span id="cb5-130"><a href="#cb5-130"></a></span>
-<span id="cb5-131"><a href="#cb5-131"></a><span class="in">```markdown</span></span>
-<span id="cb5-132"><a href="#cb5-132"></a><span class="fu"># Process Name</span></span>
-<span id="cb5-133"><a href="#cb5-133"></a></span>
-<span id="cb5-134"><a href="#cb5-134"></a><span class="fu">## Overview</span></span>
-<span id="cb5-135"><a href="#cb5-135"></a><span class="co">[</span><span class="ot">Brief description</span><span class="co">]</span></span>
-<span id="cb5-136"><a href="#cb5-136"></a></span>
-<span id="cb5-137"><a href="#cb5-137"></a><span class="fu">## Steps</span></span>
-<span id="cb5-138"><a href="#cb5-138"></a><span class="ss">1. </span></span>
-<span id="cb5-139"><a href="#cb5-139"></a><span class="ss">2. </span></span>
-<span id="cb5-140"><a href="#cb5-140"></a><span class="ss">3. </span></span>
-<span id="cb5-141"><a href="#cb5-141"></a></span>
-<span id="cb5-142"><a href="#cb5-142"></a><span class="fu">## Required Access</span></span>
-<span id="cb5-143"><a href="#cb5-143"></a><span class="ss">- </span>System 1</span>
-<span id="cb5-144"><a href="#cb5-144"></a><span class="ss">- </span>System 2</span>
-<span id="cb5-145"><a href="#cb5-145"></a></span>
-<span id="cb5-146"><a href="#cb5-146"></a><span class="fu">## Common Issues</span></span>
-<span id="cb5-147"><a href="#cb5-147"></a><span class="ss">- </span>Issue 1: Solution 1</span>
-<span id="cb5-148"><a href="#cb5-148"></a><span class="ss">- </span>Issue 2: Solution 2</span>
-<span id="cb5-149"><a href="#cb5-149"></a></span>
-<span id="cb5-150"><a href="#cb5-150"></a><span class="fu">## Notes</span></span>
-<span id="cb5-151"><a href="#cb5-151"></a><span class="co">[</span><span class="ot">Additional context</span><span class="co">]</span></span>
-<span id="cb5-152"><a href="#cb5-152"></a><span class="in">```</span></span>
-<span id="cb5-153"><a href="#cb5-153"></a></span>
-<span id="cb5-154"><a href="#cb5-154"></a><span class="fu"># Progress Tracking</span></span>
-<span id="cb5-155"><a href="#cb5-155"></a></span>
-<span id="cb5-156"><a href="#cb5-156"></a><span class="fu">## Investigation Log Template</span></span>
-<span id="cb5-157"><a href="#cb5-157"></a></span>
-<span id="cb5-158"><a href="#cb5-158"></a><span class="in">```markdown</span></span>
-<span id="cb5-159"><a href="#cb5-159"></a>Date:</span>
-<span id="cb5-160"><a href="#cb5-160"></a>System Investigated:</span>
-<span id="cb5-161"><a href="#cb5-161"></a>Findings:</span>
-<span id="cb5-162"><a href="#cb5-162"></a>Questions:</span>
-<span id="cb5-163"><a href="#cb5-163"></a>Follow-up Items:</span>
-<span id="cb5-164"><a href="#cb5-164"></a><span class="in">```</span></span>
-<span id="cb5-165"><a href="#cb5-165"></a></span>
-<span id="cb5-166"><a href="#cb5-166"></a><span class="fu">## Meeting Notes Template</span></span>
-<span id="cb5-167"><a href="#cb5-167"></a></span>
-<span id="cb5-168"><a href="#cb5-168"></a><span class="in">```markdown</span></span>
-<span id="cb5-169"><a href="#cb5-169"></a>Date:</span>
-<span id="cb5-170"><a href="#cb5-170"></a>Attendees:</span>
-<span id="cb5-171"><a href="#cb5-171"></a>Key Insights:</span>
-<span id="cb5-172"><a href="#cb5-172"></a>New Systems Discovered:</span>
-<span id="cb5-173"><a href="#cb5-173"></a>Action Items:</span>
-<span id="cb5-174"><a href="#cb5-174"></a><span class="in">```</span></span>
-<span id="cb5-175"><a href="#cb5-175"></a></span>
-<span id="cb5-176"><a href="#cb5-176"></a><span class="fu"># Priority Documentation Areas</span></span>
-<span id="cb5-177"><a href="#cb5-177"></a></span>
-<span id="cb5-178"><a href="#cb5-178"></a><span class="fu">## Critical Systems</span></span>
-<span id="cb5-179"><a href="#cb5-179"></a></span>
-<span id="cb5-180"><a href="#cb5-180"></a><span class="ss">- </span><span class="va">[ ]</span> Production databases</span>
-<span id="cb5-181"><a href="#cb5-181"></a><span class="ss">- </span><span class="va">[ ]</span> ETL processes</span>
-<span id="cb5-182"><a href="#cb5-182"></a><span class="ss">- </span><span class="va">[ ]</span> Data pipelines</span>
-<span id="cb5-183"><a href="#cb5-183"></a><span class="ss">- </span><span class="va">[ ]</span> Backup systems</span>
-<span id="cb5-184"><a href="#cb5-184"></a><span class="ss">- </span><span class="va">[ ]</span> Monitoring systems</span>
-<span id="cb5-185"><a href="#cb5-185"></a></span>
-<span id="cb5-186"><a href="#cb5-186"></a><span class="fu">## Business Processes</span></span>
-<span id="cb5-187"><a href="#cb5-187"></a></span>
-<span id="cb5-188"><a href="#cb5-188"></a><span class="ss">- </span><span class="va">[ ]</span> Data flow for critical business operations</span>
-<span id="cb5-189"><a href="#cb5-189"></a><span class="ss">- </span><span class="va">[ ]</span> Reporting processes</span>
-<span id="cb5-190"><a href="#cb5-190"></a><span class="ss">- </span><span class="va">[ ]</span> Data quality checks</span>
-<span id="cb5-191"><a href="#cb5-191"></a><span class="ss">- </span><span class="va">[ ]</span> Business rules and transformations</span>
-<span id="cb5-192"><a href="#cb5-192"></a></span>
-<span id="cb5-193"><a href="#cb5-193"></a><span class="fu"># Documentation Tools and Organization</span></span>
-<span id="cb5-194"><a href="#cb5-194"></a></span>
-<span id="cb5-195"><a href="#cb5-195"></a><span class="fu">## Recommended Tools</span></span>
-<span id="cb5-196"><a href="#cb5-196"></a></span>
-<span id="cb5-197"><a href="#cb5-197"></a><span class="ss">- </span>Draw.io for architecture diagrams</span>
-<span id="cb5-198"><a href="#cb5-198"></a><span class="ss">- </span>Markdown for process documentation</span>
-<span id="cb5-199"><a href="#cb5-199"></a><span class="ss">- </span>Git for version control of documentation</span>
-<span id="cb5-200"><a href="#cb5-200"></a><span class="ss">- </span>Team wiki (if available)</span>
-<span id="cb5-201"><a href="#cb5-201"></a><span class="ss">- </span>Shared team documentation space</span>
-<span id="cb5-202"><a href="#cb5-202"></a></span>
-<span id="cb5-203"><a href="#cb5-203"></a><span class="fu">## Documentation Organization</span></span>
-<span id="cb5-204"><a href="#cb5-204"></a></span>
-<span id="cb5-205"><a href="#cb5-205"></a><span class="ss">- </span>System Architecture</span>
-<span id="cb5-206"><a href="#cb5-206"></a><span class="ss">- </span>Data Flows</span>
-<span id="cb5-207"><a href="#cb5-207"></a><span class="ss">- </span>Process Documents</span>
-<span id="cb5-208"><a href="#cb5-208"></a><span class="ss">- </span>Troubleshooting Guides</span>
-<span id="cb5-209"><a href="#cb5-209"></a><span class="ss">- </span>Setup Procedures</span>
-<span id="cb5-210"><a href="#cb5-210"></a><span class="ss">- </span>Contact Information</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="an">title:</span><span class="co"> 'AWS Glue vs Spark on EMR for 2024'</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="an">author:</span><span class="co"> 'Your Name'</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="an">date:</span><span class="co"> 'January 22, 2025'</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="an">format:</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">  html:</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">    toc: true</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">    code-fold: true</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">    number-sections: true</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">    theme: cosmo</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co">  pdf:</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="co">    toc: true</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="co">    number-sections: true</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="co">    colorlinks: true</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="an">execute:</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="co">  echo: true</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a><span class="co">  warning: false</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="co">  message: false</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="co">---</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="in">```{python}</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb4-26"><a href="#cb4-26"></a></span>
+<span id="cb4-27"><a href="#cb4-27"></a><span class="co"># 1) Load ETL notifications from Parquet</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a>df <span class="op">=</span> pd.read_parquet(<span class="st">"scripts/etl_history_2024.parquet"</span>)</span>
+<span id="cb4-29"><a href="#cb4-29"></a></span>
+<span id="cb4-30"><a href="#cb4-30"></a><span class="co"># 2) Convert timestamp (milliseconds) to datetime</span></span>
+<span id="cb4-31"><a href="#cb4-31"></a>df[<span class="st">"datetime"</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">"timestamp"</span>], unit<span class="op">=</span><span class="st">"ms"</span>)</span>
+<span id="cb4-32"><a href="#cb4-32"></a>df[<span class="st">"date"</span>] <span class="op">=</span> df[<span class="st">"datetime"</span>].dt.date</span>
+<span id="cb4-33"><a href="#cb4-33"></a></span>
+<span id="cb4-34"><a href="#cb4-34"></a><span class="co"># 3) Hypothetical cost model</span></span>
+<span id="cb4-35"><a href="#cb4-35"></a><span class="co">#    No runtime data here, so we'll assume cost is per-row:</span></span>
+<span id="cb4-36"><a href="#cb4-36"></a><span class="co">#      cost_glue = rows * $0.00002</span></span>
+<span id="cb4-37"><a href="#cb4-37"></a><span class="co">#      cost_emr  = rows * $0.000015</span></span>
+<span id="cb4-38"><a href="#cb4-38"></a><span class="co">#    Adjust these multipliers as needed.</span></span>
+<span id="cb4-39"><a href="#cb4-39"></a>df[<span class="st">"cost_glue"</span>] <span class="op">=</span> df[<span class="st">"rows"</span>] <span class="op">*</span> <span class="fl">0.00002</span></span>
+<span id="cb4-40"><a href="#cb4-40"></a>df[<span class="st">"cost_emr"</span>]  <span class="op">=</span> df[<span class="st">"rows"</span>] <span class="op">*</span> <span class="fl">0.000015</span></span>
+<span id="cb4-41"><a href="#cb4-41"></a></span>
+<span id="cb4-42"><a href="#cb4-42"></a><span class="co"># 4) Aggregate by date</span></span>
+<span id="cb4-43"><a href="#cb4-43"></a>daily_costs <span class="op">=</span> (</span>
+<span id="cb4-44"><a href="#cb4-44"></a>    df.groupby(<span class="st">"date"</span>, as_index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-45"><a href="#cb4-45"></a>      .agg({</span>
+<span id="cb4-46"><a href="#cb4-46"></a>          <span class="st">"cost_glue"</span>: <span class="st">"sum"</span>,</span>
+<span id="cb4-47"><a href="#cb4-47"></a>          <span class="st">"cost_emr"</span>: <span class="st">"sum"</span>,</span>
+<span id="cb4-48"><a href="#cb4-48"></a>          <span class="st">"rows"</span>: <span class="st">"sum"</span></span>
+<span id="cb4-49"><a href="#cb4-49"></a>      })</span>
+<span id="cb4-50"><a href="#cb4-50"></a>)</span>
+<span id="cb4-51"><a href="#cb4-51"></a></span>
+<span id="cb4-52"><a href="#cb4-52"></a><span class="co"># 5) Compare daily costs (Glue vs EMR) in a line chart</span></span>
+<span id="cb4-53"><a href="#cb4-53"></a>fig_costs <span class="op">=</span> px.line(</span>
+<span id="cb4-54"><a href="#cb4-54"></a>    daily_costs,</span>
+<span id="cb4-55"><a href="#cb4-55"></a>    x<span class="op">=</span><span class="st">"date"</span>,</span>
+<span id="cb4-56"><a href="#cb4-56"></a>    y<span class="op">=</span>[<span class="st">"cost_glue"</span>, <span class="st">"cost_emr"</span>],</span>
+<span id="cb4-57"><a href="#cb4-57"></a>    labels<span class="op">=</span>{<span class="st">"value"</span>: <span class="st">"Daily Cost (USD)"</span>, <span class="st">"date"</span>: <span class="st">"Date"</span>},</span>
+<span id="cb4-58"><a href="#cb4-58"></a>    title<span class="op">=</span><span class="st">"Daily Hypothetical Costs: AWS Glue vs EMR (2024)"</span></span>
+<span id="cb4-59"><a href="#cb4-59"></a>)</span>
+<span id="cb4-60"><a href="#cb4-60"></a>fig_costs.update_layout(hovermode<span class="op">=</span><span class="st">"x unified"</span>)</span>
+<span id="cb4-61"><a href="#cb4-61"></a></span>
+<span id="cb4-62"><a href="#cb4-62"></a><span class="co"># Display the Plotly figure</span></span>
+<span id="cb4-63"><a href="#cb4-63"></a>fig_costs.show()</span>
+<span id="cb4-64"><a href="#cb4-64"></a><span class="in">```</span></span>
+<span id="cb4-65"><a href="#cb4-65"></a></span>
+<span id="cb4-68"><a href="#cb4-68"></a><span class="in">```{python}</span></span>
+<span id="cb4-69"><a href="#cb4-69"></a><span class="co"># 6) Visualize daily rows processed in a bar chart</span></span>
+<span id="cb4-70"><a href="#cb4-70"></a>fig_rows <span class="op">=</span> px.bar(</span>
+<span id="cb4-71"><a href="#cb4-71"></a>    daily_costs,</span>
+<span id="cb4-72"><a href="#cb4-72"></a>    x<span class="op">=</span><span class="st">"date"</span>,</span>
+<span id="cb4-73"><a href="#cb4-73"></a>    y<span class="op">=</span><span class="st">"rows"</span>,</span>
+<span id="cb4-74"><a href="#cb4-74"></a>    labels<span class="op">=</span>{<span class="st">"rows"</span>: <span class="st">"Rows Processed"</span>, <span class="st">"date"</span>: <span class="st">"Date"</span>},</span>
+<span id="cb4-75"><a href="#cb4-75"></a>    title<span class="op">=</span><span class="st">"Total Rows Processed per Day"</span></span>
+<span id="cb4-76"><a href="#cb4-76"></a>)</span>
+<span id="cb4-77"><a href="#cb4-77"></a>fig_rows.show()</span>
+<span id="cb4-78"><a href="#cb4-78"></a><span class="in">```</span></span>
+<span id="cb4-79"><a href="#cb4-79"></a></span>
+<span id="cb4-80"><a href="#cb4-80"></a>---</span>
+<span id="cb4-81"><a href="#cb4-81"></a></span>
+<span id="cb4-82"><a href="#cb4-82"></a><span class="fu">### Customizing the Document</span></span>
+<span id="cb4-83"><a href="#cb4-83"></a></span>
+<span id="cb4-84"><a href="#cb4-84"></a><span class="ss">1. </span>**Cost Model**</span>
+<span id="cb4-85"><a href="#cb4-85"></a></span>
+<span id="cb4-86"><a href="#cb4-86"></a><span class="ss">   - </span>Adjust your cost multipliers based on real usage (e.g., DPUs for Glue, instance-hour costs for EMR, cluster overhead, etc.).</span>
+<span id="cb4-87"><a href="#cb4-87"></a><span class="ss">   - </span>If you have actual **runtimes** or **DPUs** used, incorporate those into your calculation instead of a simple “per-row” approach.</span>
+<span id="cb4-88"><a href="#cb4-88"></a></span>
+<span id="cb4-89"><a href="#cb4-89"></a><span class="ss">2. </span>**Chart Types**</span>
+<span id="cb4-90"><a href="#cb4-90"></a></span>
+<span id="cb4-91"><a href="#cb4-91"></a><span class="ss">   - </span>Plotly supports many chart types (scatter, area, box, etc.). Choose what best displays your data.</span>
+<span id="cb4-92"><a href="#cb4-92"></a><span class="ss">   - </span>You can also add interactive tooltips, facet the data by <span class="in">`destination`</span> or <span class="in">`table`</span>, etc.</span>
+<span id="cb4-93"><a href="#cb4-93"></a></span>
+<span id="cb4-94"><a href="#cb4-94"></a><span class="ss">3. </span>**Grouping &amp; Granularity**</span>
+<span id="cb4-95"><a href="#cb4-95"></a></span>
+<span id="cb4-96"><a href="#cb4-96"></a><span class="ss">   - </span>If you have thousands of daily data points, consider grouping by **week** or **month** to simplify the charts:</span>
+<span id="cb4-97"><a href="#cb4-97"></a>     <span class="in">```python</span></span>
+<span id="cb4-98"><a href="#cb4-98"></a>     df[<span class="st">"year_week"</span>] <span class="op">=</span> df[<span class="st">"datetime"</span>].dt.strftime(<span class="st">'%Y-%U'</span>)</span>
+<span id="cb4-99"><a href="#cb4-99"></a>     <span class="in">```</span></span>
+<span id="cb4-100"><a href="#cb4-100"></a><span class="ss">   - </span>Then group by <span class="in">`year_week`</span> instead of <span class="in">`date`</span>.</span>
+<span id="cb4-101"><a href="#cb4-101"></a></span>
+<span id="cb4-102"><a href="#cb4-102"></a><span class="ss">4. </span>**Styling and Themes**</span>
+<span id="cb4-103"><a href="#cb4-103"></a><span class="ss">   - </span>Quarto + Plotly uses the default Plotly theme by default. You can customize layout, colors, etc. using Plotly’s theming options.</span>
+<span id="cb4-104"><a href="#cb4-104"></a></span>
+<span id="cb4-105"><a href="#cb4-105"></a>With this Quarto document, you’ll have an end-to-end workflow showing how much you _would_ have spent each day on AWS Glue vs. EMR, plus a breakdown of how many rows were processed overall. Adjust the details to match your actual cost structures and data fields.</span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
