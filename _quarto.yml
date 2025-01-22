@@ -8,94 +8,16 @@ project:
   output-dir: docs
 
 website:
-  title: 'CoopDIGITy Systems Documentation'
+  title: 'ReSight - Next Gen ETL'
   sidebar:
     style: "floating"
     contents:
-      - text: "Plan"
-        href: onboarding-planning.qmd
       - text: "Overview"
         href: index.qmd
-      - text: "Business Context"
-        href: business-context.qmd
-      - section: "System Architecture"
-        contents:
-          - text: "Overview"
-            href: architecture/index.qmd
-          - text: "Data Flow"
-            href: architecture/data-flow.qmd
-          - text: "Infrastructure"
-            href: architecture/infrastructure.qmd
-          - text: "Security"
-            href: architecture/security.qmd
-      - section: "Data Systems"
-        contents:
-          - text: "Overview"
-            href: data/index.qmd
-          - section: "Data Storage"
-            contents:
-              - text: "Databases"
-                href: data/storage/databases.qmd
-              - text: "Data Warehouse"
-                href: data/storage/warehouse.qmd
-              - text: "Data Lake"
-                href: data/storage/lake.qmd
-          - section: "Data Processing"
-            contents:
-              - text: "ETL Processes"
-                href: data/processing/etl.qmd
-              - text: "Batch Processing"
-                href: data/processing/batch.qmd
-              - text: "Real-time Processing"
-                href: data/processing/realtime.qmd
-          - text: "Data Quality"
-            href: data/quality.qmd
-          - text: "Data Governance"
-            href: data/governance.qmd
-      - section: "Technical Stack"
-        contents:
-          - text: "Overview"
-            href: tech-stack/index.qmd
-          - text: "Languages & Frameworks"
-            href: tech-stack/languages.qmd
-          - text: "Tools & Services"
-            href: tech-stack/tools.qmd
-          - text: "Cloud Infrastructure"
-            href: tech-stack/cloud.qmd
-      - section: "Processes"
-        contents:
-          - text: "Development Workflow"
-            href: processes/development.qmd
-          - text: "Deployment"
-            href: processes/deployment.qmd
-          - text: "Monitoring"
-            href: processes/monitoring.qmd
-          - text: "Incident Response"
-            href: processes/incidents.qmd
-      - section: "Troubleshooting"
-        contents:
-          - text: "Common Issues"
-            href: troubleshooting/common-issues.qmd
-          - text: "Debug Guides"
-            href: troubleshooting/debug-guides.qmd
-          - text: "System Checks"
-            href: troubleshooting/system-checks.qmd
-      - section: "Team"
-        contents:
-          - text: "Structure"
-            href: team/structure.qmd
-          - text: "Contacts"
-            href: team/contacts.qmd
-          - text: "Communication"
-            href: team/communication.qmd
-      - section: "References"
-        contents:
-          - text: "Glossary"
-            href: references/glossary.qmd
-          - text: "External Resources"
-            href: references/external.qmd
-          - text: "Change Log"
-            href: references/changelog.qmd
+      - text: "UPSERT Operations"
+        href: upsert-ops.qmd
+
+      
 
 format:
   html:
