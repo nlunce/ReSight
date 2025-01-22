@@ -48,13 +48,13 @@ Our current ETL infrastructure demonstrates significant daily processing capacit
 
 ## Target State (2026)
 
-| Metric            | Value                                    | Growth Factor        |
-| :---------------- | :--------------------------------------- | :------------------- |
-| Daily Loads       | 400+/day                                 | 10x current median   |
-| Data Volume       | 700K+ rows/day typical                   | 10x current median   |
-| Data Sources      | 1000+ integrated sources                 | 10x current scale    |
-| Complexity        | High (ML pipelines, real-time analytics) | Significant increase |
-| Processing Window | Near real-time requirements              | Minutes vs. flexible |
+| Metric            | Value                                   | Growth Factor        |
+| :---------------- | :-------------------------------------- | :------------------- |
+| Daily Loads       | 400+/day                                | 10x current median   |
+| Data Volume       | 700K+ rows/day typical                  | 10x current median   |
+| Data Sources      | 1000+ integrated sources                | 10x current scale    |
+| Complexity        | High (ML pipelines)                     | Significant increase |
+| Processing Window | Near real-time requirements (if needed) | Minutes vs. flexible |
 
 ## Growth Requirements
 
@@ -68,7 +68,6 @@ Our next-generation ETL pipeline must support:
 
 2. **Advanced Processing Capabilities**
 
-   - Real-time data transformation
    - Predictive analytics pipelines
    - Machine learning model integration
    - Market insight generation

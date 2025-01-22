@@ -1,266 +1,5 @@
 [
   {
-    "objectID": "business-context.html",
-    "href": "business-context.html",
-    "title": "Business Context",
-    "section": "",
-    "text": "Overview of CoopDIGITy’s business model and operations\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]"
-  },
-  {
-    "objectID": "business-context.html#overview",
-    "href": "business-context.html#overview",
-    "title": "Business Context",
-    "section": "",
-    "text": "[Add overview here]"
-  },
-  {
-    "objectID": "business-context.html#details",
-    "href": "business-context.html#details",
-    "title": "Business Context",
-    "section": "",
-    "text": "[Add detailed content here]"
-  },
-  {
-    "objectID": "business-context.html#notes",
-    "href": "business-context.html#notes",
-    "title": "Business Context",
-    "section": "",
-    "text": "[Add any additional notes here]"
-  },
-  {
-    "objectID": "onboarding-planning.html",
-    "href": "onboarding-planning.html",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "",
-    "text": "This document outlines the phased approach for onboarding as a Data Engineer at CoopDIGITy, with a focus on system discovery and documentation in an environment with limited existing documentation."
-  },
-  {
-    "objectID": "onboarding-planning.html#initial-information-gathering",
-    "href": "onboarding-planning.html#initial-information-gathering",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Initial Information Gathering",
-    "text": "Initial Information Gathering\n\nSchedule 1:1s with team members to understand their roles and responsibilities\nCreate a shared document to collect tribal knowledge\nSet up a personal wiki/notebook for documenting discoveries\nRequest access to all relevant systems (even ones you’re unsure about)"
-  },
-  {
-    "objectID": "onboarding-planning.html#system-archaeology",
-    "href": "onboarding-planning.html#system-archaeology",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "System Archaeology",
-    "text": "System Archaeology\n\nList all discoverable databases and data stores\nDocument all found API endpoints and services\nMap out existing data pipelines (even if incomplete)\nCreate initial system topology diagram\nDocument all environment variables and config files found"
-  },
-  {
-    "objectID": "onboarding-planning.html#code-repository-mapping",
-    "href": "onboarding-planning.html#code-repository-mapping",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Code Repository Mapping",
-    "text": "Code Repository Mapping\n\nList all repositories you can find\nFor each repository:\n\nDocument its apparent purpose\nNote active contributors\nDocument build process if found\nNote dependencies and connection points\nDocument deployment process (if discoverable)"
-  },
-  {
-    "objectID": "onboarding-planning.html#database-exploration",
-    "href": "onboarding-planning.html#database-exploration",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Database Exploration",
-    "text": "Database Exploration\n\nFor each database:\n\nDocument schema\nNote data volumes\nIdentify critical tables\nDocument relationships\nNote update frequencies\nIdentify owners/stakeholders"
-  },
-  {
-    "objectID": "onboarding-planning.html#pipeline-discovery",
-    "href": "onboarding-planning.html#pipeline-discovery",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Pipeline Discovery",
-    "text": "Pipeline Discovery\n\nTrace data flows:\n\nSource systems\nTransformation points\nDestination systems\n\nDocument job schedules\nNote failure points and current monitoring\nMap dependencies between jobs"
-  },
-  {
-    "objectID": "onboarding-planning.html#infrastructure-mapping",
-    "href": "onboarding-planning.html#infrastructure-mapping",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Infrastructure Mapping",
-    "text": "Infrastructure Mapping\n\nDocument all production servers/instances\nMap network connectivity\nDocument security groups and access patterns\nNote backup systems (if they exist)\nDocument monitoring solutions in place"
-  },
-  {
-    "objectID": "onboarding-planning.html#basic-documentation",
-    "href": "onboarding-planning.html#basic-documentation",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Basic Documentation",
-    "text": "Basic Documentation\n\nCreate README files for main repositories\nDocument setup procedures as you discover them\nCreate basic architecture diagrams\nDocument known failure scenarios"
-  },
-  {
-    "objectID": "onboarding-planning.html#process-documentation",
-    "href": "onboarding-planning.html#process-documentation",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Process Documentation",
-    "text": "Process Documentation\n\nDocument deployment process\nCreate troubleshooting guides\nDocument backup/restore procedures (if they exist)\nCreate incident response templates"
-  },
-  {
-    "objectID": "onboarding-planning.html#historical-context",
-    "href": "onboarding-planning.html#historical-context",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Historical Context",
-    "text": "Historical Context\n\nWhat are the most problematic areas of the system?\nWhich parts of the system are most critical?\nWhat breaks most often?\nWhat tribal knowledge hasn’t been documented?"
-  },
-  {
-    "objectID": "onboarding-planning.html#technical-questions",
-    "href": "onboarding-planning.html#technical-questions",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Technical Questions",
-    "text": "Technical Questions\n\nWhere are logs stored?\nHow are secrets managed?\nWhat’s the release process?\nHow is testing done?"
-  },
-  {
-    "objectID": "onboarding-planning.html#system-component-template",
-    "href": "onboarding-planning.html#system-component-template",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "System Component Template",
-    "text": "System Component Template\n# Component Name\n\n## Purpose\n[What does this component do?]\n\n## Location\n- Repository: \n- Production Location:\n- Config Files:\n\n## Dependencies\n- Input Dependencies:\n- Output Dependencies:\n- Service Dependencies:\n\n## Operation\n- How to Start:\n- How to Stop:\n- How to Monitor:\n- Common Issues:\n\n## Notes\n[Any additional information]"
-  },
-  {
-    "objectID": "onboarding-planning.html#process-documentation-template",
-    "href": "onboarding-planning.html#process-documentation-template",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Process Documentation Template",
-    "text": "Process Documentation Template\n# Process Name\n\n## Overview\n[Brief description]\n\n## Steps\n1. \n2. \n3. \n\n## Required Access\n- System 1\n- System 2\n\n## Common Issues\n- Issue 1: Solution 1\n- Issue 2: Solution 2\n\n## Notes\n[Additional context]"
-  },
-  {
-    "objectID": "onboarding-planning.html#investigation-log-template",
-    "href": "onboarding-planning.html#investigation-log-template",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Investigation Log Template",
-    "text": "Investigation Log Template\nDate:\nSystem Investigated:\nFindings:\nQuestions:\nFollow-up Items:"
-  },
-  {
-    "objectID": "onboarding-planning.html#meeting-notes-template",
-    "href": "onboarding-planning.html#meeting-notes-template",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Meeting Notes Template",
-    "text": "Meeting Notes Template\nDate:\nAttendees:\nKey Insights:\nNew Systems Discovered:\nAction Items:"
-  },
-  {
-    "objectID": "onboarding-planning.html#critical-systems",
-    "href": "onboarding-planning.html#critical-systems",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Critical Systems",
-    "text": "Critical Systems\n\nProduction databases\nETL processes\nData pipelines\nBackup systems\nMonitoring systems"
-  },
-  {
-    "objectID": "onboarding-planning.html#business-processes",
-    "href": "onboarding-planning.html#business-processes",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Business Processes",
-    "text": "Business Processes\n\nData flow for critical business operations\nReporting processes\nData quality checks\nBusiness rules and transformations"
-  },
-  {
-    "objectID": "onboarding-planning.html#recommended-tools",
-    "href": "onboarding-planning.html#recommended-tools",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Recommended Tools",
-    "text": "Recommended Tools\n\nDraw.io for architecture diagrams\nMarkdown for process documentation\nGit for version control of documentation\nTeam wiki (if available)\nShared team documentation space"
-  },
-  {
-    "objectID": "onboarding-planning.html#documentation-organization",
-    "href": "onboarding-planning.html#documentation-organization",
-    "title": "Data Engineer Onboarding Plan",
-    "section": "Documentation Organization",
-    "text": "Documentation Organization\n\nSystem Architecture\nData Flows\nProcess Documents\nTroubleshooting Guides\nSetup Procedures\nContact Information"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "",
-    "text": "ReSight is positioning itself to become the authoritative source of truth and insights for the U.S. pet industry. This transformation requires a robust, scalable ETL infrastructure capable of processing comprehensive industry data at scale.\n\n\nOur current ETL infrastructure demonstrates significant daily processing capacity with notable variability in workload:\n\n\n\n\n\nMetric\nTypical Day (Median)\nPeak Day\nAverage (Mean)\n\n\n\n\nLoads Processed\n40\n303\n59.2\n\n\nRows Processed\n70,588\n824,719\n105,218\n\n\nProcessing Window\nFlexible\nFlexible\nFlexible\n\n\n\n\n\n\n\nDaily Load Range: 1-303 loads per day\nTypical Range (Q1-Q3): 24-65 loads per day\nStandard Deviation: 54.8 loads, indicating high variability\nProcessing Reliability: 361 days of consistent operation with no outages\n\n\n\n\n\nDaily Row Range: 28-824,719 rows\nTypical Range (Q1-Q3): 15,606-159,225 rows\nVolume Variability: Standard deviation of 115,282 rows\nProcessing Success Rate: 100% (no missing days)\n\n\n\n\n\n\n\n\n\n\n\n\n\nMetric\nValue\nGrowth Factor\n\n\n\n\nDaily Loads\n400+/day\n10x current median\n\n\nData Volume\n700K+ rows/day typical\n10x current median\n\n\nData Sources\n1000+ integrated sources\n10x current scale\n\n\nComplexity\nHigh (ML pipelines, real-time analytics)\nSignificant increase\n\n\nProcessing Window\nNear real-time requirements\nMinutes vs. flexible\n\n\n\n\n\n\nOur next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\n\nAdvanced Processing Capabilities\n\nReal-time data transformation\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nIndustry-leading security controls",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#current-state-analysis-2024",
-    "href": "index.html#current-state-analysis-2024",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "",
-    "text": "Our current ETL infrastructure demonstrates significant daily processing capacity with notable variability in workload:\n\n\n\n\n\nMetric\nTypical Day (Median)\nPeak Day\nAverage (Mean)\n\n\n\n\nLoads Processed\n40\n303\n59.2\n\n\nRows Processed\n70,588\n824,719\n105,218\n\n\nProcessing Window\nFlexible\nFlexible\nFlexible\n\n\n\n\n\n\n\nDaily Load Range: 1-303 loads per day\nTypical Range (Q1-Q3): 24-65 loads per day\nStandard Deviation: 54.8 loads, indicating high variability\nProcessing Reliability: 361 days of consistent operation with no outages\n\n\n\n\n\nDaily Row Range: 28-824,719 rows\nTypical Range (Q1-Q3): 15,606-159,225 rows\nVolume Variability: Standard deviation of 115,282 rows\nProcessing Success Rate: 100% (no missing days)",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#target-state-2026",
-    "href": "index.html#target-state-2026",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "",
-    "text": "Metric\nValue\nGrowth Factor\n\n\n\n\nDaily Loads\n400+/day\n10x current median\n\n\nData Volume\n700K+ rows/day typical\n10x current median\n\n\nData Sources\n1000+ integrated sources\n10x current scale\n\n\nComplexity\nHigh (ML pipelines, real-time analytics)\nSignificant increase\n\n\nProcessing Window\nNear real-time requirements\nMinutes vs. flexible",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#growth-requirements",
-    "href": "index.html#growth-requirements",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "",
-    "text": "Our next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\n\nAdvanced Processing Capabilities\n\nReal-time data transformation\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nIndustry-leading security controls",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#core-requirements",
-    "href": "index.html#core-requirements",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "2.1 Core Requirements",
-    "text": "2.1 Core Requirements\n\n2.1.1 Scalability\n\nSupport for 400+ daily loads (10x current median)\nPeak capacity of 8M+ rows per day\nElastic resource allocation\nHorizontal scaling support\n\n\n\n2.1.2 Advanced Analytics\n\nML pipeline integration\nComplex data transformations\nData science toolkit support\nPredictive modeling capability\n\n\n\n2.1.3 Reliability\n\nZero downtime (matching current 100% reliability)\nAutomated failover\nComprehensive monitoring\nProactive scaling",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#key-performance-indicators",
-    "href": "index.html#key-performance-indicators",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "2.2 Key Performance Indicators",
-    "text": "2.2 Key Performance Indicators\n\n\n\nMetric\nCurrent (2024)\nTarget (2026)\n\n\n\n\nDaily Loads (Median)\n40\n400+\n\n\nPeak Daily Loads\n303\n3000+\n\n\nDaily Rows (Median)\n70,588\n700K+\n\n\nPeak Daily Rows\n824,719\n8M+\n\n\nProcessing Latency\nHours\nMinutes\n\n\nData Sources\n~100\n1000+",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#phase-1-foundation-q1-2025",
-    "href": "index.html#phase-1-foundation-q1-2025",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "3.1 Phase 1: Foundation (Q1 2025)",
-    "text": "3.1 Phase 1: Foundation (Q1 2025)\n\nScale current infrastructure to handle 2x current peak load\nImplement comprehensive monitoring\nDeploy new stream processing architecture",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#phase-2-scaling-q2-q3-2025",
-    "href": "index.html#phase-2-scaling-q2-q3-2025",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "3.2 Phase 2: Scaling (Q2-Q3 2025)",
-    "text": "3.2 Phase 2: Scaling (Q2-Q3 2025)\n\nExpand data source integration capacity\nImplement ML pipeline framework",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#phase-3-optimization-q4-2025",
-    "href": "index.html#phase-3-optimization-q4-2025",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "3.3 Phase 3: Optimization (Q4 2025)",
-    "text": "3.3 Phase 3: Optimization (Q4 2025)\n\nScale to 5x current capacity\nDeploy advanced analytics capabilities",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#phase-4-enterprise-scale-2026",
-    "href": "index.html#phase-4-enterprise-scale-2026",
-    "title": "ReSight: Building the Future of Pet Industry Analytics",
-    "section": "3.4 Phase 4: Enterprise Scale (2026)",
-    "text": "3.4 Phase 4: Enterprise Scale (2026)\n\nAchieve full target state capabilities\nDeploy full ML/AI integration",
-    "crumbs": [
-      "Overview"
-    ]
-  },
-  {
     "objectID": "upsert-ops.html",
     "href": "upsert-ops.html",
     "title": "AWS Glue vs Spark on EMR for UPSERT Operations",
@@ -418,6 +157,267 @@
     "text": "8.3 Phase 3: Optimization\n\nPerformance tuning\nCost optimization\nProcess refinement\nTeam training\n\n\n\n\n\n\n\nNext Steps\n\n\n\n\nPrototype both solutions\nTest with production data volumes\nCalculate actual costs",
     "crumbs": [
       "UPSERT Operations"
+    ]
+  },
+  {
+    "objectID": "onboarding-planning.html",
+    "href": "onboarding-planning.html",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "",
+    "text": "This document outlines the phased approach for onboarding as a Data Engineer at CoopDIGITy, with a focus on system discovery and documentation in an environment with limited existing documentation."
+  },
+  {
+    "objectID": "onboarding-planning.html#initial-information-gathering",
+    "href": "onboarding-planning.html#initial-information-gathering",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Initial Information Gathering",
+    "text": "Initial Information Gathering\n\nSchedule 1:1s with team members to understand their roles and responsibilities\nCreate a shared document to collect tribal knowledge\nSet up a personal wiki/notebook for documenting discoveries\nRequest access to all relevant systems (even ones you’re unsure about)"
+  },
+  {
+    "objectID": "onboarding-planning.html#system-archaeology",
+    "href": "onboarding-planning.html#system-archaeology",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "System Archaeology",
+    "text": "System Archaeology\n\nList all discoverable databases and data stores\nDocument all found API endpoints and services\nMap out existing data pipelines (even if incomplete)\nCreate initial system topology diagram\nDocument all environment variables and config files found"
+  },
+  {
+    "objectID": "onboarding-planning.html#code-repository-mapping",
+    "href": "onboarding-planning.html#code-repository-mapping",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Code Repository Mapping",
+    "text": "Code Repository Mapping\n\nList all repositories you can find\nFor each repository:\n\nDocument its apparent purpose\nNote active contributors\nDocument build process if found\nNote dependencies and connection points\nDocument deployment process (if discoverable)"
+  },
+  {
+    "objectID": "onboarding-planning.html#database-exploration",
+    "href": "onboarding-planning.html#database-exploration",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Database Exploration",
+    "text": "Database Exploration\n\nFor each database:\n\nDocument schema\nNote data volumes\nIdentify critical tables\nDocument relationships\nNote update frequencies\nIdentify owners/stakeholders"
+  },
+  {
+    "objectID": "onboarding-planning.html#pipeline-discovery",
+    "href": "onboarding-planning.html#pipeline-discovery",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Pipeline Discovery",
+    "text": "Pipeline Discovery\n\nTrace data flows:\n\nSource systems\nTransformation points\nDestination systems\n\nDocument job schedules\nNote failure points and current monitoring\nMap dependencies between jobs"
+  },
+  {
+    "objectID": "onboarding-planning.html#infrastructure-mapping",
+    "href": "onboarding-planning.html#infrastructure-mapping",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Infrastructure Mapping",
+    "text": "Infrastructure Mapping\n\nDocument all production servers/instances\nMap network connectivity\nDocument security groups and access patterns\nNote backup systems (if they exist)\nDocument monitoring solutions in place"
+  },
+  {
+    "objectID": "onboarding-planning.html#basic-documentation",
+    "href": "onboarding-planning.html#basic-documentation",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Basic Documentation",
+    "text": "Basic Documentation\n\nCreate README files for main repositories\nDocument setup procedures as you discover them\nCreate basic architecture diagrams\nDocument known failure scenarios"
+  },
+  {
+    "objectID": "onboarding-planning.html#process-documentation",
+    "href": "onboarding-planning.html#process-documentation",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Process Documentation",
+    "text": "Process Documentation\n\nDocument deployment process\nCreate troubleshooting guides\nDocument backup/restore procedures (if they exist)\nCreate incident response templates"
+  },
+  {
+    "objectID": "onboarding-planning.html#historical-context",
+    "href": "onboarding-planning.html#historical-context",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Historical Context",
+    "text": "Historical Context\n\nWhat are the most problematic areas of the system?\nWhich parts of the system are most critical?\nWhat breaks most often?\nWhat tribal knowledge hasn’t been documented?"
+  },
+  {
+    "objectID": "onboarding-planning.html#technical-questions",
+    "href": "onboarding-planning.html#technical-questions",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Technical Questions",
+    "text": "Technical Questions\n\nWhere are logs stored?\nHow are secrets managed?\nWhat’s the release process?\nHow is testing done?"
+  },
+  {
+    "objectID": "onboarding-planning.html#system-component-template",
+    "href": "onboarding-planning.html#system-component-template",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "System Component Template",
+    "text": "System Component Template\n# Component Name\n\n## Purpose\n[What does this component do?]\n\n## Location\n- Repository: \n- Production Location:\n- Config Files:\n\n## Dependencies\n- Input Dependencies:\n- Output Dependencies:\n- Service Dependencies:\n\n## Operation\n- How to Start:\n- How to Stop:\n- How to Monitor:\n- Common Issues:\n\n## Notes\n[Any additional information]"
+  },
+  {
+    "objectID": "onboarding-planning.html#process-documentation-template",
+    "href": "onboarding-planning.html#process-documentation-template",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Process Documentation Template",
+    "text": "Process Documentation Template\n# Process Name\n\n## Overview\n[Brief description]\n\n## Steps\n1. \n2. \n3. \n\n## Required Access\n- System 1\n- System 2\n\n## Common Issues\n- Issue 1: Solution 1\n- Issue 2: Solution 2\n\n## Notes\n[Additional context]"
+  },
+  {
+    "objectID": "onboarding-planning.html#investigation-log-template",
+    "href": "onboarding-planning.html#investigation-log-template",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Investigation Log Template",
+    "text": "Investigation Log Template\nDate:\nSystem Investigated:\nFindings:\nQuestions:\nFollow-up Items:"
+  },
+  {
+    "objectID": "onboarding-planning.html#meeting-notes-template",
+    "href": "onboarding-planning.html#meeting-notes-template",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Meeting Notes Template",
+    "text": "Meeting Notes Template\nDate:\nAttendees:\nKey Insights:\nNew Systems Discovered:\nAction Items:"
+  },
+  {
+    "objectID": "onboarding-planning.html#critical-systems",
+    "href": "onboarding-planning.html#critical-systems",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Critical Systems",
+    "text": "Critical Systems\n\nProduction databases\nETL processes\nData pipelines\nBackup systems\nMonitoring systems"
+  },
+  {
+    "objectID": "onboarding-planning.html#business-processes",
+    "href": "onboarding-planning.html#business-processes",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Business Processes",
+    "text": "Business Processes\n\nData flow for critical business operations\nReporting processes\nData quality checks\nBusiness rules and transformations"
+  },
+  {
+    "objectID": "onboarding-planning.html#recommended-tools",
+    "href": "onboarding-planning.html#recommended-tools",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Recommended Tools",
+    "text": "Recommended Tools\n\nDraw.io for architecture diagrams\nMarkdown for process documentation\nGit for version control of documentation\nTeam wiki (if available)\nShared team documentation space"
+  },
+  {
+    "objectID": "onboarding-planning.html#documentation-organization",
+    "href": "onboarding-planning.html#documentation-organization",
+    "title": "Data Engineer Onboarding Plan",
+    "section": "Documentation Organization",
+    "text": "Documentation Organization\n\nSystem Architecture\nData Flows\nProcess Documents\nTroubleshooting Guides\nSetup Procedures\nContact Information"
+  },
+  {
+    "objectID": "business-context.html",
+    "href": "business-context.html",
+    "title": "Business Context",
+    "section": "",
+    "text": "Overview of CoopDIGITy’s business model and operations\n\n\n[Add overview here]\n\n\n\n[Add detailed content here]\n\n\n\n[Add any additional notes here]"
+  },
+  {
+    "objectID": "business-context.html#overview",
+    "href": "business-context.html#overview",
+    "title": "Business Context",
+    "section": "",
+    "text": "[Add overview here]"
+  },
+  {
+    "objectID": "business-context.html#details",
+    "href": "business-context.html#details",
+    "title": "Business Context",
+    "section": "",
+    "text": "[Add detailed content here]"
+  },
+  {
+    "objectID": "business-context.html#notes",
+    "href": "business-context.html#notes",
+    "title": "Business Context",
+    "section": "",
+    "text": "[Add any additional notes here]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "",
+    "text": "ReSight is positioning itself to become the authoritative source of truth and insights for the U.S. pet industry. This transformation requires a robust, scalable ETL infrastructure capable of processing comprehensive industry data at scale.\n\n\nOur current ETL infrastructure demonstrates significant daily processing capacity with notable variability in workload:\n\n\n\n\n\nMetric\nTypical Day (Median)\nPeak Day\nAverage (Mean)\n\n\n\n\nLoads Processed\n40\n303\n59.2\n\n\nRows Processed\n70,588\n824,719\n105,218\n\n\nProcessing Window\nFlexible\nFlexible\nFlexible\n\n\n\n\n\n\n\nDaily Load Range: 1-303 loads per day\nTypical Range (Q1-Q3): 24-65 loads per day\nStandard Deviation: 54.8 loads, indicating high variability\nProcessing Reliability: 361 days of consistent operation with no outages\n\n\n\n\n\nDaily Row Range: 28-824,719 rows\nTypical Range (Q1-Q3): 15,606-159,225 rows\nVolume Variability: Standard deviation of 115,282 rows\nProcessing Success Rate: 100% (no missing days)\n\n\n\n\n\n\n\n\n\n\n\n\n\nMetric\nValue\nGrowth Factor\n\n\n\n\nDaily Loads\n400+/day\n10x current median\n\n\nData Volume\n700K+ rows/day typical\n10x current median\n\n\nData Sources\n1000+ integrated sources\n10x current scale\n\n\nComplexity\nHigh (ML pipelines)\nSignificant increase\n\n\nProcessing Window\nNear real-time requirements (if needed)\nMinutes vs. flexible\n\n\n\n\n\n\nOur next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\n\nAdvanced Processing Capabilities\n\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nIndustry-leading security controls",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#current-state-analysis-2024",
+    "href": "index.html#current-state-analysis-2024",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "",
+    "text": "Our current ETL infrastructure demonstrates significant daily processing capacity with notable variability in workload:\n\n\n\n\n\nMetric\nTypical Day (Median)\nPeak Day\nAverage (Mean)\n\n\n\n\nLoads Processed\n40\n303\n59.2\n\n\nRows Processed\n70,588\n824,719\n105,218\n\n\nProcessing Window\nFlexible\nFlexible\nFlexible\n\n\n\n\n\n\n\nDaily Load Range: 1-303 loads per day\nTypical Range (Q1-Q3): 24-65 loads per day\nStandard Deviation: 54.8 loads, indicating high variability\nProcessing Reliability: 361 days of consistent operation with no outages\n\n\n\n\n\nDaily Row Range: 28-824,719 rows\nTypical Range (Q1-Q3): 15,606-159,225 rows\nVolume Variability: Standard deviation of 115,282 rows\nProcessing Success Rate: 100% (no missing days)",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#target-state-2026",
+    "href": "index.html#target-state-2026",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "",
+    "text": "Metric\nValue\nGrowth Factor\n\n\n\n\nDaily Loads\n400+/day\n10x current median\n\n\nData Volume\n700K+ rows/day typical\n10x current median\n\n\nData Sources\n1000+ integrated sources\n10x current scale\n\n\nComplexity\nHigh (ML pipelines)\nSignificant increase\n\n\nProcessing Window\nNear real-time requirements (if needed)\nMinutes vs. flexible",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#growth-requirements",
+    "href": "index.html#growth-requirements",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "",
+    "text": "Our next-generation ETL pipeline must support:\n\nScalable Data Integration\n\nHandle 10x increase in daily load frequency\nProcess 10x current data volumes\nSupport 10x growth in data source connections\n\nAdvanced Processing Capabilities\n\nPredictive analytics pipelines\nMachine learning model integration\nMarket insight generation\n\nEnterprise-Scale Operations\n\nConsistent high-volume processing\n24/7 operation with high availability\nIndustry-leading security controls",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#core-requirements",
+    "href": "index.html#core-requirements",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "2.1 Core Requirements",
+    "text": "2.1 Core Requirements\n\n2.1.1 Scalability\n\nSupport for 400+ daily loads (10x current median)\nPeak capacity of 8M+ rows per day\nElastic resource allocation\nHorizontal scaling support\n\n\n\n2.1.2 Advanced Analytics\n\nML pipeline integration\nComplex data transformations\nData science toolkit support\nPredictive modeling capability\n\n\n\n2.1.3 Reliability\n\nZero downtime (matching current 100% reliability)\nAutomated failover\nComprehensive monitoring\nProactive scaling",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#key-performance-indicators",
+    "href": "index.html#key-performance-indicators",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "2.2 Key Performance Indicators",
+    "text": "2.2 Key Performance Indicators\n\n\n\nMetric\nCurrent (2024)\nTarget (2026)\n\n\n\n\nDaily Loads (Median)\n40\n400+\n\n\nPeak Daily Loads\n303\n3000+\n\n\nDaily Rows (Median)\n70,588\n700K+\n\n\nPeak Daily Rows\n824,719\n8M+\n\n\nProcessing Latency\nHours\nMinutes\n\n\nData Sources\n~100\n1000+",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#phase-1-foundation-q1-2025",
+    "href": "index.html#phase-1-foundation-q1-2025",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "3.1 Phase 1: Foundation (Q1 2025)",
+    "text": "3.1 Phase 1: Foundation (Q1 2025)\n\nScale current infrastructure to handle 2x current peak load\nImplement comprehensive monitoring\nDeploy new stream processing architecture",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#phase-2-scaling-q2-q3-2025",
+    "href": "index.html#phase-2-scaling-q2-q3-2025",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "3.2 Phase 2: Scaling (Q2-Q3 2025)",
+    "text": "3.2 Phase 2: Scaling (Q2-Q3 2025)\n\nExpand data source integration capacity\nImplement ML pipeline framework",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#phase-3-optimization-q4-2025",
+    "href": "index.html#phase-3-optimization-q4-2025",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "3.3 Phase 3: Optimization (Q4 2025)",
+    "text": "3.3 Phase 3: Optimization (Q4 2025)\n\nScale to 5x current capacity\nDeploy advanced analytics capabilities",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#phase-4-enterprise-scale-2026",
+    "href": "index.html#phase-4-enterprise-scale-2026",
+    "title": "ReSight: Building the Future of Pet Industry Analytics",
+    "section": "3.4 Phase 4: Enterprise Scale (2026)",
+    "text": "3.4 Phase 4: Enterprise Scale (2026)\n\nAchieve full target state capabilities\nDeploy full ML/AI integration",
+    "crumbs": [
+      "Overview"
     ]
   },
   {
