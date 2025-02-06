@@ -8,7 +8,6 @@ format:
     toc: true
     toc-depth: 2
     number-sections: true
-    theme: cosmo
     code-fold: true
   pdf:
     toc: true
@@ -16,7 +15,7 @@ format:
     colorlinks: true
 ---
 
-# Executive Overview
+# Overview
 
 ReSight is positioning itself to become the authoritative source of truth and insights for the U.S. pet industry. This transformation requires a robust, scalable ETL infrastructure capable of processing comprehensive industry data at scale.
 
